@@ -1,4 +1,4 @@
-valecap
+Valecap
 =======
 
-theme-wordpress
+Desenvolvimento do tema wordpress responsivo
