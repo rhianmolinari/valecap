@@ -8,9 +8,10 @@ body {
 
 }
 .container_12 {
-	/*background-image: url(../12_col.gif);*/
+	background-image: url(../12_col.gif);
 	background-repeat: repeat-y;
 }
+/* Text */
 h1 {
 	color: #FFD400;
 	font-family: 'MuseoSans500',Arial;
@@ -38,7 +39,8 @@ h4 {
 	text-transform: uppercase;
 }
 
-input#s {
+/* Form */
+input {
 	padding: 8px 3px 8px 6px;
 	font-size: 1.077em;
 	font-style: italic;
@@ -54,7 +56,7 @@ input#s {
 	-webkit-box-shadow: inset 0px 0px 3px 0px #E5E5E5;
 	box-shadow: inset 0px 0px 3px 0px #E5E5E5;
 }
-input#searchsubmit {
+button {
 	border: 1px solid #FFE600;
 	font-family: MuseoSans500,Arial;
 	font-size: 1.077em;
@@ -77,11 +79,11 @@ input#searchsubmit {
 	background: linear-gradient(to bottom, #FFE600 0%,#FFD400 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFE600', endColorstr='#FFD400',GradientType=0 );
 }
-input#searchsubmit:hover {
+button:hover {
 	border: 1px solid #FFD400;
 	background: #FFE600;
 }
-input#searchsubmit:active {
+button:active {
 	-webkit-box-shadow: inset 0px 0px 3px 3px #FFD400;
 	box-shadow: inset 0px 0px 3px 3px #FFD400;
 }
@@ -100,17 +102,18 @@ header h1 {
 }
 
 /* BUSCA */
-header form#searchform {
+header form {
 	margin-top: 30px;
+	display: block;
 }
-header form#searchform label.screen-reader-text {
+header form label {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important; /* Porque não display:none; */
 }
-header form#searchform input#s {	
+header form input {	
 	width: 210px;
 }
-header form#searchform input {
+header form button {
 	width: 75px;
 }
 
@@ -206,3 +209,4 @@ img.bg {
 footer {
 	height: 50px;
 }
+
