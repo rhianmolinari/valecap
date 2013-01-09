@@ -1,17 +1,56 @@
 /************************ GLOBAL ************************/
 body {
 	background-color: #F5F5F5;
-	border-top: 2px solid #FFD400;
+	border-top: 3px solid #FFD400;
 	font: 13px/1.5 Arial, Helvetica, Tahoma, Verdana, Sans-serif;
 	word-wrap: break-word;
 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
 
 }
 .container_12 {
-	background-image: url(../12_col.gif);
+	/*background-image: url(../12_col.gif);*/
 	background-repeat: repeat-y;
 }
+/* Link */
+a {
+	border-bottom: 1px dotted #666666;
+	color: #FFAA00;
+	padding-bottom: 1px;
+	text-decoration: none;
+}
+a:hover {
+	border-bottom: 1px solid #FFAA00;
+}
+a:active {
+	background-color: #FFD400;
+}
+a:hover, a:active {
+	color: #000000;
+}
+.nolink {
+	border: medium none;
+	padding: 0;
+}
+.nolink:hover, .nolink:active {
+	border: medium none;
+	padding: 0;
+	background-color: transparent;
+}
+/* Lista */
+ul {
+	padding: 0;
+	margin: 0;
+	text-align: left;
+	width: 100%;
+}
+li {
+	list-style: none outside none;
+}
+
 /* Text */
+h1, h2, h3, h4 {
+	margin: 5px 0;
+}
 h1 {
 	color: #FFD400;
 	font-family: 'MuseoSans500',Arial;
@@ -56,13 +95,16 @@ input {
 	-webkit-box-shadow: inset 0px 0px 3px 0px #E5E5E5;
 	box-shadow: inset 0px 0px 3px 0px #E5E5E5;
 }
+input.textoff {
+	color: #666666;
+}
 button {
 	border: 1px solid #FFE600;
 	font-family: MuseoSans500,Arial;
 	font-size: 1.077em;
 	text-transform: capitalize;
 	text-align: center;
-	padding: 8px 3px;
+	padding: 8px;
 
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -80,12 +122,12 @@ button {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFE600', endColorstr='#FFD400',GradientType=0 );
 }
 button:hover {
-	border: 1px solid #FFD400;
+	border: 1px solid #FFAA00;
 	background: #FFE600;
 }
 button:active {
-	-webkit-box-shadow: inset 0px 0px 3px 3px #FFD400;
-	box-shadow: inset 0px 0px 3px 3px #FFD400;
+	-webkit-box-shadow: inset 0 0 3px 0px #666;
+	box-shadow: inset 0 0 3px 0px #666;
 }
 
 /************************ HEADER ************************/
@@ -106,7 +148,7 @@ header form {
 	margin-top: 30px;
 	display: block;
 }
-header form label {
+form label {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important; /* Porque não display:none; */
 }
@@ -127,15 +169,8 @@ nav div {
 	margin: 0 10px;
 	height: 28px;
 }
-nav ul {
-	padding: 0;
-	margin: 0;
-	text-align: left;
-	width: 100%;
-}
 nav ul li {
 	display: inline-block;
-	list-style: none;
 	position: relative;
 }
 nav ul li:hover {
@@ -189,7 +224,7 @@ ol.breadcrumb {
 /* CONTENT */
 .content {
 	width: 100%;
-	height: 400px;
+	/*height: 400px;*/
 	min-height: 200px;
 	position: relative;
 }
@@ -204,7 +239,75 @@ img.bg {
 	width: 100%;
 	z-index: -1;
 }
+.content .container_12 {
+	padding: 30px 0;
+}
+.content .container_12 section {
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+/* Temporario */
+.box {
+	background-color: #FFFFFF;
+	border-top: 2px solid #FFD400;
+	padding: 5px 15px 10px;
+}
+.box-yellow, .destaque {
+	padding: 5px 15px 10px;
 
+	background: #FFD400;
+	background: -moz-linear-gradient(top, #FFE600 0%, #FFD400 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFE600), color-stop(100%,#FFD400));
+	background: -webkit-linear-gradient(top,  #FFE600 0%,#FFD400 100%);
+	background: -o-linear-gradient(top, #FFE600 0%,#FFD400 100%);
+	background: -ms-linear-gradient(top, #FFE600 0%,#FFD400 100%);
+	background: linear-gradient(to bottom, #FFE600 0%,#FFD400 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFE600', endColorstr='#FFD400',GradientType=0 );
+}
+.destaque h2 {
+	text-align: center;
+	margin: 0;
+}
+.number {
+	font-family: 'MuseoSans900',Arial;
+	font-size: 3.692em;
+	margin: 0 10px 0 3px;
+	display: block;
+	float: left;
+	line-height: 1.231em;
+	width: 60px;
+}
+.box ul li {
+	border-bottom: 1px solid #CCCCCC;
+	padding: 3px;
+}
+.box ul li a {
+	color: #000000;
+}
+.group {
+	padding: 5px 0 0;
+}
+.group h2 {
+	margin: 0;
+}
+/* Info bar*/
+.info {
+	color: #FFFFFF;
+	font-size: 1.231em;
+}
+.content button.grid_3 {
+	text-transform: uppercase;
+}
+/* Newsletter */
+form#newsletter input {
+	width: 287px;
+}
+/* Parceiros */
+.parceiros {
+	display: inline-block;
+	border: medium none !important;
+	margin: 5px 10px;
+}
 /************************ FOOTER ************************/
 footer {
 	height: 50px;

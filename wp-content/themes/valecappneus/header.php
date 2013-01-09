@@ -24,15 +24,20 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 
+<script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.8.3.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/main.js"></script>
 
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+	<!-- Script Facebook !-->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+
 	<header class="container_12">
 		<h1 class="grid_3">
-			<a class="logo" href="<?php bloginfo(url); ?>" title="<?php bloginfo(name); ?>"><?php bloginfo(name); ?></a>
+			<a class="logo nolink" href="<?php bloginfo(url); ?>" title="<?php bloginfo(name); ?>"><?php bloginfo(name); ?></a>
 		</h1>
 		<div class="grid_4 prefix_5"><?php get_search_form(); ?></div>
 		<nav id="site-navigation" class="container_12" role="navigation">
@@ -41,3 +46,4 @@
 	</header>
 <div class="content">
 	<img class="bg" src="<?php bloginfo('template_directory'); ?>/image/bg.jpg">
+	<div class="container_12">
