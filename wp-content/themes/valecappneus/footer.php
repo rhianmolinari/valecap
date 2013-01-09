@@ -6,6 +6,8 @@
  */
 ?>
 
+</div>
+<footer class="container_12"></footer>
 <?php wp_footer(); ?>
 </body>
 </html>

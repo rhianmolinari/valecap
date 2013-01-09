@@ -7,5 +7,8 @@
 
 get_header(); ?>
 
+<nav class="container_12">
+	<ol class="breadcrumb"><?php the_breadcrumb(); ?></ol>
+</nav>
 
 <?php get_footer(); ?>

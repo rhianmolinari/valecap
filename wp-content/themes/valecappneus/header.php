@@ -34,14 +34,10 @@
 		<h1 class="grid_3">
 			<a class="logo" href="<?php bloginfo(url); ?>" title="<?php bloginfo(name); ?>"><?php bloginfo(name); ?></a>
 		</h1>
-		<form class="grid_4 prefix_5" action="" method="get" accept-charset="utf-8">
-			<fieldset>
-			<input id="" type="text" name="query" autocomplete="off">
-			<button type="submit">Busca</button>
-			</fieldset>
-		</form>
+		<div class="grid_4 prefix_5"><?php get_search_form(); ?></div>
 		<nav id="site-navigation" class="container_12" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 		</nav>
 	</header>
-
+<div class="content">
+	<img class="bg" src="<?php bloginfo('template_directory'); ?>/image/bg.jpg">
