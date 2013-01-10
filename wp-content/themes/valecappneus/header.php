@@ -40,7 +40,7 @@
 			<a class="logo nolink" href="<?php bloginfo(url); ?>" title="<?php bloginfo(name); ?>"><?php bloginfo(name); ?></a>
 		</h1>
 		<div class="grid_4 prefix_5"><?php get_search_form(); ?></div>
-		<nav id="site-navigation" class="container_12" role="navigation">
+		<nav id="site-navigation" class="grid_12" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 		</nav>
 	</header>

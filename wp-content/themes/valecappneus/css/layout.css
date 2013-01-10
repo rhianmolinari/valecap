@@ -15,7 +15,7 @@ body {
 a {
 	border-bottom: 1px dotted #666666;
 	color: #FFAA00;
-	padding-bottom: 1px;
+	padding: 3px;
 	text-decoration: none;
 }
 a:hover {
@@ -27,11 +27,11 @@ a:active {
 a:hover, a:active {
 	color: #000000;
 }
-.nolink {
+.nolink, #site-navigation ul li a, #site-navigation ul li a ul.sub-menu li a {
 	border: medium none;
 	padding: 0;
 }
-.nolink:hover, .nolink:active {
+.nolink:hover, .nolink:active, #site-navigation ul li a:hover, #site-navigation ul li a ul.sub-menu li a:hover, #site-navigation ul li a:active, #site-navigation ul li a ul.sub-menu li a:active  {
 	border: medium none;
 	padding: 0;
 	background-color: transparent;
@@ -163,50 +163,58 @@ header form button {
 nav {
 	clear: both;
 }
-nav div {
+header nav div {
 	border-top: 1px solid #CCCCCC;
 	border-bottom: 2px solid #FFD400;
-	margin: 0 10px;
 	height: 28px;
 }
-nav ul li {
+header nav ul li {
 	display: inline-block;
 	position: relative;
 }
-nav ul li:hover {
+header nav ul li:hover {
 	background-color: #FFD400;
 }
-nav ul li a {
+header nav ul li:active {
+	-webkit-box-shadow: inset 0 0 3px 0px #666;
+	box-shadow: inset 0 0 3px 0px #666;
+}
+header nav ul li a {
 	color: #000000;
 	text-decoration: none;
 	position: relative;
-	padding: 5px;
+	padding: 5px !important;
 	display: inline-block;
 	text-decoration: none;
 	font-family: 'MuseoSans500', Arial;
 	text-transform: uppercase;
-	white-space: nowrap;
-	width: 95%;
+	white-space: normal;
+	width: auto;
 }
 /* Sub-menu */
-nav ul.sub-menu {
-	display: none; /* FAZER JS */
+header nav ul.sub-menu {
+	display: block; /* FAZER JS */
 	position: absolute;
 	top: 100%;
 	z-index: 1;
 	background-color: #FFFFFF;
 	width: auto;
 }
-nav ul.sub-menu li {
-	border-left: 2px solid #FFFFFF;
-	width: 98%;
-}
-nav ul.sub-menu li:hover {
-	border-left: 2px solid #000000;
+header nav ul.sub-menu li {
+	border-left: 3px solid #FFFFFF;
 	background-color: #FFFFFF;
 }
+header nav ul.sub-menu li:hover {
+	border-left: 3px solid #000000;
+	background-color: #FFFFFF;
+}
+header nav ul.sub-menu li a {
+    width: 160px;
+    font-family: Arial;
+    text-transform: capitalize;
+}
 /* Sub-menu nível 2 */
-nav ul.sub-menu li ul.sub-menu {
+header nav ul.sub-menu li ul.sub-menu {
 	left: 100%;
 	top: 0;
 	margin-left: 0;
@@ -290,10 +298,13 @@ img.bg {
 .group h2 {
 	margin: 0;
 }
-/* Info bar*/
+/* Info bar */
 .info {
 	color: #FFFFFF;
 	font-size: 1.231em;
+}
+.info:active {
+	color: #000000;
 }
 .content button.grid_3 {
 	text-transform: uppercase;
@@ -310,6 +321,62 @@ form#newsletter input {
 }
 /************************ FOOTER ************************/
 footer {
-	height: 50px;
+	height: 200px;
+	padding: 15px 0;
+}
+
+/* SITEMAP */
+footer nav div {
+	height: 28px;
+}
+footer nav ul li {
+	display: inline-block;
+	position: relative;
+	margin-right: 10px;
+	border-bottom: 1px dotted #666666;
+}
+footer nav ul li:hover {
+	border-bottom: 1px solid #FFAA00;
+}
+footer nav ul li a {
+	color: #000000;
+	text-decoration: none;
+	position: relative;
+	padding: 5px 5px 0 !important;
+	display: inline-block;
+	text-decoration: none;
+	font-family: 'MuseoSans500', Arial;
+	text-transform: uppercase;
+	white-space: normal;
+	width: auto;
+}
+/* Sub-menu */
+footer nav ul.sub-menu {
+	display: block; /* FAZER JS */
+	position: absolute;
+	top: 100%;
+	z-index: 1;
+	width: auto;
+}
+footer nav ul.sub-menu li {
+	border-left: 3px solid transparent;
+	border-bottom: none;
+	margin: 0;
+}
+footer nav ul.sub-menu li:hover {
+	border-left: 3px solid #000000;
+}
+footer nav ul.sub-menu li a {
+    width: auto;
+    font-family: Arial;
+    text-transform: capitalize;
+}
+/* Sub-menu nível 2 */
+footer nav ul.sub-menu li ul.sub-menu {
+	top: 100%;
+	margin-left: 0;
+}
+footer nav ul.sub-menu li ul.sub-menu li {
+	margin-left: 5px;
 }
 

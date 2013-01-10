@@ -6,23 +6,23 @@
  */
 
 get_header(); ?>
-<div class="grid_9"><span class="info">Nós somos a primeira reformadora de São Paulo a obter o registro no Inmetro</span></div>
+<div class="grid_9"><a href="#"><span class="info">Nós somos a primeira reformadora de São Paulo a obter o registro no Inmetro</span></a></div>
 <button class="grid_3">Faça seu orçamento</button>
 <section class="grid_4">
 	<h1>Mais vendidos</h1>
 	<div class="box">
 		<ul>
-			<li><a href="">
+			<li><a class="nolink" href="">
 				<span class="number">1º</span>
 				<div class="group"><span class="categ">Agrícola</span>
 				<h2>DD-dv</h2></div>
 			</a></li>
-			<li><a href="">
+			<li><a class="nolink" href="">
 				<span class="number">2º</span>
 				<div class="group"><span class="categ">Passeio / Utilitário</span>
 				<h2>DD-dv</h2></div>
 			</a></li>
-			<li><a href="">
+			<li><a class="nolink" href="">
 				<span class="number">3º</span>
 				<div class="group"><span class="categ">Terraplanagem</span>
 				<h2>DD-dv</h2></div>
