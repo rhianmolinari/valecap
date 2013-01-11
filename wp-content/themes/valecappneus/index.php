@@ -6,8 +6,19 @@
  */
 
 get_header(); ?>
+<<<<<<< HEAD
 <div class="grid_9"><a href="#"><span class="info">Nós somos a primeira reformadora de São Paulo a obter o registro no Inmetro</span></a></div>
 <button class="grid_3">Faça seu orçamento</button>
+=======
+<section class="budget grid_12">
+	<span class="info grid_8 alpha">Nós somos a primeira reformadora de São Paulo a obter o registro no Inmetro</span>
+	<button class="push_1 grid_3 omega">Faça seu orçamento</button>
+	<div class="clear"></div>
+</section>
+<section class="highlight grid_12">
+	<div></div>
+</section>
+>>>>>>> Primeiro commit, codificação da home de acordo com o layout psd
 <section class="grid_4">
 	<h1>Mais vendidos</h1>
 	<div class="box">
