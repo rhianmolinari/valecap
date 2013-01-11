@@ -7,8 +7,10 @@
 
 get_header(); ?>
 <section>
-	<span class="info grid_9">Nós somos a primeira reformadora de São Paulo a obter o registro no Inmetro</span>
-	<button class="grid_3">Faça seu orçamento</button>
+ <div class="grid_9">
+ 	<a href="#"><span class="info">Nós somos a primeira reformadora de São Paulo a obter o registro no Inmetro</span></a>
+ </div>
+ <button class="grid_3">Faça seu orçamento</button>
 </section>
 
 <section class="grid_12">
