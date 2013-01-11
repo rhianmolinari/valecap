@@ -6,12 +6,12 @@
  */
 
 get_header(); ?>
-<section class="budget grid_12">
-	<a href="#"><span class="info grid_8 alpha">Nós somos a primeira reformadora de São Paulo a obter o registro no Inmetro</span></a>
-	<button class="push_1 grid_3 omega">Faça seu orçamento</button>
-	<div class="clear"></div>
+<section>
+	<span class="info grid_9">Nós somos a primeira reformadora de São Paulo a obter o registro no Inmetro</span>
+	<button class="grid_3">Faça seu orçamento</button>
 </section>
-<section class="highlight grid_12">
+
+<section class="grid_12">
 	<div></div>
 </section>
 <section class="grid_4">
