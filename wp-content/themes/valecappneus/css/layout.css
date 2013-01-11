@@ -53,18 +53,18 @@ h1, h2, h3, h4 {
 }
 h1 {
 	color: #FFD400;
-	font-family: 'MuseoSans500',Arial;
+	font-family: 'MuseoSans500', Arial;
 	font-size: 1.692em;
 	text-transform: uppercase;
 }
 h2 {
 	color: #000000;
-	font-family: 'MuseoSans500',Arial;
+	font-family: 'MuseoSans500', Arial;
 	font-size: 1.538em;
 }
 h3 {
 	color: #666666;
-	font-family: 'MuseoSans100',Arial;
+	font-family: 'MuseoSans100', Arial;
 	font-size: 1.385em;
 }
 h4 {
@@ -73,11 +73,32 @@ h4 {
 }
 .categ {
 	color: #000000;
-	font-family: 'MuseoSans900',Arial;
+	font-family: 'MuseoSans900', Arial;
 	font-size: 1em;
 	text-transform: uppercase;
 }
-
+.entry-content {background-color: #FFFFFF}
+blockquote {
+	background-color: #F5F5F5;
+	border-left: 3px solid #FFD400;
+	margin: 15px 0; /*30px 0;*/
+	/*padding: 20px;*/
+}
+blockquote p {
+	color: #000000;
+	font-family: 'MuseoSans100',Arial;
+	font-size: 1.385em;
+	line-height: 1.846em;
+	margin: 0;
+}
+p {
+	color: #000000;
+	font-family: Arial;
+	font-size: 1.077em;
+	line-height: 1.692em;
+	margin: 0 0 20px;
+	padding: 25px;
+}
 /* Form */
 input {
 	padding: 8px 3px 8px 6px;
@@ -193,7 +214,7 @@ header nav ul li a {
 }
 /* Sub-menu */
 header nav ul.sub-menu {
-	display: block; /* FAZER JS */
+	display: none; /* FAZER JS */
 	position: absolute;
 	top: 100%;
 	z-index: 1;
@@ -223,11 +244,11 @@ header nav ul.sub-menu li ul.sub-menu {
 /************************ CONTEÚDO ************************/
 /* BREADCRUMB */
 ol.breadcrumb {
-	border-bottom: 1px solid #CCCCCC;
-	margin: 0 10px;
+	border-bottom: 1px solid #666666;
+	margin: 5px 0;
 	min-height: 28px;
 	overflow: hidden;
-	padding: 0 5px;
+	padding: 0;
 }
 /* CONTENT */
 .content {
@@ -235,6 +256,7 @@ ol.breadcrumb {
 	/*height: 400px;*/
 	min-height: 200px;
 	position: relative;
+	border-bottom: 3px solid #FFD400;
 }
 /* Background resize */
 img.bg {
@@ -248,7 +270,7 @@ img.bg {
 	z-index: -1;
 }
 .content .container_12 {
-	padding: 30px 0;
+	padding: 5px 0;
 }
 .content .container_12 section {
 	margin-bottom: 15px;
@@ -301,7 +323,7 @@ img.bg {
 	margin: 0;
 }
 .number {
-	font-family: 'MuseoSans900',Arial;
+	font-family: 'MuseoSans900', Arial;
 	font-size: 3.692em;
 	margin: 0 10px 0 3px;
 	display: block;
@@ -369,7 +391,7 @@ footer nav ul li a {
 }
 /* Sub-menu */
 footer nav ul.sub-menu {
-	display: block; /* FAZER JS */
+	display: block;
 	position: absolute;
 	top: 100%;
 	z-index: 1;
@@ -395,5 +417,8 @@ footer nav ul.sub-menu li ul.sub-menu {
 }
 footer nav ul.sub-menu li ul.sub-menu li {
 	margin-left: 5px;
+}
+footer .grid_3 ul li {
+	margin-bottom: 10px;
 }
 
