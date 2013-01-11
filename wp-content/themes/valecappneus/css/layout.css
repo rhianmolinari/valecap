@@ -302,12 +302,18 @@ img.bg {
 	margin-top: 15px;
 }
 
+<<<<<<< HEAD
 /* Index */
 /* Slider */
 .slider {
 	padding: 0 !important;
 	height: 260px;
 	position: relative;
+=======
+.budget {
+	height: 35px;
+	line-height: 35px;
+>>>>>>> destaque do produto
 }
 .slider img {
 	-webkit-border-radius: 0 3px 3px 0;
@@ -421,8 +427,9 @@ img.bg {
 .box ul li a {
 	color: #000000;
 }
-.box-yellow, .destaque {
+.box-yellow {
 	padding: 5px 15px 10px;
+<<<<<<< HEAD
 
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -430,6 +437,10 @@ img.bg {
 	-o-border-radius: 3px;
 	border-radius: 3px;
 
+=======
+}
+.box-yellow, .destaque {
+>>>>>>> destaque do produto
 	background: #FFD400;
 	background: -moz-linear-gradient(top, #FFE600 0%, #FFD400 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFE600), color-stop(100%,#FFD400));
@@ -442,6 +453,24 @@ img.bg {
 .destaque h2 {
 	text-align: center;
 	margin: 0;
+}
+
+.destaque a {
+	height: 258px;
+	padding: 0px;
+	border: none;
+	display: block; 
+}
+.destaque a span {
+	display: block;
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	color: #000;
+	text-transform: uppercase;
+	font-family: 'MuseoSans500',Arial;
+	background: #fff;
 }
 .number {
 	font-family: 'MuseoSans900', Arial;

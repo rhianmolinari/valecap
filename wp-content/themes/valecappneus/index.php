@@ -6,10 +6,17 @@
  */
 
 get_header(); ?>
+<<<<<<< HEAD
 <section>
  <div class="grid_9">
  	<a href="#"><span class="info">Nós somos a primeira reformadora de São Paulo a obter o registro no Inmetro</span></a></div>
  <button class="grid_3">Faça seu orçamento</button>
+=======
+<section class="budget grid_12">
+	<span class="info grid_8 alpha">Nós somos a primeira reformadora de São Paulo a obter o registro no Inmetro</span>
+	<button class="push_1 grid_3 omega">Faça seu orçamento</button>
+	<div class="clear"></div>
+>>>>>>> destaque do produto
 </section>
 
 <section class="grid_12 box-yellow slider">
@@ -64,7 +71,11 @@ get_header(); ?>
 <section class="grid_3">
 	<h1>Promoção</h1>
 	<div class="destaque">
+		<a href="">
 		<h2>DD-dv</h2>
+		<img src="">
+		<span>+ saiba mais</span>
+		</a>
 	</div>
 </section>
 
