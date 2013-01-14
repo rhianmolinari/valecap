@@ -8,13 +8,35 @@
 get_header(); ?>
 <section>
  <div class="grid_9">
- 	<a href="#"><span class="info">Nós somos a primeira reformadora de São Paulo a obter o registro no Inmetro</span></a>
- </div>
+ 	<a href="#"><span class="info">Nós somos a primeira reformadora de São Paulo a obter o registro no Inmetro</span></a></div>
  <button class="grid_3">Faça seu orçamento</button>
 </section>
 
-<section class="grid_12">
-	<div></div>
+<section class="grid_12 box-yellow slider">
+			<div>
+				<div class="grid_4 omega alpha">
+				<span class="categ grid_3 omega alpha">Agrícola</span>
+				<span class="number-slider">1/3</span>
+				<h2>Reparos de câmaras de ar de motos e bicicletas pelo sistema de vulcanização a frio</h2>
+				</div>
+				<img src="http://placehold.it/640x290">
+			</div>
+			<div>
+				<div class="grid_4 omega alpha">
+				<span class="categ grid_3 omega alpha">Offroad</span>
+				<span class="number-slider">2/3</span>
+				<h2>Copa Troller</h2>
+				</div>
+				<img src="http://placehold.it/640x290">
+			</div>
+			<div>
+				<div class="grid_4 omega alpha">
+				<span class="categ grid_3 omega alpha">Sustentabilidade</span>
+				<span class="number-slider">3/3</span>
+				<h2>Conheça melhor as banda Ecotread</h2>
+				</div>
+				<img src="http://placehold.it/640x290">
+			</div>
 </section>
 <section class="grid_4">
 	<h1>Mais vendidos</h1>
@@ -48,13 +70,13 @@ get_header(); ?>
 
 <section class="grid_5">
 	<h1>Newsletter</h1>
-	<form role="search" method="get" id="newsletter" action="' . home_url( '/' ) . '" >
+<form role="search" method="get" id="newsletter" action="<?php echo home_url( '/' ); ?>" >
 	<fieldset>
-	<label class="screen-reader-text" for="s">Assinar newsletter</label>
-	<input type="text" value="Endereço de e-mail" class="textoff" name="s" id="s" />
-	<button type="submit" id="searchsubmit" value="">Inscrever</button>
+	<label for="newsletter">Assinar newsletter</label>
+	<input type="email" value="<?php the_search_query(); ?>" id="newsletter" name="s" placeholder="Endereço de e-mail" />
+	<button type="submit" id="searchsubmit" value="Subscribe">Inscrever</button>
 	</fieldset>
-	</form>
+</form>
 </section>
 
 <section class="grid_5">

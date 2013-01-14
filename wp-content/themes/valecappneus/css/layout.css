@@ -81,7 +81,7 @@ h4 {
 blockquote {
 	background-color: #F5F5F5;
 	border-left: 3px solid #FFD400;
-	margin: 15px 0; /*30px 0;*/
+	margin: 20px 0; /*30px 0;*/
 	/*padding: 20px;*/
 }
 blockquote p {
@@ -90,6 +90,7 @@ blockquote p {
 	font-size: 1.385em;
 	line-height: 1.846em;
 	margin: 0;
+	padding: 15px 20px;
 }
 p {
 	color: #000000;
@@ -97,11 +98,11 @@ p {
 	font-size: 1.077em;
 	line-height: 1.692em;
 	margin: 0 0 20px;
-	padding: 25px;
+	padding: 0 20px;
 }
 /* Form */
 input {
-	padding: 8px 3px 8px 6px;
+	padding: 8px;
 	font-size: 1.077em;
 	font-style: italic;
 	color: #000000;
@@ -116,8 +117,8 @@ input {
 	-webkit-box-shadow: inset 0px 0px 3px 0px #E5E5E5;
 	box-shadow: inset 0px 0px 3px 0px #E5E5E5;
 }
-input.textoff {
-	color: #666666;
+input:focus {
+	border: 1px solid #FFD400;
 }
 button {
 	border: 1px solid #FFE600;
@@ -147,8 +148,33 @@ button:hover {
 	background: #FFE600;
 }
 button:active {
-	-webkit-box-shadow: inset 0 0 3px 0px #666;
-	box-shadow: inset 0 0 3px 0px #666;
+	-webkit-box-shadow: inset 0 0 3px 0px #666666;
+	box-shadow: inset 0 0 3px 0px #666666;
+}
+
+/* Seletores */
+::selection {
+	background:#FFD400;
+	color:#000000;
+}
+::-moz-selection {
+	background:#FFD400;
+	color:#000000;
+}
+::-webkit-selection {
+	background:#FFD400;
+	color:#000000;
+}
+
+/* Placeholder */
+::-webkit-input-placeholder {
+	color: #999999;
+}
+:-moz-placeholder {
+	color: #999999;  
+}
+:-ms-input-placeholder {
+	color: #999999;  
 }
 
 /************************ HEADER ************************/
@@ -174,7 +200,7 @@ form label {
 	position: absolute !important; /* Porque não display:none; */
 }
 header form input {	
-	width: 210px;
+	width: 203px;
 }
 header form button {
 	width: 75px;
@@ -276,14 +302,116 @@ img.bg {
 	margin-bottom: 15px;
 	margin-top: 15px;
 }
-/* Temporario */
+
+/* Index */
+/* Slider */
+.slider {
+	padding: 0 !important;
+	height: 290px;
+	position: relative;
+}
+.slider img {
+	-webkit-border-radius: 0 3px 3px 0;
+	-moz-border-radius: 0 3px 3px 0;
+	-ms-border-radius: 0 3px 3px 0;
+	-o-border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
+}
+.slider span, .slider h2 {
+	padding: 15px;
+	display: block;
+}
+.slider span.categ {
+	padding: 15px 0 15px 15px;
+}
+.slider h2 {
+	clear: both;
+}
+.number-slider {
+	color: #000000;
+	font-family: 'MuseoSans900', Arial;
+	font-size: 1.538em;
+	float: left;
+	padding: 10px 15px 15px 0 !important;
+}
+.rsNav, .rsTabs {
+	position: absolute;
+	bottom: 5%;
+	left: 11%;
+	width: auto;
+}
+.rsTabs li {
+	display: inline-block;
+	background: url("../image/button-slider.png") repeat scroll -68px -7px transparent;
+	height: 24px;
+	width: 24px;
+}
+.rsTabs li:hover {
+	background: url("../image/button-slider.png") repeat scroll -68px -51px transparent;
+}
+.rsTabs .rsNavSelected {
+	background: url("../image/button-slider.png") repeat scroll -36px -51px transparent;
+}
+.rsTabs .rsNavSelected:hover {
+	background: url("../image/button-slider.png") repeat scroll -36px -7px transparent;
+}
+.rsArrow {
+	height: 40px;
+	width: 40px;
+	bottom: 4%;
+	position: absolute;
+
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-ms-border-radius: 100%;
+	-o-border-radius: 100%;
+	border-radius: 100%;
+}
+.rsArrowRight {
+	background: url("../image/button-slider.png") repeat scroll -90px -88px transparent;
+	left: 21%;
+}
+.rsArrowRight:hover {
+	background: url("../image/button-slider.png") repeat scroll -90px -41px #333333;
+}
+.rsArrowLeft {
+	background: url("../image/button-slider.png") repeat scroll 2px -43px transparent;
+	left: 4%;
+}
+.rsArrowLeft:hover {
+	background: url("../image/button-slider.png") repeat scroll 2px 0px #333333;
+}
+.rsArrowRight:active, .rsArrowLeft:active {
+	-webkit-box-shadow: inset 0 0 5px 0px #000000;
+	box-shadow: inset 0 0 5px 0px #000000;
+}
+/* Seletores slider */
+.slider span::selection, .slider h2::selection {
+	background:#000000;
+	color:#FFFFFF;
+}
+.slider span::-moz-selection, .slider h2::-moz-selection {
+	background:#000000;
+	color:#FFFFFF;
+}
+.slider span::-webkit-selection, .slider h2::-webkit-selection {
+	background:#000000;
+	color:#FFFFFF;
+}
+
+/* Temporário */
 .box {
 	background-color: #FFFFFF;
 	border-bottom: 2px solid #FFD400;
-	padding: 0px 15px;
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
 }
 .box ul li {
-	padding: 15px 3px;
+	padding: 10px 15px;
 }
 .box ul li + li {
 	border-top: 1px solid #CCCCCC;
@@ -293,6 +421,12 @@ img.bg {
 }
 .box-yellow, .destaque {
 	padding: 5px 15px 10px;
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
 
 	background: #FFD400;
 	background: -moz-linear-gradient(top, #FFE600 0%, #FFD400 100%);
@@ -335,7 +469,7 @@ img.bg {
 }
 /* Newsletter */
 form#newsletter input {
-	width: 287px;
+	width: 280px;
 }
 /* Parceiros */
 .parceiros {

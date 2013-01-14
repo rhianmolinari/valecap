@@ -1,32 +1,31 @@
-// Menu
-( function() {
-var nav = document.getElementById( 'site-navigation' ), button, menu;
-if ( ! nav )
-return;
-button = nav.getElementsByTagName( 'h3' )[0];
-menu = nav.getElementsByTagName( 'ul' )[0];
-if ( ! button )
-return;
-// Hide button if menu is missing or empty.
-if ( ! menu || ! menu.childNodes.length ) {
-button.style.display = 'none';
-return;
-}
-button.onclick = function() {
-if ( -1 == menu.className.indexOf( 'nav-menu' ) )
-menu.className = 'nav-menu';
-if ( -1 != button.className.indexOf( 'toggled-on' ) ) {
-button.className = button.className.replace( ' toggled-on', '' );
-menu.className = menu.className.replace( ' toggled-on', '' );
-} else {
-button.className += ' toggled-on';
-menu.className += ' toggled-on';
-}
-};
-} )();
+// Slider
+jQuery(document).ready(function($) {
+$('.slider').royalSlider({
+	//Definitons
+	controlsInside: false,
+	controlNavigationSpacing: 0,
+	imageScaleMode: 'none',
+	imageAlignCenter:false,
+	loop: false,
+	loopRewind: true,
+	numImagesToPreload: 6,
+	usePreloader: false,
+	navigateByClick: false,
 
-//Busca
-//$(document).ready(function(){
-//	$("#global_search").bind('mouseover mouseout',function(){
-//	$(this).children().children().toggleClass("submit_hover");
-//} );
+	//Transition
+	transitionType: 'fade', // fade or move
+	transitionSpeed: 400,
+	//slidesOrientation: 'vertical', // move (horizontal or vertical)
+
+	//Arrow
+	allowCSS3: true,
+	arrowsNav: true,
+
+	//Ball
+	controlNavigation: 'tabs',
+
+	//Arrows keyboard
+	keyboardNavEnabled: true
+	});
+}); 
+
