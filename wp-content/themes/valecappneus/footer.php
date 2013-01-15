@@ -9,7 +9,7 @@
 </div>
 </div>
 <footer class="container_12">
-		<nav id="site-navigation" class="grid_9" role="navigation">
+		<nav id="footer" class="grid_9" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 		</nav>
 		<div class="grid_3">
