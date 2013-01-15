@@ -19,7 +19,7 @@ get_header(); ?>
 				<span class="number-slider">1/3</span>
 				<h2>Reparos de câmaras de ar de motos e bicicletas pelo sistema de vulcanização a frio</h2>
 				</div>
-				<img src="http://placehold.it/640x290">
+				<img src="http://placehold.it/640x260">
 			</div>
 			<div>
 				<div class="grid_4 omega alpha">
@@ -27,7 +27,7 @@ get_header(); ?>
 				<span class="number-slider">2/3</span>
 				<h2>Copa Troller</h2>
 				</div>
-				<img src="http://placehold.it/640x290">
+				<img src="http://placehold.it/640x260">
 			</div>
 			<div>
 				<div class="grid_4 omega alpha">
@@ -35,7 +35,7 @@ get_header(); ?>
 				<span class="number-slider">3/3</span>
 				<h2>Conheça melhor as banda Ecotread</h2>
 				</div>
-				<img src="http://placehold.it/640x290">
+				<img src="http://placehold.it/640x260">
 			</div>
 </section>
 <section class="grid_4">

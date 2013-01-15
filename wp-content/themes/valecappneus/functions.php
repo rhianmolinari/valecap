@@ -5,7 +5,6 @@
  * @since Valecap Pneus 1.0
  */
 
-
 //add suporte ao menu
 	register_nav_menu( 'primary', __( 'Menu Principal', 'valecappneus' ) );
 
@@ -28,3 +27,5 @@ function the_breadcrumb() {
 		}
 	}
 }
+
+?>

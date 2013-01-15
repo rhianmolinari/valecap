@@ -77,11 +77,10 @@ h4 {
 	font-size: 1em;
 	text-transform: uppercase;
 }
-.entry-content {background-color: #FFFFFF}
 blockquote {
 	background-color: #F5F5F5;
 	border-left: 3px solid #FFD400;
-	margin: 20px 0; /*30px 0;*/
+	margin: 20px 0 0; /*30px 0;*/
 	/*padding: 20px;*/
 }
 blockquote p {
@@ -98,7 +97,7 @@ p {
 	font-size: 1.077em;
 	line-height: 1.692em;
 	margin: 0 0 20px;
-	padding: 0 20px;
+	padding: 20px 25px 0;
 }
 /* Form */
 input {
@@ -270,8 +269,8 @@ header nav ul.sub-menu li ul.sub-menu {
 /************************ CONTEÚDO ************************/
 /* BREADCRUMB */
 ol.breadcrumb {
-	border-bottom: 1px solid #666666;
-	margin: 5px 0;
+	border-bottom: 1px solid #333333;
+	margin: 5px 0 15px;
 	min-height: 28px;
 	overflow: hidden;
 	padding: 0;
@@ -296,7 +295,7 @@ img.bg {
 	z-index: -1;
 }
 .content .container_12 {
-	padding: 5px 0;
+	padding: 5px 0 45px 0;
 }
 .content .container_12 section {
 	margin-bottom: 15px;
@@ -307,7 +306,7 @@ img.bg {
 /* Slider */
 .slider {
 	padding: 0 !important;
-	height: 290px;
+	height: 260px;
 	position: relative;
 }
 .slider img {
@@ -400,7 +399,7 @@ img.bg {
 }
 
 /* Temporário */
-.box {
+.box, .entry-content {
 	background-color: #FFFFFF;
 	border-bottom: 2px solid #FFD400;
 
@@ -409,6 +408,9 @@ img.bg {
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
 	border-radius: 3px;
+}
+.entry-content {
+	padding: 
 }
 .box ul li {
 	padding: 10px 15px;
@@ -490,7 +492,7 @@ footer nav div {
 footer nav ul li {
 	display: inline-block;
 	position: relative;
-	margin-right: 10px;
+	margin-right: 8px;
 	border-bottom: 1px dotted #666666;
 }
 footer nav ul li:hover {

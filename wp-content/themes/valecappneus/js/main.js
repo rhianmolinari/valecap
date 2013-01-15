@@ -14,8 +14,15 @@ $('.slider').royalSlider({
 
 	//Transition
 	transitionType: 'fade', // fade or move
-	transitionSpeed: 400,
+	transitionSpeed: 0,
 	//slidesOrientation: 'vertical', // move (horizontal or vertical)
+
+	//Autoplay
+	autoPlay: {
+		enabled: true,
+		pauseOnHover: true,
+		delay: 3000
+	},
 
 	//Arrow
 	allowCSS3: true,
