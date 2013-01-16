@@ -345,7 +345,7 @@ img.bg {
 	font-family: 'MuseoSans900', Arial;
 	font-size: 1.538em;
 	float: left;
-	padding: 10px 15px 15px 0 !important;
+	padding: 10px 15px 10px 0 !important;
 }
 .rsNav, .rsTabs {
 	position: absolute;
@@ -438,12 +438,6 @@ img.bg {
 	text-align: center;
 	margin: 0;
 	line-height: 2.692em;
-}
-.destaque a {
-	height: auto;
-	padding: 0px;
-	border: none;
-	display: block; 
 }
 .saibamais {
 	display: none;
