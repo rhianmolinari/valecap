@@ -34,5 +34,15 @@ $('.slider').royalSlider({
 	//Arrows keyboard
 	keyboardNavEnabled: true
 	});
-}); 
+});
+
+// Effects hover
+$(document).ready(function(){
+	$(".destaque").mouseover(function(){
+		$(".saibamais").slideToggle(200, "linear");
+	});
+	$(".destaque").mouseout(function(){
+		$(".saibamais").slideToggle(200, "linear");
+	});
+});
 

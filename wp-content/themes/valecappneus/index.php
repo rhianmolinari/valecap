@@ -63,11 +63,11 @@ get_header(); ?>
 
 <section class="grid_3">
 	<h1>Promoção</h1>
-	<div class="destaque">
+	<div class="destaque box-yellow">
 		<a href="">
 		<h2>DD-dv</h2>
-		<img src="">
-		<span>+ saiba mais</span>
+		<img src="http://placehold.it/220x220">
+		<span class="saibamais">+ saiba mais</span>
 		</a>
 	</div>
 </section>

@@ -411,9 +411,68 @@ img.bg {
 	background:#000000;
 	color:#FFFFFF;
 }
+/* Mais vendidos */
+.number {
+	font-family: 'MuseoSans900', Arial;
+	font-size: 3.692em;
+	margin: 0 10px 0 3px;
+	display: block;
+	float: left;
+	line-height: 1.231em;
+	width: 60px;
+}
+.group {
+	padding: 5px 0 0 !important;
+	margin-left: 70px;
+	width: 200px;
+}
+.group h2 {
+	margin: 0;
+}
+/* Promoção e Destaque */
+.destaque {
+	height: 310px;
+	position: relative;
+}
+.destaque h2 {
+	text-align: center;
+	margin: 0;
+	line-height: 2.692em;
+}
+.destaque a {
+	height: auto;
+	padding: 0px;
+	border: none;
+	display: block; 
+}
+.saibamais {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 35px;
+	line-height: 2.692em;
+	text-align: center;
+	color: #000000;
+	text-transform: uppercase;
+	font-family: 'MuseoSans500',Arial;
+	background: #FFFFFF;
+
+	-webkit-border-radius: 0 0 3px 3px;
+	-moz-border-radius: 0 0 3px 3px;
+	-ms-border-radius: 0 0 3px 3px;
+	-o-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+}
 /* Newsletter */
 form#newsletter input {
 	width: 280px;
+}
+/* Redes sociais */
+section.grid_5 .box ul li div {
+	margin: 0;
+	width: auto;
 }
 /* Parceiros */
 .parceiros {
@@ -421,8 +480,7 @@ form#newsletter input {
 	border: medium none !important;
 	margin: 5px 10px;
 }
-
-/* Temporário */
+/* >>>>> TEMPORÁRIO <<<<< */
 .box, .entry-content {
 	background-color: #FFFFFF;
 	border-bottom: 2px solid #FFD400;
@@ -443,7 +501,6 @@ form#newsletter input {
 	color: #000000;
 }
 .box-yellow {
-	padding: 5px 15px 10px;
 
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -460,42 +517,6 @@ form#newsletter input {
 	background: -ms-linear-gradient(top, #FFE600 0%,#FFD400 100%);
 	background: linear-gradient(to bottom, #FFE600 0%,#FFD400 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFE600', endColorstr='#FFD400',GradientType=0 );
-}
-.destaque h2 {
-	text-align: center;
-	margin: 0;
-}
-.destaque a {
-	height: 258px;
-	padding: 0px;
-	border: none;
-	display: block; 
-}
-.destaque a span {
-	display: block;
-	width: 100%;
-	height: 35px;
-	line-height: 35px;
-	text-align: center;
-	color: #000;
-	text-transform: uppercase;
-	font-family: 'MuseoSans500',Arial;
-	background: #fff;
-}
-.number {
-	font-family: 'MuseoSans900', Arial;
-	font-size: 3.692em;
-	margin: 0 10px 0 3px;
-	display: block;
-	float: left;
-	line-height: 1.231em;
-	width: 60px;
-}
-.group {
-	padding: 5px 0 0;
-}
-.group h2 {
-	margin: 0;
 }
 
 /************************* 404 ************************/
