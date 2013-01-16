@@ -6,15 +6,14 @@
  */
 
 get_header(); ?>
-			<article id="post-0" class="post error404 no-results not-found">
-				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'valecappneus' ); ?></h1>
-				</header>
+			<div class="grid_12 not-found">
+					<img class="grid_4 prefix_4 suffix_4 omega alpha" src="<?php bloginfo('template_directory'); ?>/image/ops.png">
+					<h1>Página não encontrada</h1>
+					<span class="grid_12 omega alpha">O endereço abaixo não existe na <strong><?php bloginfo('url'); ?></strong></span>
 
-				<div class="entry-content">
-					<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'valecappneus' ); ?></p>
-					<?php get_search_form(); ?>
-				</div>
-			</article>
+					<strong class="grid_12 omega alpha"><?php echo current_url(); ?></strong>
+					
+					<div class="grid_12 omega alpha"><?php get_search_form(); ?></div>
+			</div>
 
 <?php get_footer(); ?>

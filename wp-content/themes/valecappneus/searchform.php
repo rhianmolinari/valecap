@@ -6,9 +6,9 @@
  */
 ?>
 
-<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>" >
+<form role="search" method="get" action="<?php echo home_url( '/' ); ?>" >
 	<fieldset>
-	<label for="search">Search in</label>
+	<label for="search">Procurar por</label>
 	<input type="search" value="<?php the_search_query(); ?>" id="search" name="s" />
 	<button type="submit" id="searchsubmit" value="Search">Buscar</button>
 	</fieldset>
