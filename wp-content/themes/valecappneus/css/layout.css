@@ -1,3 +1,5 @@
+@import url("footer.css");
+
 /********************************************************
 ************************* GLOBAL ************************
 ********************************************************/
@@ -532,69 +534,4 @@ section.grid_5 .box ul li div {
 }
 .not-found div form button {
 	width: 75px;
-}
-
-/********************************************************
-************************* FOOTER ************************
-********************************************************/
-footer {
-	height: 200px;
-	padding: 15px 0;
-}
-/* Sitemap */
-footer nav div {
-	height: 28px;
-}
-footer nav ul li {
-	display: inline-block;
-	position: relative;
-	margin-right: 8px;
-	border-bottom: 1px dotted #666666;
-}
-footer nav ul li:hover {
-	border-bottom: 1px solid #FFAA00;
-}
-footer nav ul li a {
-	color: #000000;
-	text-decoration: none;
-	position: relative;
-	padding: 5px 5px 0 !important;
-	display: inline-block;
-	text-decoration: none;
-	font-family: 'MuseoSans500', Arial;
-	text-transform: uppercase;
-	white-space: normal;
-	width: auto;
-}
-/* Sub-menu */
-footer nav ul.sub-menu {
-	display: block;
-	position: absolute;
-	top: 100%;
-	z-index: 1;
-	width: auto;
-}
-footer nav ul.sub-menu li {
-	border-left: 3px solid transparent;
-	border-bottom: none;
-	margin: 0;
-}
-footer nav ul.sub-menu li:hover {
-	border-left: 3px solid #000000;
-}
-footer nav ul.sub-menu li a {
-    width: auto;
-    font-family: Arial;
-    text-transform: capitalize;
-}
-/* Subníveis do sub-menu */
-footer nav ul.sub-menu li ul.sub-menu {
-	top: 100%;
-	margin-left: 0;
-}
-footer nav ul.sub-menu li ul.sub-menu li {
-	margin-left: 5px;
-}
-footer .grid_3 ul li {
-	margin-bottom: 10px;
 }
