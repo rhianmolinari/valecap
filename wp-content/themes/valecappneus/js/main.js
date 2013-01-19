@@ -38,11 +38,9 @@ $('.slider').royalSlider({
 
 // Effects hover
 $(document).ready(function(){
-	$(".destaque").mouseover(function(){
-		$(".saibamais").slideToggle(200, "linear");
-	});
-	$(".destaque").mouseout(function(){
-		$(".saibamais").slideToggle(200, "linear");
+	$(".destaque").hover(function(){
+		$(".saibamais").slideUp(200, "linear");
+		$(".saibamais").slideDown(200, "linear");	
 	});
 });
 

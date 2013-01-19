@@ -8,6 +8,9 @@
 //add suporte ao menu
 	register_nav_menu( 'primary', __( 'Menu Principal', 'valecappneus' ) );
 
+//post-thumbnail
+	add_theme_support( 'post-thumbnails' );
+
 //current url
 function current_url() {
 	$pageURL = 'http';
