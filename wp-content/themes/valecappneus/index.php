@@ -13,30 +13,30 @@ get_header(); ?>
 </section>
 
 <section class="grid_12 box-yellow slider">
-			<div>
+			<a class="nolink" href="#">
 				<div class="grid_4 omega alpha">
 				<span class="categ grid_3 omega alpha">Agrícola</span>
 				<span class="number-slider">1/3</span>
 				<h2>Reparos de câmaras de ar de motos e bicicletas pelo sistema de vulcanização a frio</h2>
 				</div>
 				<img src="http://placehold.it/640x260">
-			</div>
-			<div>
+			</a>
+			<a class="nolink" href="#">
 				<div class="grid_4 omega alpha">
 				<span class="categ grid_3 omega alpha">Offroad</span>
 				<span class="number-slider">2/3</span>
 				<h2>Copa Troller</h2>
 				</div>
 				<img src="http://placehold.it/640x260">
-			</div>
-			<div>
+			</a>
+			<a class="nolink" href="#">
 				<div class="grid_4 omega alpha">
 				<span class="categ grid_3 omega alpha">Sustentabilidade</span>
 				<span class="number-slider">3/3</span>
 				<h2>Conheça melhor as banda Ecotread</h2>
 				</div>
 				<img src="http://placehold.it/640x260">
-			</div>
+			</a>
 </section>
 <section class="grid_4">
 	<h1>Mais vendidos</h1>

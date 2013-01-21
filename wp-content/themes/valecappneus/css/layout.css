@@ -325,6 +325,13 @@ img.bg {
 	height: 260px;
 	position: relative;
 }
+.slider .rsContainer li a:hover h2 {
+	text-decoration: underline;
+}
+.slider .rsContainer li a:active h2 {
+	color: #FFFFFF;
+	text-shadow: 2px 1px 0px #999999;
+}
 .slider img {
 	-webkit-border-radius: 0 3px 3px 0;
 	-moz-border-radius: 0 3px 3px 0;
@@ -333,11 +340,8 @@ img.bg {
 	border-radius: 0 3px 3px 0;
 }
 .slider span, .slider h2 {
-	padding: 15px;
+	margin: 15px;
 	display: block;
-}
-.slider span.categ {
-	padding: 15px 0 15px 15px;
 }
 .slider h2 {
 	clear: both;
@@ -347,7 +351,7 @@ img.bg {
 	font-family: 'MuseoSans900', Arial;
 	font-size: 1.538em;
 	float: left;
-	padding: 10px 15px 10px 0 !important;
+	margin: 15px 15px 15px 0 !important;
 }
 .rsNav, .rsTabs {
 	position: absolute;
@@ -360,6 +364,7 @@ img.bg {
 	background: url("../image/button-slider.png") repeat scroll -68px -7px transparent;
 	height: 24px;
 	width: 24px;
+	cursor: pointer;
 }
 .rsTabs li:hover {
 	background: url("../image/button-slider.png") repeat scroll -68px -51px transparent;
@@ -375,6 +380,7 @@ img.bg {
 	width: 40px;
 	bottom: 4%;
 	position: absolute;
+	cursor: pointer;
 
 	-webkit-border-radius: 100%;
 	-moz-border-radius: 100%;
