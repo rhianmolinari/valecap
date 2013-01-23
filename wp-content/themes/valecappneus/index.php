@@ -8,35 +8,27 @@
 get_header(); ?>
 <section class="grid_12">
 	<div class="grid_9 alpha">
- 		<a href="#"><span class="info">Nós somos a primeira reformadora de São Paulo a obter o registro no Inmetro</span></a></div>
+            <?php query_posts('category_name=info&orderby=id&order=DESC&posts_per_page=1'); ?>
+            <?php if (have_posts()) : while (have_posts()) : the_post();?>
+ 		<a href="<?php the_permalink(); ?>"><span class="info"><?php the_title(); ?></span></a>
+            <?php endwhile;endif;wp_reset_query(); ?>
+        </div>
 	<button class="grid_3 omega">Faça seu orçamento</button>
 </section>
 
 <section class="grid_12 box-yellow slider">
-			<a class="nolink" href="#">
+    <?php query_posts('category_name=slide&orderby=id&order=DESC&posts_per_page=3');$cont=1; ?>
+    <?php remove_filter ('the_content', 'wpautop'); ?>
+    <?php if (have_posts()) : while (have_posts()) : the_post();?>
+			<a class="nolink" href="<?php the_permalink(); ?>">
 				<div class="grid_4 omega alpha">
-				<span class="categ grid_3 omega alpha">Agrícola</span>
-				<span class="number-slider">1/3</span>
-				<h2>Reparos de câmaras de ar de motos e bicicletas pelo sistema de vulcanização a frio</h2>
+                                    <span class="categ grid_3 omega alpha"><?php the_title(); ?></span>
+				<span class="number-slider"><?php echo $cont++; ?>/3</span>
+                                <h2><?php the_content(); ?></h2>
 				</div>
-				<img src="http://placehold.it/640x260">
+				<?php the_post_thumbnail(get_the_ID(), "full"); ?>
 			</a>
-			<a class="nolink" href="#">
-				<div class="grid_4 omega alpha">
-				<span class="categ grid_3 omega alpha">Offroad</span>
-				<span class="number-slider">2/3</span>
-				<h2>Copa Troller</h2>
-				</div>
-				<img src="http://placehold.it/640x260">
-			</a>
-			<a class="nolink" href="#">
-				<div class="grid_4 omega alpha">
-				<span class="categ grid_3 omega alpha">Sustentabilidade</span>
-				<span class="number-slider">3/3</span>
-				<h2>Conheça melhor as banda Ecotread</h2>
-				</div>
-				<img src="http://placehold.it/640x260">
-			</a>
+    <?php endwhile;endif;wp_reset_query(); ?>
 </section>
 <section class="grid_4">
 	<h1>Mais vendidos</h1>
