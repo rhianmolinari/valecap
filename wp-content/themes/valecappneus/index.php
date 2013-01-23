@@ -66,7 +66,7 @@ get_header(); ?>
 
 <section class="grid_5">
 	<h1>Newsletter</h1>
-<form role="search" method="get" id="newsletter" action="<?php echo home_url( '/' ); ?>" >
+<form role="search" method="get" class="newsletter" action="<?php echo home_url( '/' ); ?>" >
 	<fieldset>
 	<label for="newsletter">Assinar newsletter</label>
 	<input type="email" value="<?php the_search_query(); ?>" id="newsletter" name="s" placeholder="Endereço de e-mail" />

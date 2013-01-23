@@ -103,11 +103,12 @@ p {
 	padding: 20px 25px 0;
 }
 /* Form */
-input {
+input, textarea {
 	padding: 8px;
 	font-size: 1.077em;
 	font-style: italic;
 	color: #000000;
+	background-color: #FFFFFF;
 	border: 1px solid #E5E5E5;
 
 	-webkit-border-radius: 3px;
@@ -119,7 +120,7 @@ input {
 	-webkit-box-shadow: inset 0px 0px 3px 0px #E5E5E5;
 	box-shadow: inset 0px 0px 3px 0px #E5E5E5;
 }
-input:focus {
+input:focus, textarea:focus {
 	border: 1px solid #FFD400;
 }
 button {
@@ -197,9 +198,8 @@ header form {
 	margin-top: 30px;
 	display: block;
 }
-form label {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important; /* Porque não display:none; */
+header form label, .newsletter label, .not-found form label {
+	display:none;
 }
 header form input {	
 	width: 203px;
@@ -325,13 +325,6 @@ img.bg {
 	height: 260px;
 	position: relative;
 }
-.slider .rsContainer li a:hover h2 {
-	text-decoration: underline;
-}
-.slider .rsContainer li a:active h2 {
-	color: #FFFFFF;
-	text-shadow: 2px 1px 0px #999999;
-}
 .slider img {
 	-webkit-border-radius: 0 3px 3px 0;
 	-moz-border-radius: 0 3px 3px 0;
@@ -339,12 +332,22 @@ img.bg {
 	-o-border-radius: 0 3px 3px 0;
 	border-radius: 0 3px 3px 0;
 }
+.slider ul li a div {
+	height: 205px;
+}
 .slider span, .slider h2 {
 	margin: 15px;
 	display: block;
 }
 .slider h2 {
 	clear: both;
+}
+.slider .rsContainer li a:hover h2 {
+	text-decoration: underline;
+}
+.slider .rsContainer li a:active h2 {
+	color: #FFFFFF;
+	text-shadow: 2px 1px 0px #999999;
 }
 .number-slider {
 	color: #000000;
@@ -428,6 +431,7 @@ img.bg {
 	float: left;
 	line-height: 1.231em;
 	width: 60px;
+	color: #000000;
 }
 .group {
 	padding: 5px 0 0 !important;
@@ -468,7 +472,7 @@ img.bg {
 	border-radius: 0 0 3px 3px;
 }
 /* Newsletter */
-form#newsletter input {
+form.newsletter input {
 	width: 280px;
 }
 /* Redes sociais */
@@ -498,9 +502,6 @@ section.grid_5 .box ul li div {
 }
 .box ul li + li {
 	border-top: 1px solid #CCCCCC;
-}
-.box ul li a {
-	color: #000000;
 }
 .box-yellow {
 
@@ -536,8 +537,47 @@ section.grid_5 .box ul li div {
 	margin-top: 30px;
 }
 .not-found div form input {
-	width: 220px;
+	width: 200px;
 }
 .not-found div form button {
 	width: 75px;
+}
+
+/*********************** Contato **********************/
+label {
+	color: #FFFFFF;
+	text-align: right;
+	font-size: 1.231em;
+	line-height: 2.154em;
+}
+.formcontact {
+	margin-top: 20px;
+}
+.formcontact input, .formcontact textarea, .formcontact button, .formcontact select {
+	margin-left: 10px;
+	width: 282px;
+}
+.formcontact textarea {
+	max-width: 282px;
+	min-width: 282px;
+	height: 160px;
+}
+.formcontact div {
+	margin-bottom: 20px;
+}
+.formcontact button {
+	margin-left: 160px;
+}
+aside {
+	margin-left: 20px !important;
+}
+address p {
+	margin: 8px 0;
+	padding: 0;
+}
+address a {
+	display: inline-block;
+}
+.mapa {
+	margin: 8px 0 5px;
 }
