@@ -24,7 +24,6 @@ function current_url() {
 	return $pageURL;
 }
 
-
 //breadcrumb
 function the_breadcrumb() {
 	if (!is_home()) {
