@@ -28,27 +28,29 @@ get_header(); ?>
 			<span class="author">Por <a href="#"><strong>Rhian Molinari</strong></a></span>
 			<ul>
 				<li>
-					<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="arial"></div>
-				</li>
-				<li>
-					<a href="https://twitter.com/share" class="twitter-share-button" data-via="rhianmolinari" data-lang="pt" data-related="rhianmolinari" data-hashtags="ValecapPneus">Tweetar</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				</li>
-				<li>
 					<!-- Place this tag where you want the +1 button to render. -->
 					<div class="g-plusone"></div>
 
 					<!-- Place this tag after the last +1 button tag. -->
 					<script type="text/javascript">
 						window.___gcfg = {lang: 'pt-BR'}; (function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })();
-					</script>
+					</script>	
+				</li>
+				<li>
+					<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="arial"></div>
+				</li>
+				<li>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-via="rhianmolinari" data-lang="pt" data-related="rhianmolinari" data-hashtags="ValecapPneus">Tweetar</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 				</li>
 			</ul>
 			</div>
 		</header>
 	<?php the_content(); ?>
 	</div>
+	<?php comment_form(); ?>
 </article>
 <?php endwhile; ?>
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

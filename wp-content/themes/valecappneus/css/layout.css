@@ -541,7 +541,7 @@ section.grid_5 .box ul li div {
 	width: 75px;
 }
 
-/*********************** Contato **********************/
+/*********************** Contact **********************/
 label {
 	color: #FFFFFF;
 	text-align: right;
@@ -565,9 +565,6 @@ label {
 }
 .formcontact button {
 	margin-left: 160px;
-}
-aside {
-	margin-left: 20px !important;
 }
 aside address p {
 	margin: 8px 0;
@@ -652,11 +649,17 @@ div span.comments {
 }
 .shared ul li {
 	float: right;
+	max-width: 110px;
+	width: 100px;
 }
 .shared ul li + li {
-	display: inline-block;
     margin: 0 8px;
 }
 .shared ul li span {
 	margin: 0;
 }
+/* Comments */
+
+/********************** Sidebar *********************/
+
+
