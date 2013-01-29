@@ -22,9 +22,9 @@ get_header(); ?>
 	<?php if (have_posts()) : while (have_posts()) : the_post();?>
 			<a href="<?php the_permalink(); ?>">
 				<div class="grid_4 omega alpha">
-					<span class="categ grid_3 omega alpha"><?php the_title(); ?></span>
+					<span class="categ grid_3 omega alpha"><?php wp_list_categories('child_of=$cat-id') ?></span>
 					<span class="number-slider"><?php echo $cont++; ?>/3</span>
-					<h2><?php the_content(); ?></h2>
+					<h2><?php the_title(); ?></h2>
 				</div>
 				<?php the_post_thumbnail(get_the_ID(), "full"); ?>
 			</a>
@@ -66,11 +66,13 @@ get_header(); ?>
 
 <section class="grid_5">
 	<h1>Newsletter</h1>
-<form role="search" method="get" class="newsletter" action="<?php echo home_url( '/' ); ?>" >
+<!-- MailChimp Signup Form -->
+<form action="http://valecap.us6.list-manage1.com/subscribe/post?u=f83a420ab5160b737d3ae3bd9&amp;id=8a42b484c6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 	<fieldset>
-	<label for="newsletter">Assinar newsletter</label>
-	<input type="email" value="<?php the_search_query(); ?>" id="newsletter" name="s" placeholder="Endereço de e-mail" />
-	<button type="submit" id="searchsubmit" value="Subscribe">Inscrever</button>
+	<label for="mce-EMAIL">Assinar newsletter</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Endereço de e-mail" required>
+	<button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">Inscrever</button>
+	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
 	</fieldset>
 </form>
 </section>

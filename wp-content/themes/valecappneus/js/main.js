@@ -1,3 +1,12 @@
+// Menu
+$(function(){
+	$("header nav ul li").hover(function(){
+	$('ul:first',this).css('display', 'block'); 
+	}, function(){
+	$('ul:first',this).css('display', 'none');
+	});
+});
+
 // Slider
 jQuery(document).ready(function($) {
 $('.slider').royalSlider({

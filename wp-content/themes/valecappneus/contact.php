@@ -45,7 +45,7 @@ get_header(); ?>
 	<textarea id="mensagem"></textarea>
 	</div>
 
-	<button type="submit" class="grid_4 omega">Enviar</button>
+	<button type="submit" class="grid_4 omega alpha push_2">Enviar</button>
 	</fieldset>
 </form>
 </article>
