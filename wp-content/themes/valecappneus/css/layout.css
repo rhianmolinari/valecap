@@ -783,6 +783,7 @@ aside .widget-container {
 }
 .widget-spot {
 	height: 245px;
+	padding-top: 5px;
 }
 .widget li {
 	border-left: 3px solid transparent;
