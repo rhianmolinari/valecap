@@ -42,7 +42,7 @@
 		</h1>
 		<div class="grid_4 push_5"><?php get_search_form(); ?></div>
 		<nav id="site-navigation" class="grid_12" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary') ); ?>
 		</nav>
 	</header>
 <div class="content">

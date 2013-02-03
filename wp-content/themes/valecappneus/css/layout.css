@@ -28,7 +28,7 @@ a:active {
 	text-decoration: none;
 	text-shadow: 2px 1px 0px #CCCCCC;
 }
-.slider .rsContainer li a:active h2, .slider .rsContainer li a:active span, .info:active, .box-yellow a:active h2, .destaque a:active h2 {
+.slider .rsContainer li a:active h2, .slider .rsContainer li a:active span, .info:active, .featured a:active h2, .type-product li a:active h3 {
 	color: #FFFFFF !important;
 	text-shadow: 2px 1px 0px #999999;
 	text-decoration: none;
@@ -44,7 +44,7 @@ li {
 	list-style: none outside none;
 }
 /* Text */
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
 	margin: 5px 0;
 }
 h1 {
@@ -59,11 +59,16 @@ h2 {
 	font-size: 1.692em;
 }
 h3 {
+	color: #000000;
+	font-family: 'MuseoSans500', Arial;
+	font-size: 1.462em;
+}
+h4 {
 	color: #666666;
 	font-family: 'MuseoSans100', Arial;
 	font-size: 1.385em;
 }
-h4 {
+h5 {
 	color: #000000;
 	font-size: 1.077em;
 }
@@ -318,9 +323,9 @@ img.bg {
 .content .container_12 {
 	padding: 5px 0 55px 0;
 }
-.content .container_12 section {
-	margin-bottom: 15px;
-	margin-top: 15px;
+.top_bottom {
+	margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 /************************ Index ***********************/
@@ -378,19 +383,19 @@ img.bg {
 }
 .rsTabs li {
 	display: inline-block;
-	background: url("../image/button-slider.png") repeat scroll -68px -7px transparent;
+	background: url("../image/button-slider.png") no-repeat scroll -68px -7px transparent;
 	height: 24px;
 	width: 24px;
 	cursor: pointer;
 }
 .rsTabs li:hover {
-	background: url("../image/button-slider.png") repeat scroll -68px -51px transparent;
+	background: url("../image/button-slider.png") no-repeat scroll -68px -51px transparent;
 }
 .rsTabs .rsNavSelected {
-	background: url("../image/button-slider.png") repeat scroll -36px -51px transparent;
+	background: url("../image/button-slider.png") no-repeat scroll -36px -51px transparent;
 }
 .rsTabs .rsNavSelected:hover {
-	background: url("../image/button-slider.png") repeat scroll -36px -7px transparent;
+	background: url("../image/button-slider.png") no-repeat scroll -36px -7px transparent;
 }
 .rsArrow {
 	height: 40px;
@@ -406,33 +411,33 @@ img.bg {
 	border-radius: 100%;
 }
 .rsArrowRight {
-	background: url("../image/button-slider.png") repeat scroll -90px -88px transparent;
+	background: url("../image/button-slider.png") no-repeat scroll -90px 2px transparent;
 	left: 21%;
 }
 .rsArrowRight:hover {
-	background: url("../image/button-slider.png") repeat scroll -90px -41px #333333;
+	background: url("../image/button-slider.png") no-repeat scroll -90px -41px #333333;
 }
 .rsArrowLeft {
-	background: url("../image/button-slider.png") repeat scroll 2px -43px transparent;
+	background: url("../image/button-slider.png") no-repeat scroll 2px -43px transparent;
 	left: 4%;
 }
 .rsArrowLeft:hover {
-	background: url("../image/button-slider.png") repeat scroll 2px 0px #333333;
+	background: url("../image/button-slider.png") no-repeat scroll 2px 0px #333333;
 }
 .rsArrowRight:active, .rsArrowLeft:active {
 	-webkit-box-shadow: inset 0 0 5px 0px #000000;
 	box-shadow: inset 0 0 5px 0px #000000;
 }
 /* Seletores slider */
-.slider span::selection, .slider h2::selection {
+.slider span::selection, .slider h2::selection, .productbox h3::selection, .pagination a::selection  {
 	background:#000000;
 	color:#FFFFFF;
 }
-.slider span::-moz-selection, .slider h2::-moz-selection {
+.slider span::-moz-selection, .slider h2::-moz-selection, .productbox h3::-moz-selection, .pagination a::-moz-selection {
 	background:#000000;
 	color:#FFFFFF;
 }
-.slider span::-webkit-selection, .slider h2::-webkit-selection {
+.slider span::-webkit-selection, .slider h2::-webkit-selection, .productbox h3::-webkit-selection, .pagination a::-webkit-selection {
 	background:#000000;
 	color:#FFFFFF;
 }
@@ -459,17 +464,18 @@ section.grid_4 div.box ul li a {
 	margin: 0;
 }
 /* Promoção e Destaque */
-.destaque a {
+.featured a, .type-product li a {
 	text-decoration: none;
 }
-.destaque {
+.featured {
 	height: 310px;
 	position: relative;
 }
-.destaque h2 {
+.featured h2, .type-product li h3 {
 	text-align: center;
 	margin: 0;
-	line-height: 2.692em;
+	line-height: 2.462em;
+	text-transform: capitalize;
 }
 .saibamais {
 	display: none;
@@ -491,6 +497,11 @@ section.grid_4 div.box ul li a {
 	-o-border-radius: 0 0 3px 3px;
 	border-radius: 0 0 3px 3px;
 }
+.featured:active .saibamais, .type-product li:active .saibamais {
+	color: #FFFFFF;
+	text-shadow: none;
+	background-color: #000000;
+}
 /* Newsletter */
 form#mc-embedded-subscribe-form input {
 	width: 280px;
@@ -509,7 +520,6 @@ section.grid_5 .box ul li div {
 /* >>>>> TEMPORÁRIO <<<<< */
 .box, .entry-content {
 	background-color: #FFFFFF;
-	position: relative;
 	border-bottom: 2px solid #FFD400;
 
 	-webkit-border-radius: 3px;
@@ -524,15 +534,14 @@ section.grid_5 .box ul li div {
 .box ul li + li {
 	border-top: 1px solid #CCCCCC;
 }
-.box-yellow {
+.box-yellow, .productbox:hover {
 
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
 	border-radius: 3px;
-}
-.box-yellow, .destaque {
+
 	background: #FFD400;
 	background: -moz-linear-gradient(top, #FFE600 0%, #FFD400 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFE600), color-stop(100%,#FFD400));
@@ -565,28 +574,29 @@ section.grid_5 .box ul li div {
 }
 
 /*********************** Contact **********************/
+/********************* Budget Form ********************/
 label {
 	color: #FFFFFF;
 	text-align: right;
 	font-size: 1.231em;
 	line-height: 2.154em;
 }
-.formcontact {
+.formcontact, .budgetform {
 	margin-top: 20px;
 }
-.formcontact input, .formcontact textarea, .formcontact button, .formcontact select {
+.formcontact input, .formcontact textarea, .formcontact button, .formcontact select, .budgetform input, .budgetform textarea, .budgetform button, .budgetform select {
 	margin-left: 10px;
 	width: 282px;
 }
-.formcontact button {
+.formcontact button, .budgetform button {
 	margin-left: 0;
 }
-.formcontact textarea {
+.formcontact textarea, .budgetform textarea {
 	max-width: 282px;
 	min-width: 282px;
 	height: 160px;
 }
-.formcontact div {
+.formcontact div, .budgetform div {
 	margin-bottom: 20px;
 }
 aside address p {
@@ -600,7 +610,7 @@ aside address a {
 	margin: 8px 0 5px;
 }
 
-/*********************** Single **********************/
+/****************** Single / Page ******************/
 .thumbnail {
 	-webkit-border-radius: 3px 3px 0 0;
 	-moz-border-radius: 3px 3px 0 0;
@@ -608,37 +618,38 @@ aside address a {
 	-o-border-radius: 3px 3px 0 0;
 	border-radius: 3px 3px 0 0;
 }
+article .entry-content {
+	position: relative;
+}
 .entry-content header {
 	margin-bottom: 20px;
 }
-.entry-content header time {
-	background-color: rgba(0, 0, 0, 0.7);
-	color: #FFFFFF;
+.entry-content p:first-child {
+	padding-top: 20px;
+}
+.entry-content time {
+	float: left;
+	color: #000000;
 	font-family: 'MuseoSans100',Arial;
-	font-size: 30px;
-	left: 5px;
-	top: 5px;
-	line-height: 36px;
+	font-size: 2.308em;
+	height: 45px;
+	line-height: 1em;
 	padding: 5px;
-	position: absolute;
 	text-align: center;
 	text-transform: uppercase;
-	width: 52px;
-	height: 52px;
-
-	-webkit-border-radius: 100%;
-	-moz-border-radius: 100%;
-	-ms-border-radius: 100%;
-	-o-border-radius: 100%;
-	border-radius: 100%;
+	width: 45px;
+	margin-top: 5px;
 }
-.entry-content header time span {
+.entry-content time span {
+	float: none !important;
 	font-family: 'MuseoSans500';
-	font-size: 15px;
-	line-height: 5px;
+	font-size: 0.615em;
+	line-height: 1em;
+	margin: 0 !important;
+	width: auto !important;
 	display: block;
 }
-.entry-content header div, .entry-content footer div {
+.entry-content header div, .entry-content footer div, .entry-content div div {
 	display: block;
 	width: 100%;
 	height: 25px;
@@ -663,7 +674,9 @@ aside address a {
 	width: auto !important;
 	padding: 0 0 5px;
 	background-color: #F5F5F5;
-	border: 1px solid #E5E5E5;
+
+	-webkit-box-shadow: 0 0 1px 0 #999999 inset;
+	box-shadow: 0 0 1px 0 #999999 inset;
 
 	-webkit-border-radius: 0 0 3px 3px;
 	-moz-border-radius: 0 0 3px 3px;
@@ -679,27 +692,38 @@ p.wp-caption-text {
 	margin: 0;
 	padding: 0 10px;
 }
-.entry-content header div span {
+.entry-content .infopost span {
 	display: block;
 	margin: 10px 10px 0 25px;
-	width: 460px;
+	width: 515px;
 	float: left;
 }
 div span.number-comments {
 	color: #FFFFFF;
 	font-size: 0.923em;
 	float: right;
-	background: #CCCCCC;
+	background: #666;
 	width: 60px !important;
+}
+div span.number-comments {
+	right: 10px;
+	top: 10px;
+	position: absolute;
+}
+footer div span.number-comments {
+	right: 0;
+	top: 0;
+	position: inherit;
 }
 .author-name {
 	width: 200px !important;
 	margin: 0 !important;
+	float: left;
 }
 .hshared, .fshared {
 	border-bottom: 1px solid #CCCCCC;
-	margin: 25px 0 0;
-	padding: 0 25px 20px;
+	margin: 25px 25px 0;
+	padding: 0 0 20px;
 	width: 570px !important;
 }
 .hshared ul li, .fshared ul li {
@@ -716,8 +740,8 @@ div span.number-comments {
 .fshared {
 	border-top: 1px solid #CCCCCC;
 	border-bottom: none medium;
-	padding: 20px 25px 0;
-	margin: 30px 0;
+	padding: 20px 0 0;
+	margin: 30px 25px;
 }
 .fshared ul li {
 	float: left;
@@ -730,7 +754,7 @@ div span.number-comments {
 .author {
 	background-color: #F5F5F5;
 }
-.author a img {
+.author img {
 	border-bottom: 2px solid #FFD400;
 	float: left;
 	margin: 25px;
@@ -742,8 +766,8 @@ div span.number-comments {
 	border-radius: 3px;
 }
 .author-bio {
-	padding: 25px 25px 25px 145px;
-	width: 450px !important;
+	padding: 25px 25px 25px 135px;
+	width: 460px !important;
 }
 .author, .author-bio {
 	height: auto !important;
@@ -777,6 +801,7 @@ div span.number-comments {
 	min-width: 442px;
 	height: 120px;
 }
+
 /********************** Sidebar *********************/
 aside .widget-container {
 	margin-bottom: 45px;
@@ -802,11 +827,8 @@ aside .widget-container {
 .widget li a {
 	color: #000000;
 	text-decoration: none;
-	padding: 5px !important;
-	text-decoration: none !important;
+	padding: 5px;
 	text-transform: capitalize;
-	white-space: normal;
-	width: 287px !important;
 	display: block;
 }
 .widget li a:active {
@@ -823,7 +845,150 @@ aside .widget-container {
 	border-radius: 0 3px 0 0;
 }
 
+/*************** Categoria dos produtos **************/
+.type-product li {
+	margin-bottom: 40px;
+	height: 310px;
+}
+.productbox {
+	position: relative;
+}
 
+/************* Listagem e sistema de abas ************/
+.abas li {
+	width: 210px;
+	margin-bottom: 8px;
+}
+.abas li a {
+	display: block;
+	text-decoration: none;
+	color: #000000;
+	padding: 5px;
+	text-transform: uppercase;
+	font-family: Arial;
+	width: 200px;
+	background: #CCC;
 
+	-webkit-border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+	-ms-border-radius: 3px 0 0 3px;
+	-o-border-radius: 3px 0 0 3px;
+	border-radius: 3px 0 0 3px;
+}
+.abas li.current {
+	background-image: url('../image/aba.png');
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-attachment: scroll;
+	background-color: transparent;
+	background-size: 10px 100%;
+	width: 220px;
+	font-weight: bold;
+}
+.abas li a:hover, .abas li.current a {
+	background: #FFD400;
+	background: -moz-linear-gradient(top, #FFE600 0%, #FFD400 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFE600), color-stop(100%,#FFD400));
+	background: -webkit-linear-gradient(top,  #FFE600 0%,#FFD400 100%);
+	background: -o-linear-gradient(top, #FFE600 0%,#FFD400 100%);
+	background: -ms-linear-gradient(top, #FFE600 0%,#FFD400 100%);
+	background: linear-gradient(to bottom, #FFE600 0%,#FFD400 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFE600', endColorstr='#FFD400',GradientType=0 );
+}
+.abas li a:active {
+	color: #FFFFFF !important;
+	text-shadow: 2px 1px 0px #999999;
 
+	-webkit-box-shadow: inset 0px 0px 3px 0px #666666;
+	box-shadow: inset 0px 0px 3px 0px #666666;
+}
+.abas li.current a:active {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+/* Pagination */
+.pagination {
+	height: 40px;
+	position: relative;
+	margin-top: 25px;
+}
+.pagination ul {
+	width: auto;
+	position: absolute;
+	right: 0;
+}
+.pagination li {
+	float: left;
+	height: 40px;
+	width: 40px;
+	cursor: pointer;
+	background-color: #FFFFFF;
+	text-align: center;
+	margin-right: 10px;
 
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-ms-border-radius: 100%;
+	-o-border-radius: 100%;
+	border-radius: 100%;
+}
+.pagination li a {
+	text-decoration: none;
+	line-height: 2em;
+	font-size: 1.538em;
+	color: #000000;
+	font-family: 'MuseoSans900', Arial;
+	display: block;
+}
+.pagination li:first-child {
+	background-image: url("../image/button-slider.png");
+	background-position: 2px -43px;
+}
+.pagination li:last-child {
+	background-image: url("../image/button-slider.png");
+	background-position: -90px 2px;
+	margin-right: 0;
+}
+.pagination li:first-child, .pagination li:last-child {
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	text-indent: -9999em;
+}
+.pagination li:hover {
+	background-color: #FFD400;
+}
+.pagination li:active {
+	-webkit-box-shadow: inset 0 0 5px 0px #000000;
+	box-shadow: inset 0 0 5px 0px #000000;
+}
+.pagination li:first-child:active {
+	background-position: 2px 0;
+}
+.pagination li:last-child:active {
+	background-position: -90px -41px;
+}
+.pagination li:active a {
+	color: #FFFFFF !important;
+	text-shadow: 2px 1px 0px #999999;
+}
+
+/***************** Blog ****************/
+.homeblog .hshared {
+	border: none medium !important;
+}
+.list-posts li {
+	padding: 10px;
+	position: relative;
+}
+.list-posts li + li {
+	border-top: 1px solid #CCCCCC;
+}
+.list-posts hgroup {
+	margin-left: 50px;
+}
+.list-posts hgroup h2, .list-posts hgroup h4 {
+	margin: 0 !important;
+}
+.list-posts time {
+	margin-top: 0;
+}

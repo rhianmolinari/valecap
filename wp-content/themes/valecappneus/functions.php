@@ -6,7 +6,7 @@
  */
 
 //add suporte ao menu
-	register_nav_menu( 'primary', __( 'Menu Principal', 'valecappneus' ) );
+	register_nav_menu( 'primary', __( 'Menu Principal' ) );
 
 //post-thumbnail
 	add_theme_support( 'post-thumbnails' );

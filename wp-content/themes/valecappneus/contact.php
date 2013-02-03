@@ -12,7 +12,7 @@ get_header(); ?>
 	<ol class="breadcrumb"><?php the_breadcrumb(); ?></ol>
 </nav>
 
-<article class="grid_6">
+<section class="grid_6">
 <h1><?php the_title(); ?></h1>
 
 <form class="formcontact grid_6 omega alpha" role="" method="" action="" >
@@ -48,7 +48,7 @@ get_header(); ?>
 	<button type="submit" class="grid_4 omega alpha push_2">Enviar</button>
 	</fieldset>
 </form>
-</article>
+</section>
 
 <aside class="grid_4 push_2 omega">
 <h1>Endereços</h1>

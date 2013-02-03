@@ -47,9 +47,25 @@ $('.slider').royalSlider({
 
 // Effects hover
 $(document).ready(function(){
-	$(".destaque").hover(function(){
-		$(".saibamais").slideUp(200, "linear");
-		$(".saibamais").slideDown(200, "linear");	
+	$(".featured").mouseover(function(){
+		$(".saibamais").css('display', 'block');
+	});
+	$(".featured").mouseout(function(){
+		$(".saibamais").css('display', 'none');
+	});
+
+	$(".type-product").mouseover(function(){
+		$(".saibamais").css('display', 'block');
+	});
+	$(".type-product").mouseout(function(){
+		$(".saibamais").css('display', 'none');
 	});
 });
 
+// Abas
+$(document).ready(function(){
+	$(".abas ul li a").click(function(){
+		$(".type-product").css("display", "none");
+		$("#" + $(this).attr("title")).css("display", "block");
+	});
+});

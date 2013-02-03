@@ -12,12 +12,12 @@ get_header(); ?>
 </nav>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-				<article class="grid_12">
+				<section class="grid_12">
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 					<div class="entry-content">
 						<?php the_content(); ?>
 					</div>
-				</article>
+				</section>
 <?php endwhile; ?>
 
 <?php get_footer(); ?>

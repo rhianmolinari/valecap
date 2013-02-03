@@ -6,7 +6,7 @@
  */
 
 get_header(); ?>
-<section class="grid_12">
+<section class="grid_12 top_bottom">
 	<div class="grid_9 alpha">
             <?php query_posts('category_name=info&orderby=id&order=DESC&posts_per_page=1'); ?>
             <?php if (have_posts()) : while (have_posts()) : the_post();?>
@@ -16,7 +16,7 @@ get_header(); ?>
 	<button class="grid_3 omega">Faça seu orçamento</button>
 </section>
 
-<section class="grid_12 box-yellow slider">
+<section class="grid_12 box-yellow slider top_bottom">
 	<?php query_posts('category_name=slide&orderby=id&order=DESC&posts_per_page=3');$cont=1; ?>
 	<?php remove_filter ('the_content', 'wpautop'); ?>
 	<?php if (have_posts()) : while (have_posts()) : the_post();?>
@@ -30,7 +30,7 @@ get_header(); ?>
 			</a>
     <?php endwhile;endif;wp_reset_query(); ?>
 </section>
-<section class="grid_4">
+<section class="grid_4 top_bottom">
 	<h1>Mais vendidos</h1>
 	<div class="box">
 		<ul>
@@ -53,18 +53,18 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="grid_3">
+<section class="grid_3 top_bottom">
 	<h1>Promoção</h1>
-	<div class="destaque box-yellow">
-		<a href="">
-		<h2>DD-dv</h2>
-		<img src="http://placehold.it/220x220">
-		<span class="saibamais">+ saiba mais</span>
+	<div class="box-yellow featured">
+		<a href="#">
+			<h2>DD-dv</h2>
+			<img src="http://placehold.it/220x220">
+			<span class="saibamais">+ saiba mais</span>
 		</a>
 	</div>
 </section>
 
-<section class="grid_5">
+<section class="grid_5 top_bottom">
 	<h1>Newsletter</h1>
 <!-- MailChimp Signup Form -->
 <form action="http://valecap.us6.list-manage1.com/subscribe/post?u=f83a420ab5160b737d3ae3bd9&amp;id=8a42b484c6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -77,7 +77,7 @@ get_header(); ?>
 </form>
 </section>
 
-<section class="grid_5">
+<section class="grid_5 top_bottom">
 	<h1>Redes sociais</h1>
 	<div class="box">
 		<ul>
@@ -105,7 +105,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="grid_12">
+<section class="grid_12 top_bottom">
 	<h1>Parceiros</h1>
 	<div class="box">
 		<ul>

@@ -1,5 +1,6 @@
 <?php
 /**
+ * Template Name: Blog
  * @package WordPress
  * @subpackage Valecap_Pneus
  * @since Valecap Pneus 1.0
@@ -10,12 +11,12 @@ get_header(); ?>
 <nav class="grid_12">
 	<ol class="breadcrumb"><?php the_breadcrumb(); ?></ol>
 </nav>
-
+		
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 <article class="grid_8">
 	<h1 class="entry-title">Blog</h1>
-	<section class="entry-content">
-		<header>
+	<section class="entry-content homeblog">
+		<div>
 			<img class="thumbnail" src="http://placehold.it/620x280">
 			<span class="number-comments">110</span>
 			<div class="infopost">
@@ -48,68 +49,71 @@ get_header(); ?>
 				</li>
 			</ul>
 			</div>
-		</header>
-	<?php the_content(); ?>
-	<footer>
-		<div class="fshared">
-			<span class="number-comments">110</span>
-			<ul>
-				<li>
-					<!-- Place this tag where you want the +1 button to render. -->
-					<div class="g-plusone"></div>
-
-					<!-- Place this tag after the last +1 button tag. -->
-					<script type="text/javascript">
-						window.___gcfg = {lang: 'pt-BR'}; (function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })();
-					</script>	
-				</li>
-				<li>
-					<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="arial"></div>
-				</li>
-				<li>
-					<a href="https://twitter.com/share" class="twitter-share-button" data-via="rhianmolinari" data-lang="pt" data-related="rhianmolinari" data-hashtags="ValecapPneus">Tweetar</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				</li>
-			</ul>
-			</div>
-		<div class="author">
-		<?php echo get_avatar (get_the_author_id() , 80 ); ?>
-			<div class="author-bio">
-			<h2><?php the_author_firstname(); ?> <?php the_author_lastname(); ?></h2>
-			<p><?php the_author_description(); ?></p>
-			<button>Mais posts do autor</button>
-			</div>
 		</div>
-	</footer>
 	</section>
 
-<!-- COMMENTS FORM !-->
-<section class="comment">
-	<h1>Deixar um comentário</h1>
-	<form class="commentform">
-		<fieldset>
-			<div>
-				<label for="nome" class="grid_2 alpha">Nome</label>
-				<input type="text" value="" id="nome" />
-			</div>
-			
-			<div>
-			<label for="email" class="grid_2 alpha">E-mail</label>
-			<input type="email" value="" id="email" />
-			</div>
 
-			<div>
-			<label for="mensagem" class="grid_2 alpha">Comentário</label>
-			<textarea id="mensagem"></textarea>
-			</div>
-
-			<button type="submit" class="grid_6 omega alpha push_2">Publicar</button>
-		</fieldset>
-	</form>
+<section class="grid_4 alpha entry-content top_bottom">
+	<img class="thumbnail" src="http://www.placehold.it/300x150">
+	<span class="number-comments">110</span>
+	<hgroup>
+		<h2>Copa Rally em SP</h2>
+		<h4>Aqui vai carregar para ele digital</h4>
+	</hgroup>
+</section>
+<section class="grid_4 omega entry-content top_bottom">
+	<img class="thumbnail" src="http://www.placehold.it/300x150">
+	<span class="number-comments">110</span>
+	<hgroup>
+		<h2>Agora a Vipal esta presente na Europa</h2>
+		<h4>Aqui vai carregar o resumo do post, um texto para ele digital</h4>
+	</hgroup>
 </section>
 
+<section class="grid_8 alpha entry-content top_bottom">
+<ul class="list-posts">
+	<li>
+		<time datetime="<?php the_time('Y-m-d g:i A') ?>"><?php the_time('d') ?> <span><?php the_time('M') ?></span></time>
+		<hgroup>
+			<h2>Copa Rally em SP</h2>
+			<h4>Aqui vai carregar para ele digital</h4>
+		</hgroup>
+		<span class="number-comments">110</span>
+	</li>
+	<li>
+		<time datetime="<?php the_time('Y-m-d g:i A') ?>"><?php the_time('d') ?> <span><?php the_time('M') ?></span></time>
+		<hgroup>
+			<h2>Copa Rally em SP</h2>
+			<h4>Aqui vai carregar para ele digital</h4>
+		</hgroup>
+		<span class="number-comments">110</span>
+	</li>
+	<li>
+		<time datetime="<?php the_time('Y-m-d g:i A') ?>"><?php the_time('d') ?> <span><?php the_time('M') ?></span></time>
+		<hgroup>
+			<h2>Copa Rally em SP</h2>
+			<h4>Aqui vai carregar para ele digital</h4>
+		</hgroup>
+		<span class="number-comments">110</span>
+	</li>
+</ul>
+</section>
+
+		<nav class="grid_8 pagination omega alpha">
+			<ul>
+				<li><a href="#">«</a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">…</a></li>
+				<li><a href="#">»</a></li>
+			</ul>
+		</nav>
 </article>
 <?php endwhile; ?>
+
+
+
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
