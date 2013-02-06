@@ -58,7 +58,7 @@ get_header(); ?>
 	<div class="box-yellow featured">
 		<a href="#">
 			<h2>DD-dv</h2>
-			<img src="http://placehold.it/220x220">
+			<img src="http://placehold.it/190x190 ">
 			<span class="saibamais">+ saiba mais</span>
 		</a>
 	</div>
@@ -80,42 +80,40 @@ get_header(); ?>
 <section class="grid_5 top_bottom">
 	<h1>Redes sociais</h1>
 	<div class="box">
-		<ul>
-			<li>
-				<div class="group">
+		<ul class="spread">
+			<li class="facebook">
+					<!-- Script Facebook !-->
+					<div id="fb-root"></div>
+					<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+					
 					<div class="fb-like-box" data-href="http://www.facebook.com/valecappneus" data-width="350" data-show-faces="false" data-stream="false" data-header="true"></div>
-				</div>
 			</li>
-			<li>
-				<div class="group">
+			<li class="twitter">
 					<a href="https://twitter.com/rhianmolinari" class="twitter-follow-button" data-show-count="true" data-lang="pt" data-dnt="true">Seguir @rhianmolinari</a>
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				</div>
 			</li>
-			<li>
-				<div class="group">
+			<li class="google">
 					<!-- Place this tag where you want the +1 button to render. -->
 					<div class="g-plusone" data-annotation="inline" data-width="350"></div>
 
 					<!-- Place this tag after the last +1 button tag. -->
 					<script type="text/javascript">window.___gcfg = {lang: 'pt-BR'};(function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })();</script>
-				</div>
 			</li>
 		</ul>
 	</div>
 </section>
 
 <section class="grid_12 top_bottom">
-	<h1>Parceiros</h1>
+	<h1>Clientes</h1>
 	<div class="box">
-		<ul>
-			<li class="parceiros">
+		<ul class="parceiros">
+			<li>
 				<a href="#"><img src="<?php bloginfo('template_directory'); ?>/image/logo.png"></a>
 			</li>
-			<li class="parceiros">
+			<li>
 				<a href="#"><img src="<?php bloginfo('template_directory'); ?>/image/logo.png"></a>
 			</li>
-			<li class="parceiros">
+			<li>
 				<a href="#"><img src="<?php bloginfo('template_directory'); ?>/image/logo.png"></a>
 			</li>
 		</ul>

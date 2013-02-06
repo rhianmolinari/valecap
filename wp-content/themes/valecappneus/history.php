@@ -17,7 +17,7 @@ get_header(); ?>
 	<h1><?php the_title(); ?></h1>
 		<nav class="grid_3 alpha abas">
 			<ul>
-				<li class="current"><a href="#">1998</a></li>
+				<li class="selected"><a href="#">1998</a></li>
 				<li><a href="#">1999</a></li>
 				<li><a href="#">2001</a></li>
 				<li><a href="#">2006</a></li>
@@ -26,9 +26,13 @@ get_header(); ?>
 				<li><a href="#">Hoje</a></li>
 			</ul>
 		</nav>
-		<div class="entry-content grid_9 omega">
-			<?php the_content(); ?>
-		</div>
+		<ul class="grid_9 omega entry-content">
+			<li><?php the_content(); ?></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
 </article>
 <?php endwhile; ?>
 

@@ -10,7 +10,7 @@
 <aside class="grid_4">
 	<!-- Widget 1 -->
 	<div class="widget-container">
-		<h1>Mais recentes</h1>
+		<h5>Mais recentes</h5>
 		<ul class="box widget">
 			<?php 
 			$args = array( 'numberposts' => '5' );
@@ -20,7 +20,7 @@
 		</ul>
 	</div>
 	<div class="widget-container">
-		<h1>Categorias</h1>
+		<h5>Categorias</h5>
 		<ul class="box widget">
 			<li><a href="#">Pneus</a></li>
 			<li><a href="#">Borrachas</a></li>
@@ -32,20 +32,24 @@
 
 	<!-- Widget Fixo !-->
 	<div class="box widget-container widget-spot">
+		<!-- Script Facebook !-->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+
 		<div class="fb-like-box" data-href="http://www.facebook.com/valecappneus" data-width="300" data-show-faces="true" data-stream="false" data-border-color="#FFFFFF" data-header="false"></div>
 	</div>
 
 
 	<!-- Widget 2 -->
 	<div class="widget-container">
-		<h1>Histórico</h1>
+		<h5>Histórico</h5>
 		<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
 			<option value=""><?php echo esc_attr( __( 'Select Month' ) ); ?></option> 
 			<?php wp_get_archives( array( 'type' => 'monthly', 'format' => 'option', 'show_post_count' => 1 ) ); ?>
 		</select>
 	</div>
 	<div class="widget-container">
-		<h1>Meta</h1>
+		<h5>Meta</h5>
 		<ul class="box widget">
 			<?php wp_register(); ?>
 			<li><?php wp_loginout(); ?></li>

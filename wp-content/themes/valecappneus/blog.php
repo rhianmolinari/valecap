@@ -18,7 +18,7 @@ get_header(); ?>
 	<section class="entry-content homeblog">
 		<div>
 			<img class="thumbnail" src="http://placehold.it/620x280">
-			<span class="number-comments">110</span>
+			<span class="number-comments"><a href="#">110</a></span>
 			<div class="infopost">
 				<span><a class="categ" href="#">Rally SP</a> / <a class="categ" href="#">Redes sociais</a> / <a class="categ" href="#">Offroad</a>
 				</span>
@@ -55,7 +55,7 @@ get_header(); ?>
 
 <section class="grid_4 alpha entry-content top_bottom">
 	<img class="thumbnail" src="http://www.placehold.it/300x150">
-	<span class="number-comments">110</span>
+	<span class="number-comments"><a href="#">110</a></span>
 	<hgroup>
 		<h2>Copa Rally em SP</h2>
 		<h4>Aqui vai carregar para ele digital</h4>
@@ -63,14 +63,14 @@ get_header(); ?>
 </section>
 <section class="grid_4 omega entry-content top_bottom">
 	<img class="thumbnail" src="http://www.placehold.it/300x150">
-	<span class="number-comments">110</span>
+	<span class="number-comments"><a href="#">110</a></span>
 	<hgroup>
 		<h2>Agora a Vipal esta presente na Europa</h2>
 		<h4>Aqui vai carregar o resumo do post, um texto para ele digital</h4>
 	</hgroup>
 </section>
 
-<section class="grid_8 alpha entry-content top_bottom">
+<section class="grid_8 alpha box top_bottom">
 <ul class="list-posts">
 	<li>
 		<time datetime="<?php the_time('Y-m-d g:i A') ?>"><?php the_time('d') ?> <span><?php the_time('M') ?></span></time>
@@ -78,7 +78,7 @@ get_header(); ?>
 			<h2>Copa Rally em SP</h2>
 			<h4>Aqui vai carregar para ele digital</h4>
 		</hgroup>
-		<span class="number-comments">110</span>
+		<span class="number-comments"><a href="#">110</a></span>
 	</li>
 	<li>
 		<time datetime="<?php the_time('Y-m-d g:i A') ?>"><?php the_time('d') ?> <span><?php the_time('M') ?></span></time>
@@ -86,7 +86,7 @@ get_header(); ?>
 			<h2>Copa Rally em SP</h2>
 			<h4>Aqui vai carregar para ele digital</h4>
 		</hgroup>
-		<span class="number-comments">110</span>
+		<span class="number-comments"><a href="#">110</a></span>
 	</li>
 	<li>
 		<time datetime="<?php the_time('Y-m-d g:i A') ?>"><?php the_time('d') ?> <span><?php the_time('M') ?></span></time>
@@ -94,18 +94,20 @@ get_header(); ?>
 			<h2>Copa Rally em SP</h2>
 			<h4>Aqui vai carregar para ele digital</h4>
 		</hgroup>
-		<span class="number-comments">110</span>
+		<span class="number-comments"><a href="#">110</a></span>
 	</li>
 </ul>
 </section>
 
 		<nav class="grid_8 pagination omega alpha">
+			<span>Página 1 / 14</span>
 			<ul>
-				<li><a href="#">«</a></li>
-				<li><a href="#">1</a></li>
+				<li style="display:none"><a href="#">«</a></li>
+				<li class="current"><a href="javascript:void()">1</a></li>
 				<li><a href="#">2</a></li>
 				<li><a href="#">3</a></li>
-				<li><a href="#">…</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
 				<li><a href="#">»</a></li>
 			</ul>
 		</nav>

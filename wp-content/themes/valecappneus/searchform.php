@@ -10,6 +10,6 @@
 	<fieldset>
 	<label for="search">Procurar por</label>
 	<input type="search" value="<?php the_search_query(); ?>" id="search" name="s" />
-	<button type="submit" id="searchsubmit" value="Search">Buscar</button>
+	<button type="submit" id="searchsubmit" value="Search"><span>Buscar</span></button>
 	</fieldset>
 </form>

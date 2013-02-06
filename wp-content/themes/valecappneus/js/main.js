@@ -1,6 +1,6 @@
 // Menu
 $(function(){
-	$("header nav ul li").hover(function(){
+	$('header nav ul li').hover(function(){
 	$('ul:first',this).css('display', 'block'); 
 	}, function(){
 	$('ul:first',this).css('display', 'none');
@@ -47,25 +47,45 @@ $('.slider').royalSlider({
 
 // Effects hover
 $(document).ready(function(){
-	$(".featured").mouseover(function(){
-		$(".saibamais").css('display', 'block');
+	$('.featured').mouseover(function(){
+		$('.saibamais').css('display', 'block');
 	});
-	$(".featured").mouseout(function(){
-		$(".saibamais").css('display', 'none');
+	$('.featured').mouseout(function(){
+		$('.saibamais').css('display', 'none');
 	});
 
-	$(".type-product").mouseover(function(){
-		$(".saibamais").css('display', 'block');
+	$('.type-product').mouseover(function(){
+		$('.saibamais').css('display', 'block');
 	});
-	$(".type-product").mouseout(function(){
-		$(".saibamais").css('display', 'none');
+	$('.type-product').mouseout(function(){
+		$('.saibamais').css('display', 'none');
 	});
 });
 
 // Abas
 $(document).ready(function(){
-	$(".abas ul li a").click(function(){
-		$(".type-product").css("display", "none");
-		$("#" + $(this).attr("title")).css("display", "block");
+	$('.abas ul li a').click(function(){
+		$('.type-product').css('display', 'none');
+		$('#' + $(this).attr('title')).css('display', 'block');
+	});
+});
+
+// Dropkick
+$(document).ready(function(){
+	$('select').dropkick({startSpeed:0});
+});
+
+// Tiptip
+$(document).ready(function() {
+	$('img[title]').each(function() {
+	var goto = $(this).attr('href');
+	var text = goto;
+	$(this).attr('title', text);
+	$(this).tipTip({ 
+		defaultPosition: 'top',
+		delay: 150,
+		fadeIn: 100,
+		fadeOut: 100
+	});
 	});
 });

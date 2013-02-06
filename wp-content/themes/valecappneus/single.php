@@ -17,7 +17,7 @@ get_header(); ?>
 	<section class="entry-content">
 		<header>
 			<img class="thumbnail" src="http://placehold.it/620x280">
-			<span class="number-comments">110</span>
+			<span class="number-comments"><a href="#">110</a></span>
 			<div class="infopost">
 				<span><a class="categ" href="#">Rally SP</a> / <a class="categ" href="#">Redes sociais</a> / <a class="categ" href="#">Offroad</a>
 				</span>
@@ -52,7 +52,7 @@ get_header(); ?>
 	<?php the_content(); ?>
 	<footer>
 		<div class="fshared">
-			<span class="number-comments">110</span>
+			<span class="number-comments"><a href="#">110</a></span>
 			<ul>
 				<li>
 					<!-- Place this tag where you want the +1 button to render. -->

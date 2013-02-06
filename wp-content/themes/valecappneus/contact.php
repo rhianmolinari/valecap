@@ -17,45 +17,46 @@ get_header(); ?>
 
 <form class="formcontact grid_6 omega alpha" role="" method="" action="" >
 	<fieldset>
-	<div>
+	<div class="grid_6 omega alpha">
 		<label for="nome" class="grid_2 alpha">Nome</label>
-		<input type="text" value="" id="nome" />
+		<input type="text" value="" id="nome" tabindex="1" />
 	</div>
 	
-	<div>
+	<div class="grid_6 omega alpha">
 	<label for="email" class="grid_2 alpha">E-mail</label>
-	<input type="email" value="" id="email" />
+	<input type="email" value="" id="email" tabindex="2" />
 	</div>
 
-	<div>
+	<div class="grid_6 omega alpha">
 	<label for="tel" class="grid_2 alpha">Telefone</label>
-	<input type="tel" value="" id="tel" />
+	<input type="tel" value="" id="tel" tabindex="3" />
 	</div>
 
-	<div>
-	<label for="loja" class="grid_2 alpha">Refêrente a</label>
-	<select id="loja">
-		<option>Valecap Recauchutagem</option>
-		<option>Valecap Truck Service</option>
-	</select>
+	<div class="grid_6 omega alpha">
+		<label for="loja" class="grid_2 alpha">Refêrente a</label>
+		<select name="loja" tabindex="4">
+			<option value="">Selecione a loja</option>
+			<option value="">Valecap Recauchutagem</option>
+			<option value="">Valecap Truck Service</option>
+		</select>
 	</div>
-
-	<div>
+	
+	<div class="grid_6 omega alpha">
 	<label for="mensagem" class="grid_2 alpha">Mensagem</label>
-	<textarea id="mensagem"></textarea>
+	<textarea id="mensagem" tabindex="5"></textarea>
 	</div>
 
-	<button type="submit" class="grid_4 omega alpha push_2">Enviar</button>
+	<button type="submit" class="grid_4 omega alpha push_2" tabindex="6">Enviar</button>
 	</fieldset>
 </form>
 </section>
 
 <aside class="grid_4 push_2 omega">
-<h1>Endereços</h1>
+<h5>Endereços</h5>
 <address class="box">
 	<ul>
 		<li>
-			<h4>Valecap Recauchutagem</h4>
+			<h3>Valecap Recauchutagem</h3>
 			<p>Rua Rio Grande do Norte Nº 515<br>
 			Cidade Industrial, Lorena – SP<br>
 			CEP: 12609-240<br>
@@ -65,7 +66,7 @@ get_header(); ?>
 			<a class="mapa" href="#">Exibir mapa</a>
 		</li>
 		<li>
-			<h4>Valecap Truck Service</h4>
+			<h3>Valecap Truck Service</h3>
 			<p>Rua Rio Grande do Norte Nº 515<br>
 			Cidade Industrial, Lorena – SP<br>
 			CEP: 12609-240<br>
