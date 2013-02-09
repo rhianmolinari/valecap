@@ -31,11 +31,11 @@ function the_breadcrumb() {
 		echo get_option('home');
 		echo '">';
 		bloginfo('name');
-		echo "</a> Â» ";
+		echo "</a> &raquo; ";
 		if (is_category() || is_single()) {
 			the_category('title_li=');
 			if (is_single()) {
-				echo " Â» ";
+				echo " &raquo; ";
 				the_title();
 			}
 		} elseif (is_page()) {
