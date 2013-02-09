@@ -15,35 +15,35 @@ get_header(); ?>
 <section class="grid_6">
 <h1><?php the_title(); ?></h1>
 
-<form class="formcontact grid_6 omega alpha" role="" method="" action="" >
+<form class="formcontact grid_6 omega alpha" id="form-contato" role="" method="post">
 	<fieldset>
 	<div class="grid_6 omega alpha">
 		<label for="nome" class="grid_2 alpha">Nome</label>
-		<input type="text" value="" id="nome" tabindex="1" />
+                <input type="text" value="" id="nome" name="nome" tabindex="1" />
 	</div>
 	
 	<div class="grid_6 omega alpha">
 	<label for="email" class="grid_2 alpha">E-mail</label>
-	<input type="email" value="" id="email" tabindex="2" />
+        <input type="email" value="" id="email" name="email" tabindex="2" />
 	</div>
 
 	<div class="grid_6 omega alpha">
 	<label for="tel" class="grid_2 alpha">Telefone</label>
-	<input type="tel" value="" id="tel" tabindex="3" />
+        <input type="tel" value="" id="tel" name="tel" tabindex="3" />
 	</div>
 
 	<div class="grid_6 omega alpha">
 		<label for="loja" class="grid_2 alpha">Refêrente a</label>
 		<select name="loja" tabindex="4">
 			<option value="">Selecione a loja</option>
-			<option value="">Valecap Recauchutagem</option>
-			<option value="">Valecap Truck Service</option>
+			<option value="valecap@valecap.com.br">Valecap Recauchutagem</option>
+			<option value="valecap@valecap.com.br">Valecap Truck Service</option>
 		</select>
 	</div>
 	
 	<div class="grid_6 omega alpha">
 	<label for="mensagem" class="grid_2 alpha">Mensagem</label>
-	<textarea id="mensagem" tabindex="5"></textarea>
+        <textarea id="mensagem" name="mensagem" tabindex="5"></textarea>
 	</div>
 
 	<button type="submit" class="grid_4 omega alpha push_2" tabindex="6">Enviar</button>
