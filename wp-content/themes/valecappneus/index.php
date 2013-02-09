@@ -17,12 +17,11 @@ get_header(); ?>
 </section>
 
 <section class="grid_12 box-yellow slider top_bottom">
-	<?php query_posts('category_name=slide&orderby=id&order=DESC&posts_per_page=3');$cont=1; ?>
-	<?php remove_filter ('the_content', 'wpautop'); ?>
+	<?php query_posts('category_name=blog&orderby=id&order=DESC&posts_per_page=3');$cont=1; ?>
 	<?php if (have_posts()) : while (have_posts()) : the_post();?>
 			<a href="<?php the_permalink(); ?>">
 				<div class="grid_4 omega alpha">
-					<span class="categ grid_3 omega alpha"><?php wp_list_categories('child_of=$cat-id') ?></span>
+					<span class="categ grid_3 omega alpha"><?php $cats = get_categories('child_of='.get_cat_ID('blog'));foreach($cats as $cat){if(in_category($cat->slug, get_the_ID())){echo $cat->name;break;}} ?></span>
 					<span class="number-slider"><?php echo $cont++; ?>/3</span>
 					<h2><?php the_title(); ?></h2>
 				</div>
