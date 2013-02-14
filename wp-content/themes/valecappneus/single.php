@@ -53,7 +53,7 @@ get_header(); ?>
 			</ul>
 			</div>
 		</header>
-	<?php the_content(); ?>
+	<div class="clearfix"><?php the_content(); ?></div>
 	<footer>
 		<div class="fshared">
 			<span class="number-comments"><a href="#">110</a></span>

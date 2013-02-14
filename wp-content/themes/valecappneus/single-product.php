@@ -19,7 +19,7 @@ get_header(); ?>
 		<?php the_content(); ?>
 		<div class="recommended">
 			<h6>Pneus recomendados</h6>
-			<span>Recomendados</span>
+			<span title="Medidas recomendas">Medidas recomendas</span>
 			<ul>
 				<li>155</li>
 				<li>160</li>

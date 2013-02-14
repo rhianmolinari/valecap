@@ -77,7 +77,7 @@ $(document).ready(function(){
 
 // Tiptip
 $(document).ready(function() {
-	$('img[title],a[title]').each(function() {
+	$('img[title], a.logo[title], .recommended span').each(function() {
 	var goto = $(this).attr('title');
 	var text = goto;
 	$(this).attr('title', text);
@@ -93,17 +93,17 @@ $(document).ready(function() {
 // Formulario de contato
 $(document).ready(function(){
 	$("#form-contato").submit(function() {
-            $.ajax({
-                type: "POST",
-                url: "/wp-admin/admin-ajax.php",
-                data: 'action=form_contato&'+$("#form-contato").serialize(),
-                success: function(msg) {
-                    alert("Mensagem enviada com sucesso!");
-                }
-            });
-            
-            $(this)[0].reset();
-            
-            return false;
-        });
+		$.ajax({
+			type: "POST",
+			url: "/wp-admin/admin-ajax.php",
+			data: 'action=form_contato&'+$("#form-contato").serialize(),
+			success: function(msg) {
+			alert("Mensagem enviada com sucesso!");
+			}
+		});
+
+		$(this)[0].reset();
+		
+		return false;
+		});
 });
