@@ -36,7 +36,7 @@
 <body <?php body_class(); ?>>
 	<header class="container_12">
 		<h1 class="grid_3">
-			<a class="logo" href="<?php bloginfo(url); ?>" title="<?php bloginfo(name); ?>"><?php bloginfo(name); ?></a>
+                    <a class="logo" title="P&aacute;gina inicial" href="<?php bloginfo(url); ?>" title="<?php bloginfo(name); ?>"><?php bloginfo(name); ?></a>
 		</h1>
 		<div class="grid_4 push_5"><?php get_search_form(); ?></div>
 		<nav id="site-navigation" class="grid_12" role="navigation">
