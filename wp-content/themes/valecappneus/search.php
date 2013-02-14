@@ -19,7 +19,7 @@ get_header(); ?>
 		
 		<h1>Nenhum resultado encontrado</h1>
 		
-		<span class="grid_12 omega alpha">Sua busca por <strong>XXXX</strong> não retornou resultados.</span>
+		<span class="grid_12 omega alpha">Sua busca por <strong><?php echo get_search_query() ?></strong> não retornou resultados.</span>
 		
 		<span class="grid_12 omega alpha">Tente novamente com outro termo.</span>
 		

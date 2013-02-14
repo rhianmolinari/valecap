@@ -16,17 +16,21 @@ get_header(); ?>
 	<h1 class="entry-title">Blog</h1>
 	<section class="entry-content">
 		<header>
-			<img class="thumbnail" src="http://placehold.it/620x280">
+			<a href="#"><img class="thumbnail" src="http://placehold.it/620x280"></a>
 			<span class="number-comments"><a href="#">110</a></span>
-			<div class="infopost">
-				<span><a class="categ" href="#">Rally SP</a> / <a class="categ" href="#">Redes sociais</a> / <a class="categ" href="#">Offroad</a>
-				</span>
-			<time datetime="<?php the_time('Y-m-d g:i A') ?>"><?php the_time('d') ?> <span><?php the_time('M') ?></span></time>
+			<div class="grid_8 omega alpha">
+				<ul class="infopost">
+					<li><a class="categ" href="#">Rally SP</a></li> / 
+					<li><a class="categ" href="#">Redes sociais</a></li> / 
+					<li><a class="categ" href="#">Offroad</a></li>
+				</ul>
+				<time datetime="<?php the_time('Y-m-d g:i A') ?>"><?php the_time('d') ?> <span><?php the_time('M') ?></span></time>
 			</div>
 			<hgroup>
-				<h2><?php the_title(); ?></h2>
+				<a href="#"><h2><?php the_title(); ?></h2></a>
 				<h4>Aqui vai carregar o resumo do post, um texto para ele digital</h4>
 			</hgroup>
+
 			<div class="hshared">
 			<span class="author-name">Por <a href="#"><strong><?php the_author_firstname(); ?> <?php the_author_lastname(); ?></strong></a></span>
 			<ul>

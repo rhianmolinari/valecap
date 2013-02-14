@@ -115,6 +115,7 @@ input, textarea, .upload span.extension {
 	border: 1px solid #E5E5E5;
 	height: 20px;
 	display: inline-block;
+	outline: none;
 
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -265,10 +266,10 @@ header nav ul li:last-child {
 	background: #CCCCCC;
 	background: -moz-linear-gradient(top,  #CCCCCC 0%, #E5E5E5 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#CCCCCC), color-stop(100%,#E5E5E5));
-	background: -webkit-linear-gradient(top,  #CCCCCC 0%, #E5E5E5 100%);
-	background: -o-linear-gradient(top,  #CCCCCC 0%, #E5E5E5 100%);
-	background: -ms-linear-gradient(top,  #CCCCCC 0%, #E5E5E5 100%);
-	background: linear-gradient(to bottom,  #CCCCCC 0%, #E5E5E5 100%);
+	background: -webkit-linear-gradient(top, #CCCCCC 0%, #E5E5E5 100%);
+	background: -o-linear-gradient(top, #CCCCCC 0%, #E5E5E5 100%);
+	background: -ms-linear-gradient(top, #CCCCCC 0%, #E5E5E5 100%);
+	background: linear-gradient(to bottom, #CCCCCC 0%, #E5E5E5 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#CCCCCC', endColorstr='#E5E5E5',GradientType=0 );
 }
 header nav ul li:last-child a {
@@ -327,7 +328,7 @@ header nav ul.sub-menu li:last-child {
 }
 header nav ul.sub-menu li:hover {
 	border-left: 3px solid #000000;
-	background-color: #E5E5E5;
+	background-color: #F5F5F5;
 }
 header nav ul.sub-menu li:hover:last-child {
 	-webkit-border-radius: 0 0 3px 3px;
@@ -342,7 +343,7 @@ header nav ul.sub-menu li a {
     text-transform: capitalize;
 }
 header nav ul.sub-menu li a:active {
-	background-color: #FFFFFF;
+	background-color: #F5F5F5;
 }
 header nav ul.sub-menu li:active:last-child a {
 	-webkit-border-radius: 0 0 3px 0;
@@ -504,6 +505,28 @@ section.grid_4 div.box ul li a {
 	display: block;
 	height: 100%;
 	padding: 10px 0;
+}
+.box ul li a, .widget li a {
+	border-left: 3px solid transparent;
+	display: block;
+}
+.box ul li a:hover, .widget li a:hover {
+	background-color: #F5F5F5;
+	border-left: 3px solid #000000;
+}
+.box ul li a:active, .widget li a:active {
+	-webkit-box-shadow: inset 0 0 3px 0px #666666;
+	box-shadow: inset 0 0 3px 0px #666666;
+	-moz-box-shadow: inset 0 0 3px 0px #666666;
+	background-color: #F5F5F5;
+	text-shadow: none;
+}
+.box ul li:first-child a, .widget li:first-child a {
+	-webkit-border-radius: 3px 3px 0 0;
+	-moz-border-radius: 3px 3px 0 0;
+	-ms-border-radius: 3px 3px 0 0;
+	-o-border-radius: 3px 3px 0 0;
+	border-radius: 3px 3px 0 0;
 }
 .number {
 	font-family: 'MuseoSans900', Arial;
@@ -696,6 +719,8 @@ aside address a {
 /****************** Single / Page ******************/
 .thumbnail {
 	margin-top: -20px;
+	margin-bottom: 15px;
+	display: block;
 
 	-webkit-border-radius: 3px 3px 0 0;
 	-moz-border-radius: 3px 3px 0 0;
@@ -717,11 +742,9 @@ time {
 	font-size: 2.308em;
 	height: 45px;
 	line-height: 1em;
-	padding: 5px;
 	text-align: center;
 	text-transform: uppercase;
 	width: 45px;
-	margin-top: 5px;
 }
 time span {
 	float: none !important;
@@ -732,10 +755,18 @@ time span {
 	width: auto !important;
 	display: block;
 }
-.entry-content header div, .entry-content footer div, .entry-content div div {
+.entry-content .hshared, .entry-content .fshared, .entry-content .infopost {
 	display: block;
 	width: 100%;
 	height: 25px;
+}
+.entry-content .infopost {
+	margin: 0 10px 0 25px;
+	width: 520px;
+	float: left;
+}
+.entry-content .infopost li {
+	display: inline-block;
 }
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6, .entry-content address, .entry-content pre {
 	padding: 0 25px;
@@ -773,12 +804,7 @@ p.wp-caption-text {
 	margin: 0;
 	padding: 0 10px;
 }
-.entry-content .infopost span {
-	display: block;
-	margin: 10px 10px 0 25px;
-	width: 515px;
-	float: left;
-}
+
 div span.number-comments {
 	color: #FFFFFF;
 	font-size: 0.923em;
@@ -806,6 +832,9 @@ div span.number-comments a {
 	-o-user-select: none;
 	user-select: none;
 }
+div span.number-comments a:active {
+	text-shadow: none;
+}
 div span.number-comments:hover {
 	background: url("../image/comment.png") no-repeat scroll 0 -29px transparent;
 }
@@ -821,7 +850,7 @@ footer div span.number-comments {
 }
 .hshared, .fshared {
 	border-bottom: 1px solid #CCCCCC;
-	margin: 25px 25px 0;
+	margin: 0 25px;
 	padding: 0 0 20px;
 	width: 570px !important;
 }
@@ -914,40 +943,12 @@ aside .widget-container {
 	height: 245px;
 	padding-top: 5px;
 }
-.widget li {
-	border-left: 3px solid transparent;
-}
-.widget li:first-child {
-	-webkit-border-radius: 3px 3px 0 0;
-	-moz-border-radius: 3px 3px 0 0;
-	-ms-border-radius: 3px 3px 0 0;
-	-o-border-radius: 3px 3px 0 0;
-	border-radius: 3px 3px 0 0;
-}
-.widget li:hover {
-	border-left: 3px solid #000000;
-	background-color: #E5E5E5;
-}
 .widget li a {
 	color: #000000;
 	text-decoration: none;
 	padding: 5px;
 	text-transform: capitalize;
 	display: block;
-}
-.widget li a:active {
-	-webkit-box-shadow: inset 0 0 3px 0px #666666;
-	box-shadow: inset 0 0 3px 0px #666666;
-	-moz-box-shadow: inset 0 0 3px 0px #666666;
-	text-shadow: none;
-	background-color: #FFFFFF;
-}
-.widget li:active:first-child a {
-	-webkit-border-radius: 0 3px 0 0;
-	-moz-border-radius: 0 3px 0 0;
-	-ms-border-radius: 0 3px 0 0;
-	-o-border-radius: 0 3px 0 0;
-	border-radius: 0 3px 0 0;
 }
 
 /*************** Categoria dos produtos **************/
@@ -1115,21 +1116,59 @@ aside .widget-container {
 .homeblog .hshared {
 	border: none medium !important;
 }
+.hshared .author-name a {
+	display: inline-block;
+	text-decoration: underline;
+}
+.hshared .author-name a:active, .homeblog a, section.grid_4.entry-content.top_bottom a, .hshared .author-name a:active, .entry-content .infopost li a, .entry-content header hgroup a, .homeblog a:active h2, section.grid_4.entry-content.top_bottom a:active h2 {
+	text-decoration: none;
+}
+.homeblog a:hover hgroup h2, section.grid_4.entry-content.top_bottom a:hover hgroup h2, .entry-content .infopost li a:hover, .entry-content header hgroup a:hover {
+	text-decoration: underline;
+}
+.homeblog a:active h4, section.grid_4.entry-content.top_bottom a:active h4 {
+	text-shadow: none;
+}
+.homeblog a:active hgroup h2, section.grid_4.entry-content.top_bottom a:active hgroup h2, .entry-content header hgroup a:active {
+	text-decoration: none;
+}
 .list-posts li {
-	padding: 10px !important;
 	position: relative;
 }
 .list-posts li + li {
 	border-top: 1px solid #CCCCCC;
 }
+.list-posts li a {
+	padding: 10px;
+	text-decoration: none;
+	min-height: 55px;
+}
 .list-posts hgroup {
 	margin-left: 70px;
+	margin-right: 50px;
 }
 .list-posts hgroup h2, .list-posts hgroup h4 {
 	margin: 0 !important;
 }
 .list-posts time {
-	margin-top: 0;
+	margin-top: 5px;
+}
+.list-posts .number-comments a {
+	border: none medium;
+	min-height: auto;
+	padding: 0;
+}
+.list-posts .number-comments a:hover {
+	border: none medium;
+	background-color: transparent;
+}
+.list-posts .number-comments a:active {
+	background: transparent;
+	color: #FFFFFF;
+
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
 }
 
 /*********** Trabalhe conosco **********/
