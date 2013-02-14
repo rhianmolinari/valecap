@@ -67,6 +67,7 @@ function create_post_type() {
         'description' => 'Tipo de produto da Valecap',
         'public' => true,
         'has_archive' => true,
+        'taxonomies' => array('post_tag')
             )
     );
 }
@@ -78,19 +79,19 @@ $custom_product_fields = array(
     array(
         'label' => '<img class="eco" src="' . get_bloginfo('template_directory') . '/image/vipal.png" alt="Exclusivo VIPAL">',
         'desc' => 'Exclusivo VIPAL',
-        'id' => $prefix . 'checkbox',
+        'id' => $prefix . 'checkbox_excl',
         'type' => 'checkbox'
     ),
     array(
         'label' => '<img src="' . get_bloginfo('template_directory') . '/image/ecotread.jpg" alt="EcoTREAD">',
         'desc' => 'Linha EcoTREAD',
-        'id' => $prefix . 'checkbox',
+        'id' => $prefix . 'checkbox_ecotread',
         'type' => 'checkbox'
     ),
     array(
         'label' => 'Eixo',
         'desc' => 'Eixo',
-        'id' => $prefix . 'radio',
+        'id' => $prefix . 'radio_eixo',
         'type' => 'radio',
         'options' => array(
             'livre' => array(
@@ -110,7 +111,7 @@ $custom_product_fields = array(
     array(
         'label' => 'Pneu',
         'desc' => 'Pneu',
-        'id' => $prefix . 'radio',
+        'id' => $prefix . 'radio_pneu',
         'type' => 'radio',
         'options' => array(
             'radial' => array(
@@ -126,7 +127,7 @@ $custom_product_fields = array(
     array(
         'label' => '<img src="' . get_bloginfo('template_directory') . '/image/foradeestrada.png" alt="Fora de estrada"> Fora de estrada',
         'desc' => 'Fora de estrada',
-        'id' => $prefix . 'radio',
+        'id' => $prefix . 'radio_off',
         'type' => 'radio',
         'options' => array(
             'naoaplicavel_off' => array(
@@ -150,7 +151,7 @@ $custom_product_fields = array(
     array(
         'label' => '<img src="' . get_bloginfo('template_directory') . '/image/urbano.png" alt="Urbano"> Urbano',
         'desc' => 'Urbano',
-        'id' => $prefix . 'radio',
+        'id' => $prefix . 'radio_urb',
         'type' => 'radio',
         'options' => array(
             'naoaplicavel_urb' => array(
@@ -174,7 +175,7 @@ $custom_product_fields = array(
     array(
         'label' => '<img src="' . get_bloginfo('template_directory') . '/image/industrial.png" alt="Industrial"> Industrial',
         'desc' => 'Industrial',
-        'id' => $prefix . 'radio',
+        'id' => $prefix . 'radio_ind',
         'type' => 'radio',
         'options' => array(
             'naoaplicavel_ind' => array(
@@ -198,7 +199,7 @@ $custom_product_fields = array(
     array(
         'label' => '<img src="' . get_bloginfo('template_directory') . '/image/misto.png" alt="Misto"> Misto',
         'desc' => 'Misto',
-        'id' => $prefix . 'radio',
+        'id' => $prefix . 'radio_mix',
         'type' => 'radio',
         'options' => array(
             'naoaplicavel_mix' => array(
@@ -222,7 +223,7 @@ $custom_product_fields = array(
     array(
         'label' => '<img src="' . get_bloginfo('template_directory') . '/image/pavimentadocurta.png" alt="Pavimentado Curta"> Pavimentado Curta',
         'desc' => 'Pavimentado Curta',
-        'id' => $prefix . 'radio',
+        'id' => $prefix . 'radio_pavc',
         'type' => 'radio',
         'options' => array(
             'naoaplicavel_pavc' => array(
@@ -246,7 +247,7 @@ $custom_product_fields = array(
     array(
         'label' => '<img src="' . get_bloginfo('template_directory') . '/image/pavimentadolonga.png" alt="Pavimentado Longa"> Pavimentado Longa',
         'desc' => 'Pavimentado Longa',
-        'id' => $prefix . 'radio',
+        'id' => $prefix . 'radio_pavl',
         'type' => 'radio',
         'options' => array(
             'naoaplicavel_pavl' => array(
@@ -372,5 +373,5 @@ function save_product_meta($post_id) {
 
 add_action('save_post', 'save_product_meta');
 
-add_post_type_support('produto', array('thumbnail'));
+add_post_type_support('produto', array('thumbnail', 'tags'));
 ?>
