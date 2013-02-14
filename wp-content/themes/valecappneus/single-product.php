@@ -38,7 +38,7 @@ get_header(); ?>
 	<div class="box">
 		<img src="http://www.placehold.it/190x190">
 		<span class="exclusive">Desenho exclusivo Vipal</span>
-		<img class="eco" src="<?php bloginfo('template_directory'); ?>/image/ecotread.jpg" alt="EcoTREAD">
+		<img class="eco" src="<?php bloginfo('template_directory'); ?>/image/ecotread.png" alt="EcoTREAD">
 		<ul>
 			<li class="axis">
 				<img src="<?php bloginfo('template_directory'); ?>/image/eixo-livre.jpg" alt="Eixo livre:" title="Eixo livre">
