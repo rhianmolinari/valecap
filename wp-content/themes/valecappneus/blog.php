@@ -48,7 +48,7 @@ get_header(); ?>
 	</section>
 
 
-<section class="grid_4 alpha entry-content top_bottom">
+<section class="grid_4 alpha entry-content margin_top margin_bottom">
 	<span class="number-comments"><a href="#">110</a></span>
 	<a href="#">
 		<img class="thumbnail" src="http://www.placehold.it/300x150">	
@@ -58,7 +58,7 @@ get_header(); ?>
 		</hgroup>
 	</a>
 </section>
-<section class="grid_4 omega entry-content top_bottom">
+<section class="grid_4 omega entry-content margin_top margin_bottom">
 	<span class="number-comments"><a href="#">110</a></span>
 	<a href="#">
 		<img class="thumbnail" src="http://www.placehold.it/300x150">	
@@ -69,8 +69,8 @@ get_header(); ?>
 	</a>
 </section>
 
-<section class="grid_8 alpha box top_bottom">
-<ul class="list-posts">
+<section class="grid_8 alpha margin_top margin_bottom">
+<ul class="list-posts box">
 	<li>
 		<span class="number-comments"><a href="#">110</a></span>
 		<a href="#">
