@@ -6,7 +6,7 @@
  */
 
 get_header(); ?>
-<section class="grid_12 top_bottom">
+<section class="grid_12 margin_top margin_bottom">
 	<div class="grid_9 alpha">
             <?php query_posts('category_name=info&orderby=id&order=DESC&posts_per_page=1'); ?>
             <?php if (have_posts()) : while (have_posts()) : the_post();?>
@@ -16,8 +16,9 @@ get_header(); ?>
 	<button class="grid_3 omega">Faça seu orçamento</button>
 </section>
 
-<section class="grid_12 box-yellow slider top_bottom">
-	<?php query_posts('category_name=blog&orderby=id&order=DESC&posts_per_page=3');$cont=1; ?>
+<section class="grid_12 section_slider">
+	<div class="box-yellow slider">
+		<?php query_posts('category_name=blog&orderby=id&order=DESC&posts_per_page=3');$cont=1; ?>
 	<?php if (have_posts()) : while (have_posts()) : the_post();?>
 			<a href="<?php the_permalink(); ?>">
 				<div class="grid_4 omega alpha">
@@ -28,11 +29,11 @@ get_header(); ?>
 				<?php the_post_thumbnail(get_the_ID(), "full"); ?>
 			</a>
     <?php endwhile;endif;wp_reset_query(); ?>
+	</div>
 </section>
-<section class="grid_4 top_bottom">
+<section class="grid_4 margin_top margin_bottom">
 	<h1>Mais vendidos</h1>
-	<div class="box">
-		<ul>
+		<ul class="box">
 			<li><a href="">
 				<span class="number">1º</span>
 				<div class="group"><span class="categ">Agrícola</span>
@@ -49,10 +50,9 @@ get_header(); ?>
 				<h2>DD-dv</h2></div>
 			</a></li>
 		</ul>
-	</div>
 </section>
 
-<section class="grid_3 top_bottom">
+<section class="grid_3 margin_top margin_bottom">
 	<h1>Promoção</h1>
 	<div class="box-yellow featured">
 		<a href="#">
@@ -63,7 +63,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="grid_5 top_bottom">
+<section class="grid_5 margin_top margin_bottom">
 	<h1>Newsletter</h1>
 <!-- MailChimp Signup Form -->
 <form action="http://valecap.us6.list-manage1.com/subscribe/post?u=f83a420ab5160b737d3ae3bd9&amp;id=8a42b484c6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -76,10 +76,9 @@ get_header(); ?>
 </form>
 </section>
 
-<section class="grid_5 top_bottom">
+<section class="grid_5 margin_bottom">
 	<h1>Redes sociais</h1>
-	<div class="box">
-		<ul class="spread">
+		<ul class="spread box">
 			<li class="facebook">
 					<!-- Script Facebook !-->
 					<div id="fb-root"></div>
@@ -99,13 +98,12 @@ get_header(); ?>
 					<script type="text/javascript">window.___gcfg = {lang: 'pt-BR'};(function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })();</script>
 			</li>
 		</ul>
-	</div>
 </section>
 
-<section class="grid_12 top_bottom">
+<section class="grid_12 margin_bottom section_clients">
 	<h1>Clientes</h1>
 	<div class="box">
-		<ul class="parceiros">
+		<ul class="clients">
 			<li>
 				<a href="#"><img src="<?php bloginfo('template_directory'); ?>/image/logo.png"></a>
 			</li>

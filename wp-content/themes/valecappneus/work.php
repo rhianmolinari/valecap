@@ -16,7 +16,7 @@ get_header(); ?>
 <article class="grid_12">
 	<section class="grid_8 alpha">
 		<h1><?php the_title(); ?></h1>
-		<div class="entry-content"><?php the_content(); ?></div>
+		<div class="entry-content clearfix"><?php the_content(); ?></div>
 	</section>
 
 	<form class="grid_4 omega upload">

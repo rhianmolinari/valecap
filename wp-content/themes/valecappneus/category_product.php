@@ -18,42 +18,42 @@ get_header(); ?>
 			<li class="box grid_3 productbox alpha">
 				<a href="#">
 					<h3>Passeio / Utilitários</h3>
-					<img src="http://placehold.it/220x220">
+					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
 			<li class="box grid_3 productbox">
 				<a href="#">
 					<h3>Off road</h3>
-					<img src="http://placehold.it/220x220">
+					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
 			<li class="box grid_3 productbox">
 				<a href="#">
 					<h3>Carga</h3>
-					<img src="http://placehold.it/220x220">
+					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
 			<li class="box grid_3 productbox omega">
 				<a href="#">
 					<h3>Agrícola</h3>
-					<img src="http://placehold.it/220x220">
+					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
 			<li class="box grid_3 productbox alpha">
 				<a href="#">
 					<h3>Terraplanagem</h3>
-					<img src="http://placehold.it/220x220">
+					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
 			<li class="box grid_3 productbox">
 				<a href="#">
 					<h3>Industriais</h3>
-					<img src="http://placehold.it/220x220">
+					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>

@@ -83,7 +83,7 @@ $custom_product_fields = array(
         'type' => 'checkbox'
     ),
     array(
-        'label' => '<img src="' . get_bloginfo('template_directory') . '/image/ecotread.jpg" alt="EcoTREAD">',
+        'label' => '<img src="' . get_bloginfo('template_directory') . '/image/ecotread.png" alt="EcoTREAD">',
         'desc' => 'Linha EcoTREAD',
         'id' => $prefix . 'checkbox_ecotread',
         'type' => 'checkbox'
