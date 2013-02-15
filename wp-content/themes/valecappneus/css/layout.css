@@ -684,6 +684,49 @@ ul.box li + li {
 .not-found div form button {
 	width: 75px;
 }
+/* Search Result  */
+.searchresult h1 span {
+	color: #FFFFFF;
+}
+.searchresult .infopost {
+	left: 85px;
+	position: absolute;
+	top: 10px;
+	width: 780px;
+}
+.searchresult .infopost li {
+	display: inline-block;
+	border: none medium;
+}
+.searchresult .infopost .categ {
+	display: inline;
+	border: none medium;
+	background: none; 
+	padding: 0;
+	min-height: auto;
+}
+.searchresult .infopost .categ:hover {
+	text-decoration: underline;
+}
+.searchresult .infopost .categ:active {
+	text-shadow: 2px 1px 0px #CCCCCC;
+
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+}
+.searchresult .list-posts hgroup {
+	margin-top: 25px;
+}
+.searchresult .list-posts time {
+	margin-top: 30px;
+}
+.searchresult .searchsite .list-posts hgroup {
+	margin: 0 10px;
+}
+.searchresult .searchsite .list-posts li a {
+	min-height: 35px;
+}
 
 /*********************** Contact **********************/
 /********************* Budget Form ********************/
