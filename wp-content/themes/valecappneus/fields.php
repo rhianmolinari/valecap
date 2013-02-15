@@ -13,10 +13,17 @@ function create_post_type() {
         'description' => 'Tipo de produto da Valecap',
         'public' => true,
         'has_archive' => true,
-        'taxonomies' => array('post_tag')
+        'taxonomies' => array('post_tag', 'category')
             )
     );
 }
+
+//removing revisions (autosave)
+function disable_revisions(){
+    remove_post_type_support('produto', 'revisions');
+}
+
+add_action('admin_init', 'disable_revisions');
 
 // Add the Meta Box
 // Field Array  
