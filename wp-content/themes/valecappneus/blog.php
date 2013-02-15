@@ -47,11 +47,10 @@ get_header(); ?>
 		</div>
 	</section>
 
-
 <section class="grid_4 alpha entry-content margin_top margin_bottom">
 	<span class="number-comments"><a href="#">110</a></span>
 	<a href="#">
-		<img class="thumbnail" src="http://www.placehold.it/300x150">	
+		<img class="thumbnail" src="http://www.placehold.it/300x150">
 		<hgroup>
 			<h2>Copa Rally em SP</h2>
 			<h4>Aqui vai carregar para ele digital</h4>
@@ -61,7 +60,7 @@ get_header(); ?>
 <section class="grid_4 omega entry-content margin_top margin_bottom">
 	<span class="number-comments"><a href="#">110</a></span>
 	<a href="#">
-		<img class="thumbnail" src="http://www.placehold.it/300x150">	
+		<img class="thumbnail" src="http://www.placehold.it/300x150">
 		<hgroup>
 			<h2>Agora a Vipal esta presente na Europa</h2>
 			<h4>Aqui vai carregar o resumo do post, um texto para ele digital</h4>
@@ -118,9 +117,6 @@ get_header(); ?>
 		</nav>
 </article>
 <?php endwhile; ?>
-
-
-
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

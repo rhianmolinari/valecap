@@ -76,12 +76,12 @@ get_header(); ?>
 				</li>
 			</ul>
 			</div>
-		<div class="author">
+		<div class="author-page clearfix">
 		<?php echo get_avatar (get_the_author_id() , 80 ); ?>
 			<div class="author-bio">
 			<h2><?php the_author_firstname(); ?> <?php the_author_lastname(); ?></h2>
 			<p><?php the_author_description(); ?></p>
-			<button>Mais posts do autor</button>
+			<a href="<?php bloginfo ( 'url');?>/?author=<?php the_author_ID ();?>"><button>Mais posts do autor</button></a>
 			</div>
 		</div>
 	</footer>

@@ -186,15 +186,15 @@ button:active {
 	color:#000000;
 }
 /* Seletores preto */
-header nav ul li a:selection, .slider span::selection, .slider h2::selection, button::selection, .productbox h3::selection, .featured h2::selection, .pagination a::selection, .dk_label::selection, .abas a::selection {
+header nav ul li a:selection, .slider span::selection, .slider h2::selection, button::selection, .productbox h3::selection, .featured h2::selection, .pagination a::selection, .dk_label::selection, .abas a::selection, section.author-page .author-bio h2:selection, section.author-page .author-bio p:selection {
 	background:#000000;
 	color:#FFFFFF;
 }
-header nav ul li a::-moz-selection, .slider span::-moz-selection, .slider h2::-moz-selection, button::-moz-selection, .productbox h3::-moz-selection, .featured h2::-moz-selection, .pagination a::-moz-selection, .dk_label::-moz-selection, .abas a::-moz-selection {
+header nav ul li a::-moz-selection, .slider span::-moz-selection, .slider h2::-moz-selection, button::-moz-selection, .productbox h3::-moz-selection, .featured h2::-moz-selection, .pagination a::-moz-selection, .dk_label::-moz-selection, .abas a::-moz-selection, section.author-page .author-bio h2::-moz-selection, section.author-page .author-bio p::-moz-selection {
 	background:#000000;
 	color:#FFFFFF;
 }
-header nav ul li a::-webkit-selection, .slider span::-webkit-selection, .slider h2::-webkit-selection, button::-webkit-selection, .productbox h3::-webkit-selection, .featured h2::-webkit-selection, .pagination a::-webkit-selection, .dk_label::-webkit-selection, .abas a::-webkit-selection {
+header nav ul li a::-webkit-selection, .slider span::-webkit-selection, .slider h2::-webkit-selection, button::-webkit-selection, .productbox h3::-webkit-selection, .featured h2::-webkit-selection, .pagination a::-webkit-selection, .dk_label::-webkit-selection, .abas a::-webkit-selection, section.author-page .author-bio h2::-webkit-selection, section.author-page .author-bio p::-webkit-selection {
 	background:#000000;
 	color:#FFFFFF;
 }
@@ -610,10 +610,10 @@ form#mc-embedded-subscribe-form input {
 	padding: 5px;
 }
 .spread li.twitter {
-	padding: 10px 15px 5px;
+	padding: 12px 15px 6px;
 }
 .spread li.google {
-	padding: 12px 15px 8px;
+	padding: 14px 15px 8px;
 }
 /* Clientes */
 .section_clients {
@@ -901,10 +901,10 @@ footer div span.number-comments {
 	padding: 0;
 	margin: 0;
 }
-.author {
+.author-page {
 	background-color: #F5F5F5;
 }
-.author img {
+.author-page img {
 	border-bottom: 2px solid #FFD400;
 	float: left;
 	margin: 25px;
@@ -916,11 +916,7 @@ footer div span.number-comments {
 	border-radius: 3px;
 }
 .author-bio {
-	padding: 25px 25px 25px 135px;
-	width: 460px !important;
-}
-.author, .author-bio {
-	height: auto !important;
+	margin: 25px 25px 25px 150px;
 }
 .author-bio p, .author-bio h2 {
 	padding: 0;
@@ -1304,6 +1300,27 @@ ul.entry-content li p img, ul.entry-content li h1 img, ul.entry-content li h2 im
 	border-left: medium none;
 	margin-left: 0;
 	padding-left: 0;
+}
+
+/*************** Author **************/
+section.author-page {
+	background: #FFD400;
+	background: -moz-linear-gradient(top, #FFE600 0%, #FFD400 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFE600), color-stop(100%,#FFD400));
+	background: -webkit-linear-gradient(top,  #FFE600 0%, #FFD400 100%);
+	background: -o-linear-gradient(top, #FFE600 0%, #FFD400 100%);
+	background: -ms-linear-gradient(top, #FFE600 0%, #FFD400 100%);
+	background: linear-gradient(to bottom, #FFE600 0%, #FFD400 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFE600', endColorstr='#FFD400',GradientType=0 );
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+section.author-page img {
+	border-color: #000000;
 }
 
 /********************************************************
