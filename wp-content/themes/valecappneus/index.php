@@ -8,7 +8,7 @@
 get_header(); ?>
 <section class="grid_12 margin_top margin_bottom">
 	<div class="grid_9 alpha">
-            <?php query_posts('category_name=info&orderby=id&order=DESC&posts_per_page=1'); ?>
+            <?php query_posts('category_name=informativo&orderby=id&order=DESC&posts_per_page=1'); ?>
             <?php if (have_posts()) : while (have_posts()) : the_post();?>
  		<a class="info" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             <?php endwhile;endif;wp_reset_query(); ?>
@@ -26,7 +26,7 @@ get_header(); ?>
 					<span class="number-slider"><?php echo $cont++; ?>/3</span>
 					<h2><?php the_title(); ?></h2>
 				</div>
-				<?php the_post_thumbnail(get_the_ID(), "full"); ?>
+				<?php the_post_thumbnail(get_the_ID(), "homepage-slide-thumb"); ?>
 			</a>
     <?php endwhile;endif;wp_reset_query(); ?>
 	</div>
@@ -87,7 +87,7 @@ get_header(); ?>
 					<div class="fb-like-box" data-href="http://www.facebook.com/valecappneus" data-width="350" data-show-faces="false" data-stream="false" data-header="true"></div>
 			</li>
 			<li class="twitter">
-					<a href="https://twitter.com/rhianmolinari" class="twitter-follow-button" data-show-count="true" data-lang="pt" data-dnt="true">Seguir @rhianmolinari</a>
+					<a href="https://twitter.com/valecappneus" class="twitter-follow-button" data-show-count="true" data-lang="pt" data-dnt="true">Seguir @valecappneus</a>
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 			</li>
 			<li class="google">
