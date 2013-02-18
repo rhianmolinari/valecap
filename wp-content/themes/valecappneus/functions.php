@@ -5,13 +5,14 @@
  * @subpackage Valecap_Pneus
  * @since Valecap Pneus 1.0
  */
-//add suporte ao menu
+
+//Adicionando suporte ao menu
 register_nav_menu('primary', __('Menu Principal'));
 
-//post-thumbnail
+//Adicionando o post-thumbnail
 add_theme_support('post-thumbnails');
 
-//current url
+//Mostrar current url
 function current_url() {
     $pageURL = 'http';
     if ($_SERVER["HTTPS"] == "on") {
@@ -26,7 +27,7 @@ function current_url() {
     return $pageURL;
 }
 
-//breadcrumb
+//Breadcrumb
 function the_breadcrumb() {
     if (!is_home()) {
         echo '<a href="';
@@ -46,26 +47,34 @@ function the_breadcrumb() {
     }
 }
 
-//widget
-//contato ajax
+//Widget
+//Contato Ajax
 function contato_ajax() {
     include_once 'includes/send-email.php';
 }
 
 add_action('wp_ajax_nopriv_contato_form', 'contato_ajax');
 
-//tipo produtos, meta boxes e campos
+//Tipo produtos, Meta boxes e Campos
 include_once('fields.php');
 
-//registering new image sizes for thumbnails
-
-//slides home page
+//Registering new image sizes for thumbnails
+//Slides home page
 add_image_size('homepage-slide-thumb', 640, 260);
-//product details page
+//Product details page
 add_image_size('product-thumb', 190, 190);
-//featured image on blog home page
+//Featured image on blog home page
 add_image_size('featured-blog-thumb', 620, 280);
-//another post thumbnails of the blog
+//Another post thumbnails of the blog
 add_image_size('blog-posts-thumb', 300, 150);
+
+//Escondendo versão do Wordpress
+remove_action('wp_head', 'wp_generator');
+
+//Removendo versão do Wordpress no RSS
+function wpt_remove_version() {
+    return '';
+}
+add_filter('the_generator', 'wpt_remove_version');
 
 ?>

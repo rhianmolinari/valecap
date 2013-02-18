@@ -186,15 +186,15 @@ button:active {
 	color:#000000;
 }
 /* Seletores preto */
-header nav ul li a:selection, .slider span::selection, .slider h2::selection, button::selection, .productbox h3::selection, .featured h2::selection, .pagination a::selection, .dk_label::selection, .abas a::selection, section.author-page .author-bio h2:selection, section.author-page .author-bio p:selection {
+header nav ul li a:selection, .slider span::selection, .slider h2::selection, button::selection, .type-product li h3::selection, .featured h2::selection, .pagination a::selection, .dk_label::selection, .abas a::selection, section.author-page .author-bio h2:selection, section.author-page .author-bio p:selection {
 	background:#000000;
 	color:#FFFFFF;
 }
-header nav ul li a::-moz-selection, .slider span::-moz-selection, .slider h2::-moz-selection, button::-moz-selection, .productbox h3::-moz-selection, .featured h2::-moz-selection, .pagination a::-moz-selection, .dk_label::-moz-selection, .abas a::-moz-selection, section.author-page .author-bio h2::-moz-selection, section.author-page .author-bio p::-moz-selection {
+header nav ul li a::-moz-selection, .slider span::-moz-selection, .slider h2::-moz-selection, button::-moz-selection, .type-product li h3::-moz-selection, .featured h2::-moz-selection, .pagination a::-moz-selection, .dk_label::-moz-selection, .abas a::-moz-selection, section.author-page .author-bio h2::-moz-selection, section.author-page .author-bio p::-moz-selection {
 	background:#000000;
 	color:#FFFFFF;
 }
-header nav ul li a::-webkit-selection, .slider span::-webkit-selection, .slider h2::-webkit-selection, button::-webkit-selection, .productbox h3::-webkit-selection, .featured h2::-webkit-selection, .pagination a::-webkit-selection, .dk_label::-webkit-selection, .abas a::-webkit-selection, section.author-page .author-bio h2::-webkit-selection, section.author-page .author-bio p::-webkit-selection {
+header nav ul li a::-webkit-selection, .slider span::-webkit-selection, .slider h2::-webkit-selection, button::-webkit-selection, .type-product li h3::-webkit-selection, .featured h2::-webkit-selection, .pagination a::-webkit-selection, .dk_label::-webkit-selection, .abas a::-webkit-selection, section.author-page .author-bio h2::-webkit-selection, section.author-page .author-bio p::-webkit-selection {
 	background:#000000;
 	color:#FFFFFF;
 }
@@ -561,11 +561,19 @@ ul.box li:first-child a, .widget li:first-child a {
 	height: 274px;
 	position: relative;
 }
-.featured img, .productbox a img {
+.featured img, .type-product li a img {
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
 	width: 190px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.featured img {
+	padding-bottom: 5px;
+}
+.type-product li a img {
+	padding-bottom: 11px;
 }
 .featured h2, .type-product li h3 {
 	text-align: center;
@@ -646,7 +654,7 @@ form#mc-embedded-subscribe-form input {
 ul.box li + li {
 	border-top: 1px solid #CCCCCC;
 }
-.box-yellow, .productbox:hover {
+.box-yellow, .type-product li:hover {
 
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -789,6 +797,9 @@ aside address a {
 .entry-content {
 	position: relative;
 	padding-top: 20px;
+}
+.entry-content h5 {
+	color: #666666 !important;
 }
 .entry-content header {
 	margin-bottom: 20px;
@@ -1018,9 +1029,6 @@ aside .widget-container {
 /*************** Categoria dos produtos **************/
 .type-product li {
 	margin-bottom: 40px;
-}
-.productbox {
-	position: relative;
 }
 /************* Listagem e sistema de abas ************/
 .abas li {

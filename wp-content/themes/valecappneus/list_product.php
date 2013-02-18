@@ -25,63 +25,63 @@ get_header(); ?>
 			</ul>
 		</nav>
 		<ul class="grid_9 type-product omega">
-			<li class="box grid_3 productbox alpha">
+			<li class="box grid_3 alpha">
 				<a href="#">
 					<h3>DD-dv</h3>
 					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
-			<li class="box grid_3 productbox">
+			<li class="box grid_3">
 				<a href="#">
 					<h3>VTR-10</h3>
 					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
-			<li class="box grid_3 productbox omega">
+			<li class="box grid_3 omega">
 				<a href="#">
 					<h3>Eco-DR</h3>
 					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
-			<li class="box grid_3 productbox alpha">
+			<li class="box grid_3 alpha">
 				<a href="#">
 					<h3>DV-ECO</h3>
 					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
-			<li class="box grid_3 productbox">
+			<li class="box grid_3">
 				<a href="#">
 					<h3>VRS-22</h3>
 					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
-			<li class="box grid_3 productbox omega">
+			<li class="box grid_3 omega">
 				<a href="#">
 					<h3>Agro-1S</h3>
 					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
-			<li class="box grid_3 productbox alpha">
+			<li class="box grid_3 alpha">
 				<a href="#">
 					<h3>DV-ECO</h3>
 					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
-			<li class="box grid_3 productbox">
+			<li class="box grid_3">
 				<a href="#">
 					<h3>VRS-22</h3>
 					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
-			<li class="box grid_3 productbox omega">
+			<li class="box grid_3 omega">
 				<a href="#">
 					<h3>Agro-1S</h3>
 					<img src="http://placehold.it/190x190">
