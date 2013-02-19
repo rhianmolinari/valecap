@@ -12,14 +12,14 @@ function create_post_type() {
         ),
         'description' => 'Tipo de produto da Valecap',
         'public' => true,
-        'has_archive' => true,
-        'taxonomies' => array('post_tag', 'category')
+        'has_archive' => 'produtos',
+        'taxonomies' => array('post_tag')
             )
     );
 }
 
 //removing revisions (autosave)
-function disable_revisions(){
+function disable_revisions() {
     remove_post_type_support('produto', 'revisions');
 }
 
@@ -341,8 +341,8 @@ add_action('add_meta_boxes', 'add_xyz_meta_box');
 $prefix_xyz = 'xyz_';
 $custom_xyz_fields = array(
     array(
-        'label' => 'Produto em destaque',
-        'desc' => 'Produto em destaque para a p&aacute;gina inicial',
+        'label' => 'Produto em promo&ccedil;&atilde;o',
+        'desc' => 'Produto em promo&ccedil;&atilde;o para a p&aacute;gina inicial',
         'id' => $prefix_xyz . 'dest_post_id',
         'type' => 'post_list',
         'post_type' => array('produto')
@@ -390,6 +390,8 @@ function show_xyz_meta_box() {
             case 'post_list':
                 $items = get_posts(array(
                     'post_type' => $field['post_type'],
+                    'orderby' => 'title',
+                    'order' => 'ASC',
                     'posts_per_page' => -1
                         ));
                 $atual = get_posts(array(
@@ -401,9 +403,9 @@ function show_xyz_meta_box() {
                         )
                     )
                         ));
-                
+
                 $current = get_post_meta($atual[0]->ID, $field['id'], true);
-                
+
                 echo '<select name="' . $field['id'] . '" id="' . $field['id'] . '"> 
             <option value="">Selecione um produto</option>'; // Select One  
                 foreach ($items as $item) {
@@ -439,16 +441,16 @@ function save_xyz_meta($post_id) {
     // loop through fields and save the data  
     foreach ($custom_xyz_fields as $field) {
         $atual = get_posts(array(
-                    'post_type' => $field['post_type'],
-                    'posts_per_page' => -1,
-                    'meta_query' => array(
-                        array(
-                            'key' => $field['id']
-                        )
-                    )
-                        ));
-        
-        if(get_post_meta($atual[0]->ID, $field['id'], true) <> $_POST[$field['id']]) {
+            'post_type' => $field['post_type'],
+            'posts_per_page' => -1,
+            'meta_query' => array(
+                array(
+                    'key' => $field['id']
+                )
+            )
+                ));
+
+        if (get_post_meta($atual[0]->ID, $field['id'], true) <> $_POST[$field['id']]) {
             $items = get_posts(
                     array(
                         'post_type' => $field['post_type'],
@@ -458,13 +460,13 @@ function save_xyz_meta($post_id) {
                         )
                     ));
 
-            if(!empty($_POST[$field['id']])) {
+            if (!empty($_POST[$field['id']])) {
                 foreach ($items as $item) {
                     update_post_meta($item->ID, $field['id'], $_POST[$field['id']]);
                 }
             }
         }
-        
+
         $old = get_post_meta($post_id, $field['id'], true);
         $new = $_POST[$field['id']];
         if ($new && $new != $old) {
@@ -479,4 +481,17 @@ add_action('save_post', 'save_xyz_meta');
 
 add_post_type_support('produto', array('thumbnail', 'tags'));
 
+//adicionando categoria especifica dos produtos
+add_action('init', 'create_taxonomy_product_category');
+
+function create_taxonomy_product_category() {
+    register_taxonomy('tipo_produto', 'produto', array(
+        'hierarchical' => true,
+        'label' => __('Categorias dos produtos'),
+        'show_ui' => true,
+        'show_in_tag_cloud' => true,
+        'query_var' => true
+         )
+    );
+}
 ?>
