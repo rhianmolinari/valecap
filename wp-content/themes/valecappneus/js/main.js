@@ -62,7 +62,7 @@ $(document).ready(function(){
 	});
 });
 
-// Abas
+// Abas listagem produtos
 $(document).ready(function(){
 	$('.abas ul li a').click(function(){
             var slug = $(this).attr('href');
@@ -73,7 +73,7 @@ $(document).ready(function(){
                 data: 'action=tipo_produto&slug='+slug,
                 dataType: 'json',
                 success: function(data) {
-                    
+                    alert(data);
                 }
             });
 	});
@@ -107,7 +107,7 @@ $(document).ready(function(){
 			url: "/wp-admin/admin-ajax.php",
 			data: 'action=form_contato&'+$("#form-contato").serialize(),
 			success: function(msg) {
-			alert("Mensagem enviada com sucesso!");
+                            alert("Mensagem enviada com sucesso!");
 			}
 		});
 

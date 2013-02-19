@@ -73,7 +73,7 @@ function tipo_produto() {
         $produto[$cont++]['link'] = get_permalink();
         array_push($produtos, $produto);
     endwhile;
-    echo json_encode($produtos);
+    echo (count($produtos)>0)?json_encode($produtos):"";
     die();
 }
 

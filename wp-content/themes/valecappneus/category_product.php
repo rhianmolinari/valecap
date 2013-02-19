@@ -18,7 +18,7 @@ get_header(); ?>
 		<ul class="type-product">
                         <?php foreach($categories as $category): ?>
 			<li class="box grid_3 productbox<?php echo $classez[$cont++];$cont = ($cont%4 == 0)?0:$cont; ?>">
-                            <a href="<?php echo get_category_link($category->term_id); ?>">
+                            <a href="lista-produtos-categoria/#!/<?php echo $category->slug; ?>">
 					<h3><?php echo $category->cat_name; ?></h3>
                                         <img src="<?php echo (function_exists('z_taxonomy_image_url'))?z_taxonomy_image_url($category->term_id):"http://placehold.it/190x190"; ?>">
 					<span class="saibamais">+ saiba mais</span>

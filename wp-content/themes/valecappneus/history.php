@@ -17,21 +17,15 @@ get_header(); ?>
 	<h1><?php the_title(); ?></h1>
 		<nav class="grid_3 alpha abas">
 			<ul>
-				<li class="selected"><a href="#">1998</a></li>
-				<li><a href="#">1999</a></li>
-				<li><a href="#">2001</a></li>
-				<li><a href="#">2006</a></li>
-				<li><a href="#">2008</a></li>
-				<li><a href="#">2011</a></li>
-				<li><a href="#">Hoje</a></li>
+                            <?php $anos = new WP_Query(array('category_name' => 'historico', 'orderby' => 'title', 'order' => 'ASC'));$cont=0;while($anos->have_posts()):$anos->the_post(); ?>
+                            <li<?php if($cont++ == 0):?> class="selected"<?php endif; ?>><a href="<?php echo substr(get_permalink(), 0, strrpos(get_permalink(), '/')); ?>/#!<?php echo substr(get_permalink(), strrpos(get_permalink(), '/')); ?>"><?php echo get_the_title(); ?></a></li>
+                            <?php endwhile;wp_reset_postdata();$cont=0; ?>
 			</ul>
 		</nav>
 		<ul class="grid_9 omega entry-content">
-			<li><?php the_content(); ?></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
+                    <?php $content_anos = new WP_Query(array('category_name' => 'historico', 'orderby' => 'title', 'order' => 'ASC'));while($content_anos->have_posts()):$content_anos->the_post(); ?>
+			<li<?php if($cont > 0):?> style="display:none"<?php endif; ?>><?php the_content();$cont++; ?></li>
+                    <?php endwhile;wp_reset_postdata(); ?>
 		</ul>
 </article>
 <?php endwhile; ?>

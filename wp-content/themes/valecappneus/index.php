@@ -36,17 +36,17 @@ get_header(); ?>
 		<ul class="box">
                     <li><?php $first = new WP_Query(array('post_type' => 'produto', 'meta_key' => 'xyz_first_post_id'));if($first->have_posts()):$first->the_post(); ?><a href="<?php echo get_permalink(get_post_meta(get_the_ID(), 'xyz_first_post_id', true)); ?>">
 				<span class="number">1º</span>
-                                <div class="group"><span class="categ"><?php echo strip_tags(get_the_term_list(get_post_meta(get_the_ID(), 'xyz_first_post_id', true), 'tipo_produto')); ?></span>
+                                <div class="group"><span class="categ"><?php echo strip_tags(get_the_term_list(get_post_meta(get_the_ID(), 'xyz_first_post_id', true), 'tipo_produto', '', ' / ', '')); ?></span>
 				<h2><?php echo get_the_title(get_post_meta(get_the_ID(), 'xyz_first_post_id', true)); ?></h2></div>
 			</a><?php endif;wp_reset_postdata(); ?></li>
 			<li><?php $second = new WP_Query(array('post_type' => 'produto', 'meta_key' => 'xyz_second_post_id'));if($second->have_posts()):$second->the_post(); ?><a href="<?php echo get_permalink(get_post_meta(get_the_ID(), 'xyz_second_post_id', true)); ?>">
 				<span class="number">2º</span>
-				<div class="group"><span class="categ"><?php echo strip_tags(get_the_term_list(get_post_meta(get_the_ID(), 'xyz_second_post_id', true), 'tipo_produto')); ?></span>
+				<div class="group"><span class="categ"><?php echo strip_tags(get_the_term_list(get_post_meta(get_the_ID(), 'xyz_second_post_id', true), 'tipo_produto', '', ' / ', '')); ?></span>
 				<h2><?php echo get_the_title(get_post_meta(get_the_ID(), 'xyz_second_post_id', true)); ?></h2></div>
 			</a><?php endif;wp_reset_postdata(); ?></li>
 			<li><?php $third = new WP_Query(array('post_type' => 'produto', 'meta_key' => 'xyz_third_post_id'));if($third->have_posts()):$third->the_post(); ?><a href="<?php echo get_permalink(get_post_meta(get_the_ID(), 'xyz_third_post_id', true)); ?>">
 				<span class="number">3º</span>
-				<div class="group"><span class="categ"><?php echo strip_tags(get_the_term_list(get_post_meta(get_the_ID(), 'xyz_third_post_id', true), 'tipo_produto')); ?></span>
+				<div class="group"><span class="categ"><?php echo strip_tags(get_the_term_list(get_post_meta(get_the_ID(), 'xyz_third_post_id', true), 'tipo_produto', '', ' / ', '')); ?></span>
 				<h2><?php echo get_the_title(get_post_meta(get_the_ID(), 'xyz_third_post_id', true)); ?></h2></div>
 			</a><?php endif;wp_reset_postdata(); ?></li>
 		</ul>
