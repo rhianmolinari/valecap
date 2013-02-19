@@ -18,8 +18,8 @@ get_header(); ?>
 
 <section class="grid_12 section_slider">
 	<div class="box-yellow slider">
-		<?php query_posts('category_name=blog&orderby=id&order=DESC&posts_per_page=3');$cont=1; ?>
-	<?php if (have_posts()) : while (have_posts()) : the_post();?>
+		<?php query_posts('category_name=blog&orderby=id&order=DESC');$cont=1; ?>
+	<?php if (have_posts()) : while (have_posts()) : the_post(); if(has_post_thumbnail()):?>
 			<a href="<?php the_permalink(); ?>">
 				<div class="grid_4 omega alpha">
 					<span class="categ grid_3 omega alpha"><?php $cats = get_categories('child_of='.get_cat_ID('blog'));foreach($cats as $cat){if(in_category($cat->slug, get_the_ID())){echo $cat->name;break;}} ?></span>
@@ -27,39 +27,41 @@ get_header(); ?>
 					<h2><?php the_title(); ?></h2>
 				</div>
 				<?php the_post_thumbnail(get_the_ID(), "homepage-slide-thumb"); ?>
-			</a>
-    <?php endwhile;endif;wp_reset_query(); ?>
+			</a><?php if($cont == 4)break; ?>
+    <?php endif;endwhile;endif;wp_reset_query(); ?>
 	</div>
 </section>
 <section class="grid_4 margin_top margin_bottom">
 	<h1>Mais vendidos</h1>
 		<ul class="box">
-			<li><a href="">
+                    <li><?php $first = new WP_Query(array('post_type' => 'produto', 'meta_key' => 'xyz_first_post_id'));if($first->have_posts()):$first->the_post(); ?><a href="<?php echo get_permalink(get_post_meta(get_the_ID(), 'xyz_first_post_id', true)); ?>">
 				<span class="number">1º</span>
-				<div class="group"><span class="categ">Agrícola</span>
-				<h2>DD-dv</h2></div>
-			</a></li>
-			<li><a href="">
+                                <div class="group"><span class="categ"><?php echo strip_tags(get_the_term_list(get_post_meta(get_the_ID(), 'xyz_first_post_id', true), 'tipo_produto')); ?></span>
+				<h2><?php echo get_the_title(get_post_meta(get_the_ID(), 'xyz_first_post_id', true)); ?></h2></div>
+			</a><?php endif;wp_reset_postdata(); ?></li>
+			<li><?php $second = new WP_Query(array('post_type' => 'produto', 'meta_key' => 'xyz_second_post_id'));if($second->have_posts()):$second->the_post(); ?><a href="<?php echo get_permalink(get_post_meta(get_the_ID(), 'xyz_second_post_id', true)); ?>">
 				<span class="number">2º</span>
-				<div class="group"><span class="categ">Passeio / Utilitário</span>
-				<h2>DD-dv</h2></div>
-			</a></li>
-			<li><a href="">
+				<div class="group"><span class="categ"><?php echo strip_tags(get_the_term_list(get_post_meta(get_the_ID(), 'xyz_second_post_id', true), 'tipo_produto')); ?></span>
+				<h2><?php echo get_the_title(get_post_meta(get_the_ID(), 'xyz_second_post_id', true)); ?></h2></div>
+			</a><?php endif;wp_reset_postdata(); ?></li>
+			<li><?php $third = new WP_Query(array('post_type' => 'produto', 'meta_key' => 'xyz_third_post_id'));if($third->have_posts()):$third->the_post(); ?><a href="<?php echo get_permalink(get_post_meta(get_the_ID(), 'xyz_third_post_id', true)); ?>">
 				<span class="number">3º</span>
-				<div class="group"><span class="categ">Terraplanagem</span>
-				<h2>DD-dv</h2></div>
-			</a></li>
+				<div class="group"><span class="categ"><?php echo strip_tags(get_the_term_list(get_post_meta(get_the_ID(), 'xyz_third_post_id', true), 'tipo_produto')); ?></span>
+				<h2><?php echo get_the_title(get_post_meta(get_the_ID(), 'xyz_third_post_id', true)); ?></h2></div>
+			</a><?php endif;wp_reset_postdata(); ?></li>
 		</ul>
 </section>
 
 <section class="grid_3 margin_top margin_bottom">
 	<h1>Promoção</h1>
 	<div class="box-yellow featured">
-		<a href="#">
-			<h2>DD-dv</h2>
-			<img src="http://placehold.it/190x190 ">
+            <?php $promocao = new WP_Query(array('post_type' => 'produto', 'meta_key' => 'xyz_dest_post_id'));if($promocao->have_posts()):$promocao->the_post(); ?>
+            <a href="<?php echo get_permalink(); ?>">
+			<h2><?php echo get_the_title(); ?></h2>
+                        <?php echo get_the_post_thumbnail(get_the_ID(), 'product-thumb', array('class'=>"",'alt'=>"",'title'=>"")); ?>
 			<span class="saibamais">+ saiba mais</span>
-		</a>
+            </a>
+            <?php endif;wp_reset_postdata(); ?>
 	</div>
 </section>
 
