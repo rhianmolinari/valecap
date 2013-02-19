@@ -16,72 +16,70 @@ get_header(); ?>
 	<h1><?php the_title(); ?></h1>
 		<nav class="grid_3 alpha abas">
 			<ul>
-				<li class="selected"><a href="#">Off road</a></li>
-				<li><a href="#">Passeio / Utilitários</a></li>
-				<li><a href="#">Carga</a></li>
-				<li><a href="#">Agrícola</a></li>
-				<li><a href="#">Terraplanagem</a></li>
-				<li><a href="#">Industriais</a></li>
+                            <?php $categories = get_categories(array('type' => 'produto', 'orderby' => 'id','order' => 'ASC', 'taxonomy' => 'tipo_produto', 'hide_empty' => 0));$cont=0; ?>
+                            <?php foreach ($categories as $categoria): ?>
+				<li<?php echo ($cont++ == 0)?' class="selected"':''; ?>><a href="#!/<?php echo $categoria->slug; ?>"><?php echo $categoria->cat_name; ?></a></li>
+                            <?php endforeach; ?>
 			</ul>
 		</nav>
 		<ul class="grid_9 type-product omega">
-			<li class="box grid_3 alpha">
+			<li class="box grid_3 productbox alpha">
 				<a href="#">
 					<h3>DD-dv</h3>
 					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
-			<li class="box grid_3">
+			<li class="box grid_3 productbox">
 				<a href="#">
 					<h3>VTR-10</h3>
 					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
-			<li class="box grid_3 omega">
+			<li class="box grid_3 productbox omega">
 				<a href="#">
 					<h3>Eco-DR</h3>
 					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
-			<li class="box grid_3 alpha">
+			<li class="box grid_3 productbox alpha">
 				<a href="#">
 					<h3>DV-ECO</h3>
 					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
-			<li class="box grid_3">
+			<li class="box grid_3 productbox">
 				<a href="#">
 					<h3>VRS-22</h3>
 					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
-			<li class="box grid_3 omega">
+			<li class="box grid_3 productbox omega">
 				<a href="#">
 					<h3>Agro-1S</h3>
 					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
-			<li class="box grid_3 alpha">
+			<li class="box grid_3 productbox alpha">
 				<a href="#">
 					<h3>DV-ECO</h3>
 					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
-			<li class="box grid_3">
+			<li class="box grid_3 productbox">
 				<a href="#">
 					<h3>VRS-22</h3>
 					<img src="http://placehold.it/190x190">
 					<span class="saibamais">+ saiba mais</span>
 				</a>
 			</li>
-			<li class="box grid_3 omega">
+			<li class="box grid_3 productbox omega">
 				<a href="#">
 					<h3>Agro-1S</h3>
 					<img src="http://placehold.it/190x190">
