@@ -5,14 +5,13 @@
  * @subpackage Valecap_Pneus
  * @since Valecap Pneus 1.0
  */
-
-//Adicionando suporte ao menu
+//add suporte ao menu
 register_nav_menu('primary', __('Menu Principal'));
 
-//Adicionando o post-thumbnail
+//post-thumbnail
 add_theme_support('post-thumbnails');
 
-//Mostrar current url
+//current url
 function current_url() {
     $pageURL = 'http';
     if ($_SERVER["HTTPS"] == "on") {
@@ -27,7 +26,7 @@ function current_url() {
     return $pageURL;
 }
 
-//Breadcrumb
+//breadcrumb
 function the_breadcrumb() {
     if (!is_home()) {
         echo '<a href="';
@@ -47,34 +46,51 @@ function the_breadcrumb() {
     }
 }
 
-//Widget
-//Contato Ajax
+//widget
+//contato ajax
 function contato_ajax() {
     include_once 'includes/send-email.php';
 }
 
 add_action('wp_ajax_nopriv_contato_form', 'contato_ajax');
 
-//Tipo produtos, Meta boxes e Campos
+function tipo_produto() {
+    $consulta = new WP_Query(array(
+        'tipo_produto' => $_GET['slug'],
+        'post_type' => 'produto',
+        'orderby' => 'title',
+        'order' => 'ASC'
+        )
+    );
+    
+    $produtos = array();
+    $cont = 0;
+    while ( $consulta->have_posts() ) :
+        $consulta->the_post();
+        $produto[$cont]['title'] = get_the_title();
+        $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'product-thumb' );
+        $produto[$cont]['img'] = $thumb[0];
+        $produto[$cont++]['link'] = get_permalink();
+        array_push($produtos, $produto);
+    endwhile;
+    echo json_encode($produtos);
+    die();
+}
+
+add_action('wp_ajax_nopriv_tipo_produto', 'tipo_produto');
+
+//tipo produtos, meta boxes e campos
 include_once('fields.php');
 
-//Registering new image sizes for thumbnails
-//Slides home page
+//registering new image sizes for thumbnails
+
+//slides home page
 add_image_size('homepage-slide-thumb', 640, 260);
-//Product details page
+//product details page
 add_image_size('product-thumb', 190, 190);
-//Featured image on blog home page
+//featured image on blog home page
 add_image_size('featured-blog-thumb', 620, 280);
-//Another post thumbnails of the blog
+//another post thumbnails of the blog
 add_image_size('blog-posts-thumb', 300, 150);
-
-//Escondendo versão do Wordpress
-remove_action('wp_head', 'wp_generator');
-
-//Removendo versão do Wordpress no RSS
-function wpt_remove_version() {
-    return '';
-}
-add_filter('the_generator', 'wpt_remove_version');
 
 ?>
