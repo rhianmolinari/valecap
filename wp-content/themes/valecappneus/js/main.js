@@ -65,8 +65,17 @@ $(document).ready(function(){
 // Abas
 $(document).ready(function(){
 	$('.abas ul li a').click(function(){
-		$('.type-product').css('display', 'none');
-		$('#' + $(this).attr('title')).css('display', 'block');
+            var slug = $(this).attr('href');
+            slug = slug.substring(slug.lastIndexOf('/')+1);
+            $.ajax({
+                type: "GET",
+                url: "/wp-admin/admin-ajax.php",
+                data: 'action=tipo_produto&slug='+slug,
+                dataType: 'json',
+                success: function(data) {
+                    
+                }
+            });
 	});
 });
 
