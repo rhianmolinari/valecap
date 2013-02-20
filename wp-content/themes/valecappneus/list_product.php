@@ -14,15 +14,15 @@ get_header(); ?>
 
 <article class="grid_12">
 	<h1><?php the_title(); ?></h1>
-		<nav class="grid_3 alpha abas">
+		<nav id="categoria-produtos" class="grid_3 alpha abas">
 			<ul>
                             <?php $categories = get_categories(array('type' => 'produto', 'orderby' => 'id','order' => 'ASC', 'taxonomy' => 'tipo_produto', 'hide_empty' => 0));$cont=0; ?>
                             <?php foreach ($categories as $categoria): ?>
-				<li<?php echo ($cont++ == 0)?' class="selected"':''; ?>><a href="#!/<?php echo $categoria->slug; ?>"><?php echo $categoria->cat_name; ?></a></li>
+                            <li<?php echo ($cont++ == 0)?' class="selected"':''; ?>><a href="#!/<?php echo $categoria->slug; ?>" id="<?php echo $categoria->slug; ?>"><?php echo $categoria->cat_name; ?></a></li>
                             <?php endforeach; ?>
 			</ul>
 		</nav>
-		<ul class="grid_9 type-product omega">
+		<ul id="products" class="grid_9 type-product omega">
 			<li class="box grid_3 productbox alpha">
 				<a href="#">
 					<h3>DD-dv</h3>
