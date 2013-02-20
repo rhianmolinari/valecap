@@ -56,9 +56,9 @@ get_header(); ?>
 	<h1>Promoção</h1>
 	<div class="box-yellow featured">
             <?php $promocao = new WP_Query(array('post_type' => 'produto', 'meta_key' => 'xyz_dest_post_id'));if($promocao->have_posts()):$promocao->the_post(); ?>
-            <a href="<?php echo get_permalink(); ?>">
-			<h2><?php echo get_the_title(); ?></h2>
-                        <?php echo get_the_post_thumbnail(get_the_ID(), 'product-thumb', array('class'=>"",'alt'=>"",'title'=>"")); ?>
+            <a href="<?php echo get_permalink(get_post_meta(get_the_ID(), 'xyz_dest_post_id', true)); ?>">
+			<h2><?php echo get_the_title(get_post_meta(get_the_ID(), 'xyz_dest_post_id', true)); ?></h2>
+                        <?php echo get_the_post_thumbnail(get_post_meta(get_the_ID(), 'xyz_dest_post_id', true), 'product-thumb', array('class'=>"",'alt'=>"",'title'=>"")); ?>
 			<span class="saibamais">+ saiba mais</span>
             </a>
             <?php endif;wp_reset_postdata(); ?>
