@@ -83,14 +83,15 @@ add_action('wp_ajax_nopriv_tipo_produto', 'tipo_produto');
 include_once('fields.php');
 
 //registering new image sizes for thumbnails
-
-//slides home page
-add_image_size('homepage-slide-thumb', 640, 260);
-//product details page
-add_image_size('product-thumb', 190, 190);
-//featured image on blog home page
-add_image_size('featured-blog-thumb', 620, 280);
-//another post thumbnails of the blog
-add_image_size('blog-posts-thumb', 300, 150);
+if ( function_exists( 'add_image_size' ) ) { 
+    //slides home page
+    add_image_size('homepage-slide-thumb', 640, 260, true);
+    //product details page
+    add_image_size('product-thumb', 190, 190, true);
+    //featured image on blog home page
+    add_image_size('featured-blog-thumb', 620, 280, true);
+    //another post thumbnails of the blog
+    add_image_size('blog-posts-thumb', 300, 150, true);
+}
 
 ?>
