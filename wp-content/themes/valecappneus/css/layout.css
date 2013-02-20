@@ -833,13 +833,33 @@ time span {
 	margin: 0 10px 0 25px;
 	width: 520px;
 	float: left;
+	padding: 0;
+	font-size: 1em;
+	line-height: 1.385em;
 }
 .entry-content .infopost li {
 	display: inline-block;
+	margin: 0;
 }
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6, .entry-content address, .entry-content pre {
+	padding: 25px 0 20px;
+	margin: 0 25px;
+}
+.entry-content ul, .entry-content ol {
+	font-size: 1.077em;
+	line-height: 1.692em;
+	margin-bottom: 25px;
 	padding: 0 25px;
-	margin: 5px 0 20px;
+	width: auto;
+}
+.entry-content ul li, .entry-content ol li {
+	margin-bottom: 15px;
+}
+.entry-content ul li {
+	list-style: disc inside none;
+}
+.entry-content ol li {
+	list-style: disc inside none;
 }
 .entry-content p img, .entry-content h1 img, .entry-content h2 img, .entry-content h3 img, .entry-content h4 img, .entry-content h5 img, .entry-content h6 img, .entry-content address img, .entry-content pre img {
 	display: block;
@@ -877,7 +897,6 @@ p.wp-caption-text {
 	margin: 0;
 	padding: 0 10px;
 }
-
 div span.number-comments {
 	color: #FFFFFF;
 	font-size: 0.923em;
@@ -930,10 +949,17 @@ footer div span.number-comments {
 	padding: 0 0 20px;
 	width: 570px !important;
 }
+.hshared ul, .fshared ul {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
 .hshared ul li, .fshared ul li {
 	float: right;
 	max-width: 110px;
 	width: 100px;
+	list-style: none outside none;
+	margin: 0;
 }
 .hshared ul li + li, .fshared ul li + li {
     margin: 0 8px;
