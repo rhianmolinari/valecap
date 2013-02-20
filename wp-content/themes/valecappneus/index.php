@@ -13,7 +13,7 @@ get_header(); ?>
  		<a class="info" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             <?php endwhile;endif;wp_reset_query(); ?>
         </div>
-	<button class="grid_3 omega">Faça seu orçamento</button>
+	<button onclick="location.href='<?php bloginfo('url'); ?>/orcamento'" class="grid_3 omega">Faça seu orçamento</button>
 </section>
 
 <section class="grid_12 section_slider">
@@ -26,7 +26,7 @@ get_header(); ?>
 					<span class="number-slider"><?php echo $cont++; ?>/3</span>
 					<h2><?php the_title(); ?></h2>
 				</div>
-				<?php the_post_thumbnail(get_the_ID(), "homepage-slide-thumb"); ?>
+				<?php the_post_thumbnail('homepage-slide-thumb'); ?>
 			</a><?php if($cont == 4)break; ?>
     <?php endif;endwhile;endif;wp_reset_query(); ?>
 	</div>
