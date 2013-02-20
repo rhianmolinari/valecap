@@ -515,6 +515,7 @@ section.grid_4 ul.box li a {
 	display: block;
 	height: 100%;
 	padding: 16px 0;
+	min-height: 58px;
 }
 ul.box li a, .widget li a {
 	border-left: 3px solid transparent;
@@ -847,6 +848,9 @@ time span {
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6, .entry-content address, .entry-content pre {
 	padding: 25px 0 20px;
 	margin: 0 25px;
+}
+.entry-content hgroup h2, .entry-content hgroup h4 {
+	padding-top: 0;
 }
 .entry-content ul, .entry-content ol {
 	font-size: 1.077em;
