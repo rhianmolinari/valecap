@@ -68,14 +68,11 @@ function tipo_produto() {
     $cont = 0;
     while ( $consulta->have_posts() ) :
         $consulta->the_post();
-        $produto[$cont]['title'] = get_the_title();
         $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'product-thumb' );
-        $produto[$cont]['img'] = $thumb[0];
-        $produto[$cont++]['link'] = get_permalink();
+        $produtos['produtos'][] = array('title'=>get_the_title(), 'img'=>$thumb[0], 'link'=>get_permalink());
         array_push($produtos, $produto);
     endwhile;
-    echo (count($produtos)>0)?json_encode($produtos):"";
-    die();
+    die((count($produtos)>0)?json_encode($produtos):"");
 }
 
 add_action('wp_ajax_tipo_produto', 'tipo_produto');
