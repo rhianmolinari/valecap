@@ -426,6 +426,9 @@ img.bg {
 	position: relative;
 }
 .slider img {
+	height: 260px;
+	width: 640px;
+	
 	-webkit-border-radius: 0 3px 3px 0;
 	-moz-border-radius: 0 3px 3px 0;
 	-ms-border-radius: 0 3px 3px 0;
@@ -859,7 +862,7 @@ time span {
 	list-style: disc inside none;
 }
 .entry-content ol li {
-	list-style: disc inside none;
+	list-style: decimal inside none;
 }
 .entry-content p img, .entry-content h1 img, .entry-content h2 img, .entry-content h3 img, .entry-content h4 img, .entry-content h5 img, .entry-content h6 img, .entry-content address img, .entry-content pre img {
 	display: block;
