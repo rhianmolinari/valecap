@@ -849,6 +849,9 @@ time span {
 	padding: 25px 0 20px;
 	margin: 0 25px;
 }
+.entry-content hgroup h2, .entry-content hgroup h4 {
+	padding-top: 0;
+}
 .entry-content ul, .entry-content ol {
 	font-size: 1.077em;
 	line-height: 1.692em;
