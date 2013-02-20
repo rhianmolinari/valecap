@@ -52,6 +52,7 @@ function contato_ajax() {
     include_once 'includes/send-email.php';
 }
 
+add_action('wp_ajax_contato_form', 'contato_ajax');
 add_action('wp_ajax_nopriv_contato_form', 'contato_ajax');
 
 function tipo_produto() {
@@ -77,6 +78,7 @@ function tipo_produto() {
     die();
 }
 
+add_action('wp_ajax_tipo_produto', 'tipo_produto');
 add_action('wp_ajax_nopriv_tipo_produto', 'tipo_produto');
 
 //tipo produtos, meta boxes e campos
