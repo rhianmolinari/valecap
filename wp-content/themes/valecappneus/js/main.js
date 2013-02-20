@@ -97,17 +97,17 @@ function getProdutos(data) {
         var classez = [' alpha','',' omega'];
         var cont = 0;
         $('#products').html('');
-        for(var i=0;i<data.length;i++) {
+        $.each(data.produtos, function(key, value) {
             var li = document.createElement('li');li.setAttribute('class', 'box grid_3 productbox'+classez[cont]);
-            var a = document.createElement('a');a.setAttribute('href', data[i][0].link);
-            var h3 = document.createElement('h3');h3.appendChild(document.createTextNode(data[i][0].title));
-            var img = document.createElement('img');img.setAttribute('src', (data[i][0].img == null)?'':data[i][0].img);
+            var a = document.createElement('a');a.setAttribute('href', value.link);
+            var h3 = document.createElement('h3');h3.appendChild(document.createTextNode(value.title));
+            var img = document.createElement('img');img.setAttribute('src', (value.img == null)?'':value.img);
             var span = document.createElement('span');span.setAttribute('class', 'saibamais');span.appendChild(document.createTextNode('+ saiba mais'));
             a.appendChild(h3);a.appendChild(img);a.appendChild(span);
             li.appendChild(a);
             if(cont++ == 2)cont=0;
             $('#products').append(li);
-        }
+        });
     }else
         alert('No momento não há produtos nesta categoria!');
 }
