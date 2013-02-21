@@ -46,6 +46,12 @@ function the_breadcrumb() {
     }
 }
 
+//funcao para retorno da aplicacao do produto
+function showUse($tipo) {
+    $tipos = array('aceitavel'=>'Aceit&aacute;vel', 'indicado'=>'Indicado', 'recomendado'=>'Recomendado');
+    echo $tipos[substr($tipo, 0, strlen($tipo)-(strlen($tipo)-strrpos($tipo, '_')))];
+}
+
 //widget
 //contato ajax
 function contato_ajax() {
