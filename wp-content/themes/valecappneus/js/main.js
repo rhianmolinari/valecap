@@ -154,10 +154,9 @@ $(document).ready(function(){
 // Abas listagem itens historico
 $(document).ready(function(){
     
-    if(location.pathname.indexOf('historico')>-1) {
+    if(location.pathname.indexOf('historico')>-1 && location.hash != '') {
             var hsh = location.hash;
             hsh = hsh.substring(hsh.lastIndexOf('/')+1);
-            alert(hsh);
             $('.entry-content li').css('display', 'none')
             $('#content-'+hsh).css('display', 'block');
             $('#itens-historico li').removeClass('selected');
