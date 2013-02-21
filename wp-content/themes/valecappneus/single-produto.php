@@ -18,16 +18,14 @@ get_header(); ?>
 		<?php the_content(); ?>
 		<div class="recommended">
 			<h6>Pneus recomendados</h6>
-			<span title="Medidas recomendas">Medidas recomendas</span>
+			<span title="Medidas recomendadas">Medidas recomendadas</span>
+                        <?php $posttags = get_the_tags();if($posttags):?>
 			<ul>
-				<li>155</li>
-				<li>160</li>
-				<li>170</li>
-				<li>175</li>
-				<li>200</li>
-				<li>275</li>
-				<li>280</li>
+                            <?php foreach($posttags as $tag) : ?>
+				<li><?php echo $tag->name; ?></li>
+                            <?php endforeach; ?>
 			</ul>
+                        <?php endif; ?>
 		</div>
 	</section>
 </article>
@@ -35,30 +33,30 @@ get_header(); ?>
 <section class="grid_4 product">
 	<h5>Informa&ccedil;&otilde;es</h5>
 	<div class="box">
-		<img src="http://www.placehold.it/190x190">
-		<span class="exclusive">Desenho exclusivo Vipal</span>
-		<img class="eco" src="<?php bloginfo('template_directory'); ?>/image/ecotread.png" alt="EcoTREAD">
-		<ul>
+		<?php echo (has_post_thumbnail())?get_the_post_thumbnail(get_the_ID(), 'product-thumb'):'<img width="190" height="190" src="' . get_bloginfo('template_directory') . '/image/not-image.png" alt="' . get_the_title() . '" />'; ?>
+		<?php if(get_post_meta(get_the_ID(), 'prd_checkbox_excl', true)): ?><span class="exclusive">Desenho exclusivo Vipal</span><?php endif; ?>
+		<?php if(get_post_meta(get_the_ID(), 'prd_checkbox_ecotread', true)): ?><img class="eco" src="<?php bloginfo('template_directory'); ?>/image/ecotread.png" alt="EcoTREAD"><?php endif; ?>
+		<ul><?php if(get_post_meta(get_the_ID(), 'prd_radio_eixo', true)): ?><?php if(get_post_meta(get_the_ID(), 'prd_radio_eixo', true) == 'livre'): ?>
 			<li class="axis">
 				<img src="<?php bloginfo('template_directory'); ?>/image/eixo-livre.jpg" alt="Eixo livre:" title="Eixo livre">
 				<span>Eixo livre</span>
-			</li>
+			</li><?php endif; ?><?php if(get_post_meta(get_the_ID(), 'prd_radio_eixo', true) == 'misto'): ?>
 			<li class="axis">
 				<img src="<?php bloginfo('template_directory'); ?>/image/eixo-misto.jpg" alt="Eixo misto:" title="Eixo misto">
 				<span>Eixo misto</span>
-			</li>
+			</li><?php endif; ?><?php if(get_post_meta(get_the_ID(), 'prd_radio_eixo', true) == 'tracao'): ?>
 			<li class="axis">
 				<img src="<?php bloginfo('template_directory'); ?>/image/eixo-tracao.jpg" alt="Eixo tração:" title="Eixo tração">
 				<span>Eixo tração</span>
-			</li>
+			</li><?php endif; ?><?php endif; ?><?php if(get_post_meta(get_the_ID(), 'prd_radio_pneu', true)):if(get_post_meta(get_the_ID(), 'prd_radio_pneu', true) == 'radial'): ?>
 			<li>
 				<img src="<?php bloginfo('template_directory'); ?>/image/radial.png" alt="Radial:" title="Radial">
 				<span>Pneu radial</span>
-			</li>
+			</li><?php endif;if(get_post_meta(get_the_ID(), 'prd_radio_pneu', true) == 'diagonal'): ?>
 			<li>
 				<img src="<?php bloginfo('template_directory'); ?>/image/diagonal.png" alt="Diagonal:" title="Diagonal">
 				<span>Pneu diagonal</span>
-			</li>
+			</li><?php endif;endif; ?>
 		</ul>
 		<ul class="aplications">
 			<h6>Aplicações</h6>
