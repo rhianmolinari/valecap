@@ -12,9 +12,13 @@ function create_post_type() {
         ),
         'description' => 'Tipo de produto da Valecap',
         'public' => true,
-        'has_archive' => 'produtos',
-        'taxonomies' => array('post_tag')
-            )
+        'has_archive' => true,
+        'rewrite' => array(
+            'slug' => 'produto',
+            'with_front' => true
+        )
+        //'taxonomies' => array('category')
+      )
     );
 }
 
@@ -257,12 +261,13 @@ function show_product_meta_box() {
             // radio  
             case 'radio':
                 if (isset($field['options'])) {
+                    $cont = 0;
                     foreach ($field['options'] as $option) {
-                        echo '<input type="radio" name="' . $field['id'] . '" id="' . $option['value'] . '" value="' . $option['value'] . '" ', $meta == $option['value'] ? ' checked="checked"' : '', ' /> 
+                        echo '<input type="radio" name="' . $field['id'] . '" id="' . $option['value'] . '" value="' . $option['value'] . '" ', $meta == $option['value'] || (empty($meta) && $cont++ == 0) ? ' checked="checked"' : '', ' /> 
                 <label for="' . $option['value'] . '">' . $option['label'] . '</label>&nbsp;&nbsp;';
                     }
                 } else {
-                    echo '<input type="checkbox" name="' . $field['id'] . '" id="' . $field['id'] . '" ', $meta ? ' checked="checked"' : '', '/> 
+                    echo '<input type="radio" name="' . $field['id'] . '" id="' . $field['id'] . '" ', $meta ? ' checked="checked"' : '', '/> 
         <label for="' . $field['id'] . '">' . $field['desc'] . '</label>';
                 }
                 break;
@@ -490,7 +495,8 @@ function create_taxonomy_product_category() {
         'label' => __('Categorias dos produtos'),
         'show_ui' => true,
         'show_in_tag_cloud' => true,
-        'query_var' => true
+        'query_var' => true,
+        'rewrite' => array('slug'=>'categoria', 'with_front'=>false)
          )
     );
 }
