@@ -64,18 +64,19 @@ $(document).ready(function(){
 
 // Abas listagem produtos
 $(document).ready(function(){
-    
-    var slugi = location.hash;
-    slugi = slugi.substring(slugi.lastIndexOf('/')+1);
-    $('#categoria-produtos ul li').removeClass('selected');
-    $('#'+slugi).parent().addClass('selected');
-    $.ajax({
-        type: "GET",
-        url: "/wp-admin/admin-ajax.php",
-        data: 'action=tipo_produto&slug='+slugi,
-        dataType: 'json',
-        success: getProdutos
-    });
+    if(location.pathname.indexOf('lista-produtos')>-1) {
+        var slugi = location.hash;
+        slugi = slugi.substring(slugi.lastIndexOf('/')+1);
+        $('#categoria-produtos ul li').removeClass('selected');
+        $('#'+slugi).parent().addClass('selected');
+        $.ajax({
+            type: "GET",
+            url: "/wp-admin/admin-ajax.php",
+            data: 'action=tipo_produto&slug='+slugi,
+            dataType: 'json',
+            success: getProdutos
+        });
+    }
     
 	$('#categoria-produtos ul li a').click(function(){
             var slug = $(this).attr('href');
@@ -101,7 +102,7 @@ function getProdutos(data) {
             var li = document.createElement('li');li.setAttribute('class', 'box grid_3 productbox'+classez[cont]);
             var a = document.createElement('a');a.setAttribute('href', value.link);
             var h3 = document.createElement('h3');h3.appendChild(document.createTextNode(value.title));
-            var img = document.createElement('img');img.setAttribute('src', (value.img == null)?'':value.img);
+            var img = document.createElement('img');img.setAttribute('src', (value.img == null)?'http://valecap.local/wp-content/themes/valecappneus/image/not-image.png':value.img);
             var span = document.createElement('span');span.setAttribute('class', 'saibamais');span.appendChild(document.createTextNode('+ saiba mais'));
             a.appendChild(h3);a.appendChild(img);a.appendChild(span);
             li.appendChild(a);
@@ -148,4 +149,28 @@ $(document).ready(function(){
 		
 		return false;
 		});
+});
+
+// Abas listagem itens historico
+$(document).ready(function(){
+    
+    if(location.pathname.indexOf('historico')>-1) {
+            var hsh = location.hash;
+            hsh = hsh.substring(hsh.lastIndexOf('/')+1);
+            alert(hsh);
+            $('.entry-content li').css('display', 'none')
+            $('#content-'+hsh).css('display', 'block');
+            $('#itens-historico li').removeClass('selected');
+            $('#itens-historico li a[href="' + location.hash + '"]').parent().addClass('selected');
+    }
+    
+    $('#itens-historico li a').click(function(){
+        var title = $(this).attr('href');
+        title = title.substring(title.lastIndexOf('/')+1);
+        $('.entry-content li').css('display', 'none')
+        $('#content-'+title).css('display', 'block');
+        $('#itens-historico li').removeClass('selected');
+        $(this).parent().addClass('selected');
+    });
+    
 });
