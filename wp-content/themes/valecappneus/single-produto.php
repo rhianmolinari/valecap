@@ -59,31 +59,31 @@ get_header(); ?>
 			</li><?php endif;endif; ?>
 		</ul>
 		<ul class="aplications">
-			<h6>Aplicações</h6>
+			<h6>Aplicações</h6><?php if(get_post_meta(get_the_ID(), 'prd_radio_ind', true) && get_post_meta(get_the_ID(), 'prd_radio_ind', true) != 'naoaplicavel_ind'): ?>
 			<li>
 				<img src="<?php bloginfo('template_directory'); ?>/image/industrial.png" alt="Industrial:" title="Industrial">
-				<span>Recomendado</span>
-			</li>
+				<span><?php showUse(get_post_meta(get_the_ID(), 'prd_radio_ind', true)); ?></span>
+			</li><?php endif;if(get_post_meta(get_the_ID(), 'prd_radio_urb', true) && get_post_meta(get_the_ID(), 'prd_radio_urb', true) != 'naoaplicavel_urb'): ?>
 			<li>
 				<img src="<?php bloginfo('template_directory'); ?>/image/urbano.png" alt="Urbano:" title="Urbano">
-				<span>Indicado</span>
-			</li>
+				<span><?php showUse(get_post_meta(get_the_ID(), 'prd_radio_urb', true)); ?></span>
+			</li><?php endif;if(get_post_meta(get_the_ID(), 'prd_radio_mix', true) && get_post_meta(get_the_ID(), 'prd_radio_mix', true) != 'naoaplicavel_mix'): ?>
 			<li>
 				<img src="<?php bloginfo('template_directory'); ?>/image/misto.png" alt="Misto:" title="Misto">
-				<span>Indicado</span>
-			</li>
+				<span><?php showUse(get_post_meta(get_the_ID(), 'prd_radio_mix', true)); ?></span>
+			</li><?php endif;if(get_post_meta(get_the_ID(), 'prd_radio_off', true) && get_post_meta(get_the_ID(), 'prd_radio_off', true) != 'naoaplicavel_off'): ?>
 			<li>
 				<img src="<?php bloginfo('template_directory'); ?>/image/foradeestrada.png" alt="Fora de estrada:" title="Fora de estrada">
-				<span>Aceitável</span>
-			</li>
+				<span><?php showUse(get_post_meta(get_the_ID(), 'prd_radio_off', true)); ?></span>
+			</li><?php endif;if(get_post_meta(get_the_ID(), 'prd_radio_pavc', true) && get_post_meta(get_the_ID(), 'prd_radio_pavc', true) != 'naoaplicavel_pavc'): ?>
 			<li>
 				<img src="<?php bloginfo('template_directory'); ?>/image/pavimentadocurta.png" alt="Pavimentado de curta distância:" title="Pavimentado de curta distância">
-				<span>Aceitável</span>
-			</li>
+				<span><?php showUse(get_post_meta(get_the_ID(), 'prd_radio_pavc', true)); ?></span>
+			</li><?php endif;if(get_post_meta(get_the_ID(), 'prd_radio_pavl', true) && get_post_meta(get_the_ID(), 'prd_radio_pavl', true) != 'naoaplicavel_pavl'): ?>
 			<li>
 				<img src="<?php bloginfo('template_directory'); ?>/image/pavimentadolonga.png" alt="Pavimentado de longa distância:" title="Pavimentado de longa distância">
-				<span>Aceitável</span>
-			</li>
+				<span><?php showUse(get_post_meta(get_the_ID(), 'prd_radio_pavl', true)); ?></span>
+			</li><?php endif; ?>
 		</ul>
 	</div>
 </section>
