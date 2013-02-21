@@ -16,8 +16,8 @@ function create_post_type() {
         'rewrite' => array(
             'slug' => 'produto',
             'with_front' => true
-        )
-        //'taxonomies' => array('category')
+        ),
+        'taxonomies' => array('post_tag')
       )
     );
 }
