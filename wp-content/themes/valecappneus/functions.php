@@ -76,8 +76,8 @@ function tipo_produto() {
         $consulta->the_post();
         $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'product-thumb' );
         $produtos['produtos'][] = array('title'=>get_the_title(), 'img'=>$thumb[0], 'link'=>get_permalink());
-        array_push($produtos, $produto);
     endwhile;
+    wp_reset_postdata();
     die((count($produtos)>0)?json_encode($produtos):"");
 }
 
