@@ -214,18 +214,18 @@ header nav ul li a::-webkit-selection, .slider span::-webkit-selection, .slider 
 ********************************************************/
 /* Logo */
 header h1 {
-	margin-top: 8px;
-	margin-bottom: 8px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 .logo {
 	background:url('../image/logo.png') 0 0 no-repeat transparent;
 	text-indent: -99999em;
 	display: block;
-	height: 80px !important;
+	height: 72px !important;
 }
 /* Busca */
 header form {
-	margin-top: 30px;
+	margin-top: 28px;
 	display: block;
 }
 header form label, #mc-embedded-subscribe-form label, .not-found form label {
