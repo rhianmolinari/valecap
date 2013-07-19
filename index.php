@@ -17,7 +17,7 @@ get_header(); ?>
 </section>
 
 <section class="grid_12 section_slides">
-	<div class="box-yellow flexslider">
+	<div class="box-yellow flexslider flex-loading">
 		<?php query_posts('category_name=blog&orderby=id&order=DESC&post_status=publish');$cont=1; ?>
 		<ul class="slides">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); if(has_post_thumbnail()):?>

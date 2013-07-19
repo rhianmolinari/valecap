@@ -19,14 +19,16 @@ get_header(); ?>
 		<fieldset>
 			<h5>Envie seu currículo</h5>
 			<div class="cv">
-				<div id="nozes"></div>
-				<input type="file" class="input_file" accept="application/pdf" name="datafile" onchange="document.getElementById('extension').value = this.value;" />
+				<input type="file" class="input_file" accept="application/pdf" name="datafile" onchange="document.getElementById('extension').value = this.value.replace('C:\\fakepath\\', '');" />
 				<div class="fake">
 					<input type="text" id="extension" placeholder="Envie do seu currículo em PDF" />
 					<span class="button"><span>Up</span></span>
 				</div>
 			</div>
-			<button id="send-curriculum" class="grid_4 omega alpha" onclick="fileUpload('work-with-us','http://www.valecap.com.br/wp-content/themes/valecappneus/includes/send-email-curriculum.php', 'nozes');return false;">Enviar</button>
+			<button id="send-curriculum" class="grid_4 omega alpha" onclick="fileUpload('work-with-us','http://www.valecap.com.br/wp-content/themes/valecap/includes/send-email-curriculum.php', 'cv-message');return false;">Enviar</button>
+			<div id="msg-error" class="error_box grid_4 omega alpha"></div>
+			<div id="msg-success" class="success_box grid_4 omega alpha"></div>
+			<div id="msg-alert" class="alert_box grid_4 omega alpha"></div>
 		</fieldset>
 	</form>
 </article>

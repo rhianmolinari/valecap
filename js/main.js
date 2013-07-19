@@ -14,7 +14,12 @@ $(window).load(function() {
         keyboard: true,
         slideshow: true,
         slideshowSpeed: 3000,
-        animationSpeed: 500
+        animationSpeed: 500,
+        pauseOnHover: true,
+        touch: true,
+        start: function(slider) {
+            $('.flexslider').removeClass('flex-loading');
+        }
     });
 });
 
@@ -232,7 +237,7 @@ function fileUpload(formId, action_url, div_id) {
     window.frames['upload_iframe'].name = "upload_iframe";
  
     iframeId = document.getElementById("upload_iframe");
- 
+
     // Add event...
     var eventHandler = function () {
  
@@ -247,9 +252,23 @@ function fileUpload(formId, action_url, div_id) {
             } else if (iframeId.document) {
                 content = iframeId.document.body.innerHTML;
             }
+
+            if (content == "Seu currículo foi enviada com sucesso!") {
+                document.getElementById("msg-success").innerHTML = content;
+                document.getElementById("msg-success").style.display = "block";
+            }
+            else if (content) {
+                document.getElementById("msg-error").innerHTML = content;
+                document.getElementById("msg-error").style.display = "block";
+            }
  
-            alert(content);
+            //alert(content);
             document.getElementById(div_id).innerHTML = "";
+            document.getElementById(div_id).style.display = "none";
+
+            document.getElementById("send-curriculum").disabled = false;
+            document.getElementById("send-curriculum").innerHTML = "Enviar";
+            document.getElementById("send-curriculum").style.cursor = "pointer";
  
             // Del the iframe...
             setTimeout('iframeId.parentNode.removeChild(iframeId)', 250);
@@ -267,8 +286,17 @@ function fileUpload(formId, action_url, div_id) {
  
     // Submit the form...
     form.submit();
- 
-    document.getElementById(div_id).innerHTML = "Uploading...";
+
+    document.getElementById("msg-error").innerHTML = "";
+    document.getElementById("msg-error").style.display = "none";
+
+    document.getElementById("send-curriculum").disabled = true;
+    document.getElementById("send-curriculum").innerHTML = "Aguarde...";
+    document.getElementById("send-curriculum").style.cursor = "progress";
+
+    document.getElementById(div_id).innerHTML = "Enviando...";
+    document.getElementById(div_id).style.display = "block";
+
 }
 
 // Mask input
@@ -400,7 +428,5 @@ $(document).ready(function(){
             event.returnValue = false;
         }
     });
-});
 
-// reCAPTCHA
-var RecaptchaOptions = { theme: 'white', lang: 'pt' };
+});

@@ -5,7 +5,7 @@ $extension = end($ext);
 
 if ((($_FILES["datafile"]["type"] == "application/pdf")) && ($_FILES["datafile"]["size"] < 2000000) && in_array($extension, $allowedExts)) {
     if ($_FILES["datafile"]["error"] > 0) {
-        echo "Erro! Codigo de retorno: " . $_FILES["datafile"]["error"];
+        echo "Erro! C&oacute;digo de retorno: " . $_FILES["datafile"]["error"];
     } else {
         if (file_exists("../../../uploads/" . date("Y") . "/" . date("m") . "/" . $_FILES["datafile"]["name"])) {
             echo "../../../uploads/" . date("Y") . "/" . date("m") . "/" . $_FILES["datafile"]["name"] . " j&aacute; existe.";
@@ -49,11 +49,11 @@ if ((($_FILES["datafile"]["type"] == "application/pdf")) && ($_FILES["datafile"]
                 echo "Mailer Error: " . $mail->ErrorInfo;
             } else {
                 unlink("../../../uploads/" . date("Y") . "/" . date("m") . "/" . $_FILES["datafile"]["name"]);
-                echo "E-mail enviado com sucesso!";
+                echo "Seu curr&iacute;culo foi enviada com sucesso!";
             }
         }
     }
 } else {
-    echo "Arquivo invalido!";
+    echo "Arquivo inv&aacute;lido, por favor certifique-se que &eacute; um arquivo PDF";
 }
 ?>
