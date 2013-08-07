@@ -205,4 +205,28 @@ if ( function_exists( 'add_image_size' ) ) {
     add_image_size('blog-posts-thumb', 300, 150, true);
 }
 
+//add more buttons
+// Shortcodes youtube
+function embed_youtube($atts, $content=null) {
+    extract(
+        shortcode_atts(
+            array(
+                'height' => 350,
+                'width' => '100%'
+            ),
+        $atts
+        )
+    );
+    
+    $content = esc_url(
+        str_replace('watch?v=','embed/', $content),
+        array('http')
+    );
+
+    return '<iframe class="embed_movie" width="'.$width.'" height="'.$height.'" src="'.$content.'" frameborder="0" allowfullscreen></iframe>';
+}
+add_shortcode( 'youtube', 'embed_youtube' );
+
+require_once('includes/tinymce/tinymce.php');
+
 ?>

@@ -1155,7 +1155,6 @@ footer div span.number-comments {
 	margin-top: 30px;
 }
 #comments ol {
-	background-color: #F5F5F5;
 	margin: 0;
 	padding: 0 25px;
 }
@@ -1985,4 +1984,9 @@ footer .selo li a {
 }
 .alert_box {
 	background-color: #B39E36;
+}
+
+/* Youtube */
+.embed_movie {
+	margin: 0 0 25px;
 }
