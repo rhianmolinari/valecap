@@ -369,7 +369,7 @@ $(document).ready(function(){
     }, {
         name: 'cidade',
         display: 'Cidade',
-        rules: 'required|alpha'
+        rules: 'required'
     }, {
         name: 'uf',
         display: 'Estado',
