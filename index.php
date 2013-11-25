@@ -96,21 +96,11 @@ get_header(); ?>
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 			</li>
 			<li class="google">
-				<span>
-					<!-- Posicione esta tag onde você deseja que o selo apareça. -->
-					<div class="g-plus" data-width="350" data-height="69" data-href="//plus.google.com/117525717337564195677" data-rel="publisher"></div>
-
-					<!-- Posicione esta tag depois da última tag do selo. -->
-					<script type="text/javascript">
-					window.___gcfg = {lang: 'pt-BR'};
-
-					(function() {
-						var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-						po.src = 'https://apis.google.com/js/plusone.js';
-						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-					})();
-					</script>
-				</span>
+					<!-- Posicione este código onde você deseja que o selo apareça. -->
+					<a href="https://plus.google.com/117525717337564195677?prsrc=3" rel="publisher" target="_top" style="text-decoration:none;display:inline-block;color:#333;text-align:center; font:13px/16px arial,sans-serif;white-space:nowrap;">
+					<span style="display:inline-block;font-weight:bold;vertical-align:top;margin-right:5px; margin-top:8px;">Valecap Pneus</span><span style="display:inline-block;vertical-align:top;margin-right:15px; margin-top:8px;">em</span>
+					<img src="//ssl.gstatic.com/images/icons/gplus-32.png" alt="Google+" style="border:0;width:32px;height:32px;"/>
+					</a>
 			</li>
 		</ul>
 </section>

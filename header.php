@@ -85,7 +85,7 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 
-<script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.8.3.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery.flexslider-min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/dropkick-1.0.0.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/tipTip.min.js"></script>

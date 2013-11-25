@@ -696,26 +696,23 @@ form#mc-embedded-subscribe-form input {
 	height: 171px;
 }
 .spread li.facebook {
-	padding: 5px;
+	padding: 0px 5px;
 }
 .spread li.twitter {
-	padding: 10px 15px 5px;
+	padding: 8px 14px 3px;
 }
 .spread li.google {
-	padding: 0 19px;
+	padding: 15px;
 	width: auto;
-	height: 50px;
+	height: 33px;
 }
-.spread li.google span{
-	width: 342px;
-	height: 45px;
-	float: left;
-	overflow: hidden;
-	background: #fff;
-}
-.spread li.google span div{
-	margin: -5px 0px 0 -6px !important;
-	position: relative;
+.spread li.google a {
+	border: 0 !important;
+	background: transparent !important;
+
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	-moz-box-shadow: none !important;
 }
 /* Parceiros */
 .section_parceiros {
@@ -1227,7 +1224,10 @@ aside .widget-container {
 	width: 282px !important;
 }
 .widget-spot {
-	height: 255px;
+	height: 240px;
+}
+.widget-spot .fb-like-box.fb_iframe_widget > span > iframe {
+	height: 240px !important;
 }
 .widget li {
 	border: none medium !important;
