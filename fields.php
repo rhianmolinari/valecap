@@ -13,6 +13,7 @@ function create_post_type() {
         ),
         'description' => 'Tipo de produto da Valecap',
         'public' => true,
+        'menu_icon' => get_bloginfo('template_url').'/image/icon-produtos.png',
         'has_archive' => true,
         'rewrite' => array(
             'slug' => 'produto',
@@ -23,21 +24,6 @@ function create_post_type() {
     );
 }
 
-// Custom Icon Post Type
-function custom_valecap_icon() { ?>
-<style type="text/css" media="screen">
-    #menu-posts-produto .wp-menu-image {
-        background: url(<?php bloginfo('template_url') ?>/image/custom_types_icon.png) no-repeat -30px -2px !important;
-    }
-    #menu-posts-produto:hover .wp-menu-image, #menu-posts-produto.wp-has-current-submenu .wp-menu-image {
-        background-position: -51px -2px !important;
-    }
-    #icon-edit.icon32-posts-produto {
-        background: url(<?php bloginfo('template_url') ?>/image/custom_types_icon.png) no-repeat 6px 6px;
-    }
-</style>
-<?php }
-add_action( 'admin_head', 'custom_valecap_icon' );
 
 //removing revisions (autosave)
 function disable_revisions() {

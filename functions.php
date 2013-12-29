@@ -21,7 +21,7 @@ add_filter('the_generator', 'wpt_remove_version');
 
 //custom login
 function custom_login_logo() {
-    echo '<style type="text/css">div#login h1 a { background-image: url('.get_bloginfo('template_directory').'/image/logo.png) !important; background-size: auto !important; }</style>';
+    echo '<style type="text/css">div#login h1 a { background-image: url('.get_bloginfo('template_directory').'/image/logo.png) !important; background-size: auto !important; margin: 0 auto; width: auto; }</style>';
 }
 add_action('login_head', 'custom_login_logo');
 
