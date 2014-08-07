@@ -32,7 +32,7 @@
 
         $mail->SMTPAuth = true;
         $mail->Username = "valecap@valecap.com.br";
-        $mail->Password = "#V@l3+C*";
+        $mail->Password = "valentina@2809";
 
         $mail->SetFrom("valecap@valecap.com.br", "Valecap Pneus");
 
