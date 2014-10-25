@@ -222,7 +222,7 @@ header h1 {
 	margin-bottom: 8px;
 }
 .logo {
-	background:url('../image/logo.png') 0 0 no-repeat transparent;
+	background:url('../image/logo.png') 5px 8px no-repeat transparent;
 	text-indent: -99999em;
 	display: block;
 	height: 80px !important;
